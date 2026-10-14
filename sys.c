@@ -135,6 +135,7 @@ static void can_transmit(sys_t *s, int m)
         LOG("\n");
     }
     if (s->tx_count < 64) s->tx_queue[s->tx_count++] = f;
+    if (s->tx_hook) s->tx_hook(s, &f);
     /* completion */
     b[0xE] &= ~0x02;              /* clear TRQ */
     can_push_thl(s, m);
@@ -145,6 +146,13 @@ static void can_transmit(sys_t *s, int m)
 void sys_can_inject(sys_t *s, const can_frame_t *f)
 {
     int hit = 0;
+    if (s->c_ctrl & 0x18) {   /* PSMODE != 0 (sleep/stop): bus activity wakes the module and raises INTCnWUP */
+        if (s->log_can) LOG("[%llu] CAN RX id=%03X while in power-save mode %d: wake-up\n", (unsigned long long)NOW, f->id, (s->c_ctrl >> 3) & 3);
+        s->c_ctrl &= ~0x18u;
+        s->c_ints |= 0x20;
+        if (s->c_ie & 0x20) sys_raise(s, VEC_CAN_WUP);
+        s->wakeup_pending = 1;
+    }
     for (int m = 0; m < 32; m++) {
         uint8_t *b = s->c_mb[m];
         uint8_t conf = b[9]; uint16_t ctrl = mb16(s, m, 0xE);
@@ -167,6 +175,10 @@ void sys_can_inject(sys_t *s, const can_frame_t *f)
         if (ctrl & 0x04) b[0xE] |= 0x10;      /* MOW */
         memcpy(b, f->data, 8);
         b[8] = f->dlc;
+        if (mt >= 2) {                        /* mask mailbox: the hardware stores the received identifier */
+            uint16_t nidh = ext ? (0x8000 | ((f->id >> 16) & 0x1FFF)) : ((f->id & 0x7FF) << 2), nidl = ext ? (f->id & 0xFFFF) : 0;
+            b[0xC] = nidh & 0xFF; b[0xD] = nidh >> 8; b[0xA] = nidl & 0xFF; b[0xB] = nidl >> 8;
+        }
         b[0xE] |= 0x04;                       /* DN */
         s->c_ctrl |= 0x20;                    /* VALID */
         can_push_rhl(s, m);
@@ -272,6 +284,78 @@ static void gdc_bus_update(sys_t *s, uint8_t old_pcs, uint8_t new_pcs)
     }
 }
 
+/* S1D15721 on port DL: PDLH bit0 = /RD, bit1 = /WR, bit2 = A0, bit3 = /CS, bit4 = /RES */
+static void lcd_bus_update(sys_t *s, uint8_t old, uint8_t new_)
+{
+    if (!s->lcd) return;
+    if ((old ^ new_) & 0x10) lcd_reset(s->lcd, !(new_ & 0x10));
+    int cs = !(new_ & 8), a0 = !!(new_ & 4);
+    if (cs && !(old & 2) && (new_ & 2)) lcd_write(s->lcd, a0, s->portc[0x04]);          /* /WR rising edge latches data */
+    if (cs && (old & 1) && !(new_ & 1)) s->pinc_in[0x04] = lcd_read(s->lcd, a0);        /* /RD falling edge: drive bus */
+}
+
+/* SPI EEPROM (25xx-style, 256 bytes, 8-byte pages) on the mono unit: P4 bit2 = SCK, bit1 = MOSI, bit0 = MISO, P9H bit5 = /CS.
+ * Output bits change on the falling SCK edge (D7 of a byte appears on the falling edge that follows the last input bit). */
+#define ee (s->ee)
+#define g_eeprom (s->eeprom)
+#define g_eeprom_dirty (s->eeprom_dirty)
+#define g_eeprom_verbose (s->eeprom_verbose)
+static void ee_present(sys_t *s, int bit) { s->pin_in[0x08] = (s->pin_in[0x08] & ~1) | (bit & 1); }
+static void ee_next_out(sys_t *s)
+{
+    /* called on each falling edge once a byte has been loaded (outidx >= -1) */
+    if (ee.outidx < -1) return;
+    ee.outidx++;
+    if (ee.outidx == 8) {
+        if (ee.cmd == 3) { ee.addr = (ee.addr + 1) & 511; ee.shout = g_eeprom[ee.addr]; }
+        else if (ee.cmd == 5) ee.shout = ee.wel ? 0x02 : 0x00;
+        else ee.shout = 0xFF;
+        ee.outidx = 0;
+    }
+    ee_present(s, (ee.shout >> (7 - ee.outidx)) & 1);
+}
+static void eeprom_update(sys_t *s, uint8_t p4, uint8_t csport)
+{
+    int cs = !(csport & s->ee_cs_bit), sck = !!(p4 & 4), mosi = !!(p4 & 2);
+    if (!cs) { if (ee.cs && ee.cmd == 2 && ee.phase == 2) ee.wel = 0;      /* WRITE completes when /CS rises */
+               ee.cs = 0; ee.bitcnt = 0; ee.phase = 0; ee.shin = 0; ee.outidx = -2; ee.sck = sck; ee_present(s, 1); return; }
+    if (!ee.cs) { ee.cs = 1; ee.bitcnt = 0; ee.phase = 0; ee.shin = 0; ee.outidx = -2; }
+    if (!ee.sck && sck) {                     /* rising edge: sample MOSI */
+        ee.shin = (ee.shin << 1) | mosi; ee.bitcnt++;
+        if (ee.bitcnt == 8) {
+            ee.bitcnt = 0;
+            switch (ee.phase) {
+            case 0:   /* instruction */
+                ee.cmd = ee.shin & 7;
+                if (g_eeprom_verbose) LOG("[%llu] EEPROM cmd %02x\n", (unsigned long long)NOW, ee.shin);
+                if (ee.cmd == 6) ee.wel = 1;
+                else if (ee.cmd == 4) ee.wel = 0;
+                else if (ee.cmd == 5) { ee.shout = ee.wel ? 0x02 : 0x00; ee.outidx = -1; ee.phase = 3; }
+                else if (ee.cmd == 3 || ee.cmd == 2) { ee.phase = 1; ee.addr = (ee.shin & 8) ? 256 : 0; }
+                else if (ee.cmd == 1) ee.phase = 4;
+                break;
+            case 1:   /* address byte */
+                ee.addr |= ee.shin; ee.phase = 2;
+                if (g_eeprom_verbose) LOG("[%llu] EEPROM %s addr %03x\n", (unsigned long long)NOW, ee.cmd == 3 ? "READ" : "WRITE", ee.addr);
+                if (ee.cmd == 3) { ee.shout = g_eeprom[ee.addr & 511]; ee.outidx = -1; }
+                break;
+            case 2:   /* data */
+                if (ee.cmd == 2) {
+                    if (ee.wel) { if (g_eeprom[ee.addr & 511] != ee.shin) g_eeprom_dirty = 1; g_eeprom[ee.addr & 511] = ee.shin; }
+                    if (g_eeprom_verbose || s->log_gdc) LOG("[%llu] EEPROM write [%03x] = %02x%s\n", (unsigned long long)NOW, ee.addr & 511, ee.shin, ee.wel ? "" : " (ignored: WEL clear)");
+                    ee.addr = (ee.addr & ~7) | ((ee.addr + 1) & 7);
+                }
+                break;
+            case 4: ee.status = ee.shin; break;
+            }
+            ee.shin = 0;
+        }
+    } else if (ee.sck && !sck) {              /* falling edge: next output bit */
+        ee_next_out(s);
+    }
+    ee.sck = sck;
+}
+
 /* 3-wire device on P9 (bit2 = CE, bit3 = CLK, bit4 = DIO) */
 static struct { int bitcnt; uint8_t shift; int phase; uint8_t cmd; uint8_t regs[16]; uint8_t outbits; int outcnt; } p9dev;
 static void p9_update(sys_t *s, uint8_t old, uint8_t new_)
@@ -348,7 +432,7 @@ static uint32_t sfr_read(sys_t *s, uint32_t off, int size)
     switch (off) {
     case 0x680: return s->wtm;
     case 0x824: return 0;              /* LOCKR: 0 = PLL locked */
-    case 0x828: return s->pcc;
+    case 0x828: return (s->pcc & ~0x10) | ((s->pcc & 0x08) ? 0x10 : 0);   /* CLS (status, bit 4) follows CK3 (bit 3): 1 = running on the sub-clock */
     case 0x82C: return s->pllctl;
     case 0x1FE: return s->psc;
     case 0x8B0: return s->prsm0;
@@ -360,6 +444,19 @@ static uint32_t sfr_read(sys_t *s, uint32_t off, int size)
     case 0xD03: return s->cb0str | ((s->cb0_done > NOW) ? 0x80 : 0);
     case 0xD04: return s->cb0rx;
     case 0xD06: return s->cb0tx;
+    case 0xD10: return s->cb1ctl0;
+    case 0xD11: return s->cb1ctl1;
+    case 0xD12: return s->cb1ctl2;
+    case 0xD13: return s->cb1str | ((s->cb1_done > NOW) ? 0x80 : 0);
+    case 0xD14: return s->cb1rx;
+    case 0xD16: return s->cb1tx;
+    case 0xA10: return s->ua1ctl0;
+    case 0xA11: return s->ua1ctl1;
+    case 0xA12: return s->ua1ctl2;
+    case 0xA13: return s->ua1opt0;
+    case 0xA14: return s->ua1str | ((s->ua1_tx_done > NOW) ? 0x80 : 0);
+    case 0xA16: return s->ua1rx;
+    case 0xA17: return s->ua1tx;
     case 0x200: return s->ada0m0 & ~(s->adc_busy ? 0 : 0);
     case 0x201: return s->ada0m1;
     case 0x202: return s->ada0s;
@@ -399,14 +496,19 @@ static void sfr_write(sys_t *s, uint32_t off, uint32_t v, int size)
         int p = off - 0x400;
         uint8_t old = s->port[p];
         if (size == 2) { s->port[p] = v; s->port[p + 1] = v >> 8; } else s->port[p] = v;
-        if (p == 0x12) p9_update(s, old, s->port[0x12]);
+        if (p == 0x12 && s->board == 0) p9_update(s, old, s->port[0x12]);
+        if (s->board == 1 && (p == 0x08 || p == s->ee_cs_port)) eeprom_update(s, s->port[0x08], s->port[s->ee_cs_port]);
         if (p == 0x0D && s->log_gdc && old != s->port[p]) LOG("[%llu] P6H = %02x (display power bits 6/7 = %d/%d)\n", (unsigned long long)NOW, s->port[p], !!(s->port[p] & 0x40), !!(s->port[p] & 0x80));
+        if (s->board == 1 && s->log_gdc && old != s->port[p] && (p == 0x13 || p == 0x12 || p == 0x0E || p == 0x08 || p == 0x00)) LOG("[%llu] P%s = %02x\n", (unsigned long long)NOW, p == 0x13 ? "9H" : p == 0x12 ? "9L" : p == 0x0E ? "7" : p == 0x08 ? "4" : "0", s->port[p]);
         return;
     }
     if (off < 0x40) {
         int p = off; uint8_t old = s->portc[p];
-        s->portc[p] = v;
+        if (size == 2 && p + 1 < 0x40) { s->portc[p] = v; s->portc[p + 1] = v >> 8; } else s->portc[p] = v;
         if (p == 0x08) gdc_bus_update(s, old, v);
+        if (p == 0x05 && s->lcd) lcd_bus_update(s, old, s->portc[0x05]);
+        if (p == 0x04 && size == 2 && s->lcd) lcd_bus_update(s, s->portc[0x05], s->portc[0x05]);
+        if (p == 0x0C && s->log_gdc && old != s->portc[p]) LOG("[%llu] PCM = %02x\n", (unsigned long long)NOW, s->portc[p]);
         if (p == 0x0A && s->gdc && ((old ^ v) & 0x20)) { if (!(v & 0x20)) { LOG("[%llu] GDC reset asserted\n", (unsigned long long)NOW); gdc_reset(s->gdc); } else LOG("[%llu] GDC reset released\n", (unsigned long long)NOW); }
         return;
     }
@@ -415,8 +517,13 @@ static void sfr_write(sys_t *s, uint32_t off, uint32_t v, int size)
     if (off >= 0x620 && off < 0x630) { timer_write(&s->tmq[2], off - 0x620, v, size); return; }
     if (off >= 0x590 && off < 0x5D0) { timer_write(&s->tmp[(off - 0x590) / 0x10], (off - 0x590) % 0x10, v, size); return; }
     switch (off) {
-    case 0x680: s->wtm = v; if (v & 2) { s->wt_next = NOW + ((1ULL << (4 + ((v >> 4) & 7))) * CPU_HZ / 32768); LOG("[%llu] WT interval enabled, period %llu cyc\n", (unsigned long long)NOW, (unsigned long long)((1ULL << (4 + ((v >> 4) & 7))) * CPU_HZ / 32768)); } else s->wt_next = ~0ULL; return;
-    case 0x828: s->pcc = v; return;
+    case 0x680: { uint8_t old = s->wtm; s->wtm = v;
+        if (v & 2) { if (!(old & 2)) { s->wt_next = NOW + ((1ULL << (4 + ((v >> 4) & 7))) * CPU_HZ / 32768); LOG("[%llu] WT interval enabled, period %llu cyc\n", (unsigned long long)NOW, (unsigned long long)((1ULL << (4 + ((v >> 4) & 7))) * CPU_HZ / 32768)); } }
+        else s->wt_next = ~0ULL;
+        if (v & 1) { static const int sh[4] = {14, 13, 5, 4}; s->wtov_period = (1ULL << sh[(v >> 2) & 3]) * CPU_HZ / 32768; if (!(old & 1)) { s->wtov_next = NOW + s->wtov_period; LOG("[%llu] WT overflow enabled, period %llu cyc\n", (unsigned long long)NOW, (unsigned long long)s->wtov_period); } }
+        else s->wtov_next = ~0ULL;
+        return; }
+    case 0x828: if (s->log_sfr || ((s->pcc ^ v) & 0x58)) LOG("[%llu] PCC = %02x (%s)\n", (unsigned long long)NOW, v, (v & 0x08) ? ((v & 0x40) ? "sub-clock, main osc stopped" : "sub-clock") : "main clock"); s->pcc = v; return;
     case 0x82C: s->pllctl = v; return;
     case 0x1FC: return; /* PRCMD */
     case 0x1FE: s->psc = v; return;
@@ -426,6 +533,28 @@ static void sfr_write(sys_t *s, uint32_t off, uint32_t v, int size)
     case 0xD01: s->cb0ctl1 = v; return;
     case 0xD02: s->cb0ctl2 = v; return;
     case 0xD03: s->cb0str = v & 0x7F; return;
+    case 0xD10: s->cb1ctl0 = v; return;
+    case 0xD11: s->cb1ctl1 = v; return;
+    case 0xD12: s->cb1ctl2 = v; return;
+    case 0xD13: s->cb1str = v & 0x7F; return;
+    case 0xD14: return;
+    case 0xD16: { int cl = s->cb1ctl2 & 0xF; int bits = cl == 0 ? 8 : cl == 8 ? 16 : cl;
+        s->cb1tx = v; s->cb1_done = NOW + 40 * bits; s->cb1_count++;
+        if (s->log_gdc) LOG("[%llu] CSIB1 TX %0*x (%d bits, P9H=%02x P4=%02x PCM=%02x)\n", (unsigned long long)NOW, bits > 8 ? 4 : 2, v & (bits > 8 ? 0xFFFF : 0xFF), bits, s->port[0x13], s->port[0x08], s->portc[0x0C]);
+        return; }
+    case 0xA10: { uint8_t old = s->ua1ctl0; s->ua1ctl0 = v; if ((old ^ v) & 0xE0) LOG("[%llu] UARTA1 CTL0=%02x (PWR=%d TXE=%d RXE=%d) CTL1=%02x CTL2=%02x -> %llu baud\n", (unsigned long long)NOW, v, !!(v & 0x80), !!(v & 0x40), !!(v & 0x20), s->ua1ctl1, s->ua1ctl2, (unsigned long long)(s->ua1ctl2 ? (CPU_HZ >> (s->ua1ctl1 & 7)) / (2 * s->ua1ctl2) : 0)); 
+        s->ua1_byte_cycles = s->ua1ctl2 ? (uint64_t)(2 * s->ua1ctl2) * 10 * (1ULL << (s->ua1ctl1 & 7)) : 2000; return; }
+    case 0xA11: s->ua1ctl1 = v; return;
+    case 0xA12: s->ua1ctl2 = v; return;
+    case 0xA13: s->ua1opt0 = v; return;
+    case 0xA14: s->ua1str &= ~(v & 0x07); return;
+    case 0xA17: { s->ua1tx = v; s->ua1_tx_done = NOW + (s->ua1_byte_cycles ? s->ua1_byte_cycles : 2000); s->ua1_tx_count++;
+        if (s->uart_tx_hook) s->uart_tx_hook(s, v);
+        /* collect bytes into lines for the log (flush on a 20 ms gap or 64 bytes) */
+        if (s->ua1_txline_len && (NOW - s->ua1_txline_t0 > CPU_HZ / 50 || s->ua1_txline_len >= 64)) { LOG("[%llu] UARTA1 TX:", (unsigned long long)s->ua1_txline_t0); for (int k = 0; k < s->ua1_txline_len; k++) LOG(" %02x", s->ua1_txline[k]); LOG("\n"); s->ua1_txline_len = 0; }
+        if (!s->ua1_txline_len) s->ua1_txline_t0 = NOW;
+        s->ua1_txline[s->ua1_txline_len++] = v;
+        return; }
     case 0xD06: s->cb0tx = v; s->cb0_done = NOW + 400;   /* 16 bits @ ~1 MHz */
         if (s->log_sfr) LOG("[%llu] CSIB0 TX %04x (reg %02x <- %02x) P4=%02x\n", (unsigned long long)NOW, v & 0xFFFF, v & 0xFF, (v >> 8) & 0xFF, s->port[0x08]);
         return;
@@ -445,10 +574,10 @@ static void sfr_write(sys_t *s, uint32_t off, uint32_t v, int size)
     case 0x802: case 0x810: case 0x812: case 0x814: case 0x816: case 0x82F: case 0x870: case 0x888: case 0x8B2:
         return;
     }
-    if (off >= 0xA00 && off < 0xA40) return;   /* UARTA0-3 */
+    if (off >= 0xA00 && off < 0xA40) return;   /* UARTA0,2,3 */
     if (off >= 0xB00 && off < 0xB80) return;   /* PFCE etc. */
     if (off >= 0xC00 && off < 0xC40) return;   /* INTFn/INTRn */
-    if (off >= 0xD10 && off < 0xD30) return;   /* CSIB1/2 */
+    if (off >= 0xD20 && off < 0xD30) return;   /* CSIB2 */
     if (off >= 0x5D0 && off < 0x610) return;   /* TMP4.. */
     if (s->log_unknown) LOG("[%llu] SFR write %08x (%s) = %x size %d pc=%06x\n", (unsigned long long)NOW, 0xFFFFF000 + off, sfr_name(off), v, size, s->cpu.last_pc);
 }
@@ -473,14 +602,17 @@ uint32_t bus_fetch16(cpu_t *c, uint32_t a)
     return 0xFFFF;
 }
 
+uint32_t g_flash_hist[FLASH_SIZE / 64]; int g_flash_hist_on; uint32_t g_rwatch;
 uint32_t bus_read(cpu_t *c, uint32_t addr, int size)
 {
     (void)c; uint32_t a = addr & 0x03FFFFFF;
+    if (g_flash_hist_on && a < FLASH_SIZE) g_flash_hist[a / 64]++;
+    if (g_rwatch && a >= g_rwatch && a < g_rwatch + 256) LOG("[%llu] RWATCH read %08x size %d pc=%06x r6=%08x r7=%08x r8=%08x r9=%08x r10=%08x r11=%08x r12=%08x r13=%08x lp=%06x\n", (unsigned long long)NOW, addr, size, S->cpu.pc, S->cpu.r[6], S->cpu.r[7], S->cpu.r[8], S->cpu.r[9], S->cpu.r[10], S->cpu.r[11], S->cpu.r[12], S->cpu.r[13], S->cpu.r[31]);
     if (a >= 0x03FFF000) return sfr_read(S, a - 0x03FFF000, size);
     if (a >= RAM_BASE && a < RAM_BASE + RAM_SIZE) return rd(&S->ram[a - RAM_BASE], size);
     if (a < FLASH_SIZE) return rd(&S->flash[a], size);
-    if (a >= 0x03FEC600 && a < 0x03FECC00) return can_read(S, a - 0x03FEC600, size);
-    if (a >= 0x03FEC000 && a < 0x03FEC600) return 0;      /* CAN0 (unused) */
+    if (a >= S->can_base && a < S->can_base + 0x600) return can_read(S, a - S->can_base, size);
+    if (a >= 0x03FEC000 && a < 0x03FECC00) return 0;      /* the other CAN controller (unused) */
     if (S->log_unknown) LOG("[%llu] unmapped read %08x size %d pc=%06x\n", (unsigned long long)NOW, addr, size, S->cpu.last_pc);
     return 0;
 }
@@ -490,7 +622,8 @@ void bus_write(cpu_t *c, uint32_t addr, uint32_t val, int size)
     (void)c; uint32_t a = addr & 0x03FFFFFF;
     if (a >= 0x03FFF000) { sfr_write(S, a - 0x03FFF000, val, size); return; }
     if (a >= RAM_BASE && a < RAM_BASE + RAM_SIZE) { wr(&S->ram[a - RAM_BASE], val, size); return; }
-    if (a >= 0x03FEC600 && a < 0x03FECC00) { can_write(S, a - 0x03FEC600, val, size); return; }
+    if (a >= S->can_base && a < S->can_base + 0x600) { can_write(S, a - S->can_base, val, size); return; }
+    if (a >= 0x03FEC000 && a < 0x03FECC00) return;
     if (a < FLASH_SIZE) { if (S->log_unknown) LOG("[%llu] flash write %08x = %x (ignored) pc=%06x\n", (unsigned long long)NOW, addr, val, S->cpu.last_pc); return; }
     if (S->log_unknown) LOG("[%llu] unmapped write %08x = %x size %d pc=%06x\n", (unsigned long long)NOW, addr, val, size, S->cpu.last_pc);
 }
@@ -502,14 +635,28 @@ void sys_init(sys_t *s, const uint8_t *app, size_t applen)
     memset(s->flash, 0xFF, sizeof s->flash);
     if (applen > FLASH_SIZE) applen = FLASH_SIZE;
     memcpy(s->flash, app, applen);
-    /* synthesize bootloader vector table: each vector v -> jr 0x4400+v */
+    /* board detection: the colour unit image is 384 KB with its vector table (16-byte slots) at 0x4400,
+     * the mono unit image is 256 KB with a compact table (4-byte slots, slot k = vector 0x10*(k+1)) at 0x4500 */
+    s->board = (applen <= 0x40000) ? 1 : 0;
+    s->module = s->board ? app[0x4701] : 0;
+    if (s->module == 2) { s->ee_cs_port = 0x00; s->ee_cs_bit = 0x10; } else { s->ee_cs_port = 0x13; s->ee_cs_bit = 0x20; }
+    s->can_base = s->board ? 0x03FEC000 : 0x03FEC600;
+    s->vec_can  = s->board ? 0x2C0 : 0x3D0;
     for (uint32_t v = 0; v < NVEC; v += 0x10) {
-        uint32_t disp = 0x4400;   /* target - v = 0x4400 + v - v */
-        s->flash[v + 0] = 0x80; s->flash[v + 1] = 0x07;
+        uint32_t target = s->board ? (v == 0 ? 0x4500 : 0x4500 + 4 * (v / 0x10 - 1)) : 0x4400 + v;
+        if (s->board && target >= 0x4670) continue;              /* beyond the app's table */
+        uint32_t disp = (target - v) & 0x3FFFFF;                 /* jr disp22 */
+        s->flash[v + 0] = 0x80 | ((disp >> 16) & 0x3F); s->flash[v + 1] = 0x07;
         s->flash[v + 2] = disp & 0xFF; s->flash[v + 3] = (disp >> 8) & 0xFF;
     }
-    /* plausible bootloader data the app reads (FBL part number at 0x720) */
-    memcpy(&s->flash[0x720], "8R29-14D017-AA", 15);
+    /* plausible bootloader data the app reads */
+    if (s->board == 0) memcpy(&s->flash[0x720], "8R29-14D017-AA", 15);
+    else {
+        /* 0x700: pointer to the bootloader's reprogramming entry (we point it at a 'jmp [lp]'), 0x704-0x706: FBL version bytes */
+        s->flash[0x700] = 0x10; s->flash[0x701] = 0x07; s->flash[0x702] = 0; s->flash[0x703] = 0;
+        s->flash[0x710] = 0x7F; s->flash[0x711] = 0x00;                       /* jmp [lp] */
+        s->flash[0x704] = 1; s->flash[0x705] = 0; s->flash[0x706] = 0;
+    }
     memset(s->ram, 0, sizeof s->ram);
     memset(s->ic, 0x47, sizeof s->ic);
     s->ispr = 0;
@@ -517,14 +664,16 @@ void sys_init(sys_t *s, const uint8_t *app, size_t applen)
     for (int i = 0x20; i < 0x40; i++) { s->port[i] = 0xFF; s->portc[i] = 0xFF; }  /* PM: all inputs after reset */
     s->portc[0x0A] = 0; s->pinc_in[0x0A] = 0x04;
     for (int i = 0; i < 16; i++) s->adc_val[i] = 0x200;
+    if (!s->eeprom_loaded) memset(s->eeprom, 0xFF, sizeof s->eeprom);
+    s->pin_in[0x08] |= 1;   /* MISO idle high */
     timer_init(&s->tmp[0], "TMP0", 0x170, 0x180, 0x160);
     timer_init(&s->tmp[1], "TMP1", 0x1A0, 0x1B0, 0x190);
     timer_init(&s->tmp[2], "TMP2", VEC_TICK, 0x1E0, 0x1C0);
     timer_init(&s->tmp[3], "TMP3", 0x200, 0x210, 0x1F0);
     timer_init(&s->tmq[0], "TMQ0", 0x120, 0x130, 0x110); s->tmq[0].ccr[2] = 1;
-    timer_init(&s->tmq[1], "TMQ1", -1, -1, -1); s->tmq[1].ccr[2] = 1;
+    timer_init(&s->tmq[1], "TMQ1", 0x370, 0x380, 0x360); s->tmq[1].ccr[2] = 1;
     timer_init(&s->tmq[2], "TMQ2", -1, -1, -1); s->tmq[2].ccr[2] = 1;
-    s->wt_next = ~0ULL; s->cb0_done = 0; s->adc_done = ~0ULL;
+    s->wt_next = ~0ULL; s->wtov_next = ~0ULL; s->cb0_done = 0; s->adc_done = ~0ULL;
     s->c_ctrl = 0; s->c_ie = 0; s->c_ints = 0;
     cpu_reset(&s->cpu, 0x0000);
 }
@@ -533,19 +682,31 @@ static void sys_events(sys_t *s)
 {
     for (int i = 0; i < 4; i++) if (s->tmp[i].ctl0 & 0x80) timer_tick(&s->tmp[i]);
     for (int i = 0; i < 3; i++) if (s->tmq[i].ctl0 & 0x80) timer_tick(&s->tmq[i]);
-    if (NOW >= s->wt_next) { sys_raise(s, VEC_WT); s->wt_next += (1ULL << (4 + ((s->wtm >> 4) & 7))) * CPU_HZ / 32768; }
+    if (NOW >= s->wt_next) { sys_raise(s, VEC_WTI); s->wt_next += (1ULL << (4 + ((s->wtm >> 4) & 7))) * CPU_HZ / 32768; }
+    if (NOW >= s->wtov_next) { sys_raise(s, VEC_WTOV); s->wtov_next += s->wtov_period; }
     if (s->cb0_done && NOW >= s->cb0_done) { s->cb0_done = 0; if (s->cb0ctl0 & 0x80) sys_raise(s, VEC_CSIB0); }
+    if (s->cb1_done && NOW >= s->cb1_done) { s->cb1_done = 0; if (s->cb1ctl0 & 0x80) { sys_raise(s, VEC_CSIB1_R); sys_raise(s, VEC_CSIB1_T); } }
+    if (s->ua1_tx_done && NOW >= s->ua1_tx_done) { s->ua1_tx_done = 0; if (s->ua1ctl0 & 0x80) sys_raise(s, VEC_UA1_T); }
+    if (s->ua1_rxq_count && NOW >= s->ua1_rx_next) {
+        s->ua1rx = s->ua1_rxq[s->ua1_rxq_head]; s->ua1_rxq_head = (s->ua1_rxq_head + 1) % (int)sizeof s->ua1_rxq; s->ua1_rxq_count--; s->ua1_rx_count++;
+        s->ua1_rx_next = NOW + (s->ua1_byte_cycles ? s->ua1_byte_cycles : 2000);
+        if ((s->ua1ctl0 & 0xA0) == 0xA0) sys_raise(s, VEC_UA1_R);
+    }
     if (s->adc_busy && NOW >= s->adc_done) { s->adc_busy = 0; s->adc_done = ~0ULL; sys_raise(s, VEC_INTAD); }
     if (s->gdc) { gdc_tick(s->gdc, NOW); if (gdc_irq_pending(s->gdc)) sys_raise(s, VEC_INTP0); }
 }
 
-uint32_t g_watch[16]; int g_nwatch;
+uint32_t g_watch[16]; int g_nwatch; uint32_t g_callw[16]; int g_ncallw;
 static void watch_check(sys_t *s)
 {
+    for (int i = 0; i < g_ncallw; i++) if (s->cpu.pc == g_callw[i]) {
+        LOG("[%llu] CALL %06x(r6=%x r7=%x r8=%x r9=%x | stk", (unsigned long long)NOW, s->cpu.pc, s->cpu.r[6], s->cpu.r[7], s->cpu.r[8], s->cpu.r[9]);
+        for (int k = 0; k < 8; k++) LOG(" %x", bus_read(&s->cpu, s->cpu.r[3] + 4 * k, 4));
+        LOG(") lp=%06x\n", s->cpu.r[31]);
+    }
     for (int i = 0; i < g_nwatch; i++) if (s->cpu.pc == g_watch[i]) {
-        LOG("[%llu] WATCH pc=%06x r6=%08x r7=%08x r8=%08x r9=%08x r10=%08x lp=%06x gp-0x5844=%02x gp-0x77b6=%02x state=%04x\n", (unsigned long long)NOW, s->cpu.pc,
-            s->cpu.r[6], s->cpu.r[7], s->cpu.r[8], s->cpu.r[9], s->cpu.r[10], s->cpu.r[31],
-            bus_read(&s->cpu, s->cpu.r[4] - 0x5844, 1), bus_read(&s->cpu, s->cpu.r[4] - 0x77b6, 1), bus_read(&s->cpu, s->cpu.r[4] - 0x59fc, 2));
+        LOG("[%llu] WATCH pc=%06x r6=%08x r7=%08x r8=%08x r9=%08x r10=%08x r11=%08x r12=%08x r13=%08x r29=%08x lp=%06x\n", (unsigned long long)NOW, s->cpu.pc,
+            s->cpu.r[6], s->cpu.r[7], s->cpu.r[8], s->cpu.r[9], s->cpu.r[10], s->cpu.r[11], s->cpu.r[12], s->cpu.r[13], s->cpu.r[29], s->cpu.r[31]);
     }
 }
 void sys_run(sys_t *s, uint64_t cycles)
@@ -559,14 +720,18 @@ void sys_run(sys_t *s, uint64_t cycles)
             for (int i = 0; i < 4; i++) if ((s->tmp[i].ctl0 & 0x80) && s->tmp[i].next_match < nxt) nxt = s->tmp[i].next_match;
             for (int i = 0; i < 3; i++) if ((s->tmq[i].ctl0 & 0x80) && s->tmq[i].next_match < nxt) nxt = s->tmq[i].next_match;
             if (s->wt_next < nxt) nxt = s->wt_next;
+            if (s->wtov_next < nxt) nxt = s->wtov_next;
             if (s->cb0_done && s->cb0_done < nxt) nxt = s->cb0_done;
+            if (s->cb1_done && s->cb1_done < nxt) nxt = s->cb1_done;
+            if (s->ua1_tx_done && s->ua1_tx_done < nxt) nxt = s->ua1_tx_done;
+            if (s->ua1_rxq_count && s->ua1_rx_next < nxt) nxt = s->ua1_rx_next;
             if (s->adc_busy && s->adc_done < nxt) nxt = s->adc_done;
             if (nxt > NOW) s->cpu.cycles = nxt; else s->cpu.cycles++;
             sys_events(s);
             if (sys_pending_irq(s)) s->cpu.halted = 0;
             continue;
         }
-        if (g_nwatch) watch_check(s);
+        if (g_nwatch | g_ncallw) watch_check(s);
         cpu_step(&s->cpu);
         if ((s->cpu.insns & 15) == 0) sys_events(s);
         sys_pending_irq(s);
@@ -582,9 +747,17 @@ static const char *sfr_name(uint32_t off)
     }
 }
 
+void sys_uart1_inject(sys_t *s, const uint8_t *data, int n)
+{
+    for (int i = 0; i < n; i++) { if (s->ua1_rxq_count >= (int)sizeof s->ua1_rxq) break; s->ua1_rxq[(s->ua1_rxq_head + s->ua1_rxq_count) % (int)sizeof s->ua1_rxq] = data[i]; s->ua1_rxq_count++; }
+    if (s->ua1_rx_next < NOW) s->ua1_rx_next = NOW;
+}
+
 void sys_dump_can(sys_t *s, FILE *f)
 {
-    fprintf(f, "CAN1: ctrl=%04x ie=%04x ints=%04x brp=%02x btr=%04x masks:", s->c_ctrl, s->c_ie, s->c_ints, s->c_brp, s->c_btr);
+    if (s->ua1_txline_len) { LOG("[%llu] UARTA1 TX:", (unsigned long long)s->ua1_txline_t0); for (int k = 0; k < s->ua1_txline_len; k++) LOG(" %02x", s->ua1_txline[k]); LOG("\n"); s->ua1_txline_len = 0; }
+    if (s->ua1_tx_count || s->cb1_count) fprintf(f, "UARTA1: %d bytes sent, %d received; CSIB1: %d transfers\n", s->ua1_tx_count, s->ua1_rx_count, s->cb1_count);
+    fprintf(f, "CAN%d: ctrl=%04x ie=%04x ints=%04x brp=%02x btr=%04x masks:", s->board ? 0 : 1, s->c_ctrl, s->c_ie, s->c_ints, s->c_brp, s->c_btr);
     for (int k = 0; k < 4; k++) fprintf(f, " m%d=%04x%04x", k + 1, s->c_mask[k * 2 + 1], s->c_mask[k * 2]);
     fprintf(f, "\n");
     for (int m = 0; m < 32; m++) {

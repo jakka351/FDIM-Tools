@@ -3,8 +3,8 @@
 import struct, sys, re, collections
 
 img = open(sys.argv[1], 'rb').read()
-BASE = 0x4400
-END = 0x5E000
+BASE = int(sys.argv[2], 16) if len(sys.argv) > 2 else 0x4400
+END = int(sys.argv[3], 16) if len(sys.argv) > 3 else 0x5E000
 
 def h16(a): return struct.unpack_from('<H', img, a)[0]
 def h32(a): return struct.unpack_from('<I', img, a)[0]

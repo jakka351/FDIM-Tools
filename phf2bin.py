@@ -45,6 +45,12 @@ def parse(path):
             base = struct.unpack('>H', payload)[0] << 4
         elif typ == 0x04:
             base = struct.unpack('>H', payload)[0] << 16
+        elif ((-(sum(data[pos+1:pos+4]) + sum(payload))) & 0xFF) == cks:
+            # unknown type but the checksum validates with type 00: the type byte itself is corrupt -> treat as data
+            print(f"record type {typ:02x} at {pos:#x} is a corrupted data record (checksum valid with type 00): placing {ln} bytes at {base+addr:#x}", file=sys.stderr)
+            a = base + addr
+            for i, b in enumerate(payload):
+                mem[a+i] = b
         else:
             print(f"unknown record type {typ:02x} at {pos:#x} payload={payload.hex()}", file=sys.stderr)
         pos += 5 + ln + 1

@@ -4,7 +4,7 @@ and dump cross-references for peripheral regions."""
 import sys, re, collections, pypcode
 
 IMG = open(sys.argv[1], 'rb').read()
-BASE, END = 0x4400, 0x5E000
+BASE, END = (int(sys.argv[3], 16), int(sys.argv[4], 16)) if len(sys.argv) > 4 else (0x4400, 0x5E000)
 ctx = pypcode.Context("V850:LE:32:default")
 
 # linear sweep, recovering from undecodable with +2
