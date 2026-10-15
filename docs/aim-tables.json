@@ -1,0 +1,421 @@
+{
+ "vectors": [
+  {
+   "slot": "004500",
+   "vector": "entry",
+   "handler": "00afe0"
+  },
+  {
+   "slot": "004544",
+   "vector": "120",
+   "handler": "01af66"
+  },
+  {
+   "slot": "004558",
+   "vector": "170",
+   "handler": "01b162"
+  },
+  {
+   "slot": "004590",
+   "vector": "250",
+   "handler": "01acf0"
+  },
+  {
+   "slot": "004594",
+   "vector": "260",
+   "handler": "01adba"
+  },
+  {
+   "slot": "0045a0",
+   "vector": "290",
+   "handler": "00f36e"
+  },
+  {
+   "slot": "0045a4",
+   "vector": "2a0",
+   "handler": "00f298"
+  },
+  {
+   "slot": "0045a8",
+   "vector": "2b0",
+   "handler": "014d26"
+  },
+  {
+   "slot": "0045ac",
+   "vector": "2c0",
+   "handler": "00ce64"
+  },
+  {
+   "slot": "0045b0",
+   "vector": "2d0",
+   "handler": "00cd80"
+  },
+  {
+   "slot": "0045b4",
+   "vector": "2e0",
+   "handler": "00cf30"
+  },
+  {
+   "slot": "0045b8",
+   "vector": "2f0",
+   "handler": "00d038"
+  },
+  {
+   "slot": "0045c4",
+   "vector": "320",
+   "handler": "00be9c"
+  },
+  {
+   "slot": "0045d8",
+   "vector": "370",
+   "handler": "01ae84"
+  }
+ ],
+ "can_rx": [
+  {
+   "id": "767",
+   "slot": 3,
+   "dlc": 0,
+   "ram": null,
+   "gp_offset": null,
+   "callback": null,
+   "flag_byte": 0,
+   "flag_bit": "00"
+  },
+  {
+   "id": "317",
+   "slot": 0,
+   "dlc": 8,
+   "ram": "03ffc97c",
+   "gp_offset": "-0x7690",
+   "callback": "00df96",
+   "flag_byte": 0,
+   "flag_bit": "01"
+  },
+  {
+   "id": "2FC",
+   "slot": 1,
+   "dlc": 8,
+   "ram": "03ffce84",
+   "gp_offset": "-0x7188",
+   "callback": "00df48",
+   "flag_byte": 0,
+   "flag_bit": "02"
+  },
+  {
+   "id": "2F2",
+   "slot": 2,
+   "dlc": 8,
+   "ram": "03ffc818",
+   "gp_offset": "-0x77f4",
+   "callback": "00df2e",
+   "flag_byte": 0,
+   "flag_bit": "04"
+  },
+  {
+   "id": "2E9",
+   "slot": 4,
+   "dlc": 0,
+   "ram": "03ffce8c",
+   "gp_offset": "-0x7180",
+   "callback": null,
+   "flag_byte": 0,
+   "flag_bit": "00"
+  },
+  {
+   "id": "2E5",
+   "slot": 5,
+   "dlc": 0,
+   "ram": "03ffce94",
+   "gp_offset": "-0x7178",
+   "callback": null,
+   "flag_byte": 0,
+   "flag_bit": "00"
+  },
+  {
+   "id": "2DF",
+   "slot": 6,
+   "dlc": 0,
+   "ram": "03ffce9c",
+   "gp_offset": "-0x7170",
+   "callback": null,
+   "flag_byte": 0,
+   "flag_bit": "00"
+  },
+  {
+   "id": "2DC",
+   "slot": 7,
+   "dlc": 0,
+   "ram": "03ffcea4",
+   "gp_offset": "-0x7168",
+   "callback": null,
+   "flag_byte": 0,
+   "flag_bit": "00"
+  },
+  {
+   "id": "2D9",
+   "slot": 8,
+   "dlc": 0,
+   "ram": "03ffceac",
+   "gp_offset": "-0x7160",
+   "callback": null,
+   "flag_byte": 0,
+   "flag_bit": "00"
+  },
+  {
+   "id": "2D3",
+   "slot": 9,
+   "dlc": 0,
+   "ram": "03ffceb4",
+   "gp_offset": "-0x7158",
+   "callback": null,
+   "flag_byte": 0,
+   "flag_bit": "00"
+  },
+  {
+   "id": "500-57F",
+   "note": "network-management range handled by 0xE6A8 (own NM id 0x555)"
+  }
+ ],
+ "can_tx": [
+  {
+   "slot": 0,
+   "id": "76F",
+   "dlc": 8,
+   "ram": "03ffca38",
+   "gp_offset": "-0x75d4"
+  },
+  {
+   "slot": 1,
+   "id": "76F",
+   "dlc": 8,
+   "ram": "03ffce1c",
+   "gp_offset": "-0x71f0"
+  },
+  {
+   "slot": 2,
+   "id": "555",
+   "dlc": 8,
+   "ram": "03ffc98c",
+   "gp_offset": "-0x7680"
+  },
+  {
+   "slot": 3,
+   "id": "2E8",
+   "dlc": 8,
+   "ram": "03ffce24",
+   "gp_offset": "-0x71e8"
+  },
+  {
+   "slot": 4,
+   "id": "2E8",
+   "dlc": 8,
+   "ram": "03ffce2c",
+   "gp_offset": "-0x71e0"
+  },
+  {
+   "slot": 5,
+   "id": "2E4",
+   "dlc": 8,
+   "ram": "03ffce34",
+   "gp_offset": "-0x71d8"
+  },
+  {
+   "slot": 6,
+   "id": "2E4",
+   "dlc": 8,
+   "ram": "03ffce3c",
+   "gp_offset": "-0x71d0"
+  },
+  {
+   "slot": 7,
+   "id": "2DE",
+   "dlc": 8,
+   "ram": "03ffce44",
+   "gp_offset": "-0x71c8"
+  },
+  {
+   "slot": 8,
+   "id": "2DE",
+   "dlc": 8,
+   "ram": "03ffce4c",
+   "gp_offset": "-0x71c0"
+  },
+  {
+   "slot": 9,
+   "id": "2DB",
+   "dlc": 8,
+   "ram": "03ffce54",
+   "gp_offset": "-0x71b8"
+  },
+  {
+   "slot": 10,
+   "id": "2DB",
+   "dlc": 8,
+   "ram": "03ffce5c",
+   "gp_offset": "-0x71b0"
+  },
+  {
+   "slot": 11,
+   "id": "2D8",
+   "dlc": 8,
+   "ram": "03ffce64",
+   "gp_offset": "-0x71a8"
+  },
+  {
+   "slot": 12,
+   "id": "2D8",
+   "dlc": 8,
+   "ram": "03ffce6c",
+   "gp_offset": "-0x71a0"
+  },
+  {
+   "slot": 13,
+   "id": "2D4",
+   "dlc": 8,
+   "ram": "03ffc984",
+   "gp_offset": "-0x7688"
+  },
+  {
+   "slot": 14,
+   "id": "2D2",
+   "dlc": 8,
+   "ram": "03ffce74",
+   "gp_offset": "-0x7198"
+  },
+  {
+   "slot": 15,
+   "id": "2D2",
+   "dlc": 8,
+   "ram": "03ffce7c",
+   "gp_offset": "-0x7190"
+  }
+ ],
+ "iap_lingo4_responses": [
+  "0001",
+  "0003",
+  "0005",
+  "0008",
+  "000a",
+  "000d",
+  "000f",
+  "0011",
+  "0013",
+  "0019",
+  "001b",
+  "001d",
+  "001f",
+  "0021",
+  "0023",
+  "0025",
+  "0027",
+  "002b",
+  "002d",
+  "0030",
+  "0034",
+  "0036",
+  "003a"
+ ],
+ "ipod_strings": [
+  {
+   "addr": "000008",
+   "s": "Music"
+  },
+  {
+   "addr": "00000f",
+   "s": "Playlists"
+  },
+  {
+   "addr": "00001a",
+   "s": "Artists"
+  },
+  {
+   "addr": "000023",
+   "s": "Albums"
+  },
+  {
+   "addr": "00002b",
+   "s": "Songs"
+  },
+  {
+   "addr": "000032",
+   "s": "Podcasts"
+  },
+  {
+   "addr": "00003c",
+   "s": "Composers"
+  },
+  {
+   "addr": "000047",
+   "s": "Audiobooks"
+  },
+  {
+   "addr": "000053",
+   "s": "No Playlists"
+  },
+  {
+   "addr": "000061",
+   "s": "No Artists"
+  },
+  {
+   "addr": "00006d",
+   "s": "No Albums"
+  },
+  {
+   "addr": "000078",
+   "s": "No Songs"
+  },
+  {
+   "addr": "000082",
+   "s": "No Podcasts"
+  },
+  {
+   "addr": "00008f",
+   "s": "No Composers"
+  },
+  {
+   "addr": "00009d",
+   "s": "No Audiobooks"
+  },
+  {
+   "addr": "0000ac",
+   "s": "Playlist"
+  },
+  {
+   "addr": "0000b6",
+   "s": "Artist"
+  },
+  {
+   "addr": "0000be",
+   "s": "Album"
+  },
+  {
+   "addr": "0000c5",
+   "s": "Track"
+  },
+  {
+   "addr": "0000cc",
+   "s": "Podcast"
+  },
+  {
+   "addr": "0000d5",
+   "s": "Composer"
+  },
+  {
+   "addr": "0000df",
+   "s": "Audiobook"
+  },
+  {
+   "addr": "0000ea",
+   "s": "Menu"
+  },
+  {
+   "addr": "0000f0",
+   "s": "Album Unknown"
+  },
+  {
+   "addr": "0000ff",
+   "s": "Artist Unknown"
+  }
+ ]
+}

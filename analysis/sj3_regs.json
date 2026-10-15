@@ -1,0 +1,5554 @@
+{
+"03fec000": [
+"C0GMCTRL",
+"CAN0 global control register"
+],
+"03fec002": [
+"C0GMCS",
+"CAN0 global clock selection register"
+],
+"03fec006": [
+"C0GMABT",
+"CAN0 global automatic block transmission"
+],
+"03fec008": [
+"C0GMABTD",
+"CAN0 global automatic block transmission"
+],
+"03fec040": [
+"C0MASK1L",
+"CAN0 module mask 1 register"
+],
+"03fec042": [
+"C0MASK1H",
+""
+],
+"03fec044": [
+"C0MASK2L",
+"CAN0 module mask 2 register"
+],
+"03fec046": [
+"C0MASK2H",
+""
+],
+"03fec048": [
+"C0MASK3L",
+"CAN0 module mask 3 register"
+],
+"03fec04a": [
+"C0MASK3H",
+""
+],
+"03fec04c": [
+"C0MASK4L",
+"CAN0 module mask 4 register"
+],
+"03fec04e": [
+"C0MASK4H",
+""
+],
+"03fec050": [
+"C0CTRL",
+"CAN0 module control register"
+],
+"03fec052": [
+"C0LEC",
+"CAN0 module last error code register"
+],
+"03fec053": [
+"C0INFO",
+"CAN0 module information register"
+],
+"03fec054": [
+"C0ERC",
+"CAN0 module error counter register"
+],
+"03fec056": [
+"C0IE",
+"CAN0 module interrupt enable register"
+],
+"03fec058": [
+"C0INTS",
+"CAN0 module interrupt status register"
+],
+"03fec05a": [
+"C0BRP",
+"CAN0 module bit-rate prescaler register"
+],
+"03fec05c": [
+"C0BTR",
+"CAN0 module bit-rate register"
+],
+"03fec05e": [
+"C0LIPT",
+"CAN0 module last in-pointer register"
+],
+"03fec060": [
+"C0RGPT",
+"CAN0 module receive history list register"
+],
+"03fec062": [
+"C0LOPT",
+"CAN0 module last out-pointer register"
+],
+"03fec064": [
+"C0TGPT",
+"CAN0 module transmit history list register"
+],
+"03fec066": [
+"C0TS",
+"CAN0 module time stamp register"
+],
+"03fec100": [
+"C0MDATA0100",
+"CAN0 message data byte 01 register 00"
+],
+"03fec101": [
+"C0MDATA100",
+"CAN0 message data byte 1 register 00"
+],
+"03fec102": [
+"C0MDATA2300",
+"CAN0 message data byte 23 register 00"
+],
+"03fec103": [
+"C0MDATA300",
+"CAN0 message data byte 3 register 00"
+],
+"03fec104": [
+"C0MDATA4500",
+"CAN0 message data byte 45 register 00"
+],
+"03fec105": [
+"C0MDATA500",
+"CAN0 message data byte 5 register 00"
+],
+"03fec106": [
+"C0MDATA6700",
+"CAN0 message data byte 67 register 00"
+],
+"03fec107": [
+"C0MDATA700",
+"CAN0 message data byte 7 register 00"
+],
+"03fec108": [
+"C0MDLC00",
+"CAN0 message data length register 00"
+],
+"03fec109": [
+"C0MCONF00",
+"CAN0 message configuration register 00"
+],
+"03fec10a": [
+"C0MIDL00",
+"CAN0 message identifier register 00"
+],
+"03fec10c": [
+"C0MIDH00",
+""
+],
+"03fec10e": [
+"C0MCTRL00",
+"CAN0 message control register 00"
+],
+"03fec120": [
+"C0MDATA0101",
+"CAN0 message data byte 01 register 01"
+],
+"03fec121": [
+"C0MDATA101",
+"CAN0 message data byte 1 register 01"
+],
+"03fec122": [
+"C0MDATA2301",
+"CAN0 message data byte 23 register 01"
+],
+"03fec123": [
+"C0MDATA301",
+"CAN0 message data byte 3 register 01"
+],
+"03fec124": [
+"C0MDATA4501",
+"CAN0 message data byte 45 register 01"
+],
+"03fec125": [
+"C0MDATA501",
+"CAN0 message data byte 5 register 01"
+],
+"03fec126": [
+"C0MDATA6701",
+"CAN0 message data byte 67 register 01"
+],
+"03fec127": [
+"C0MDATA701",
+"CAN0 message data byte 7 register 01"
+],
+"03fec128": [
+"C0MDLC01",
+"CAN0 message data length register 01"
+],
+"03fec129": [
+"C0MCONF01",
+"CAN0 message configuration register 01"
+],
+"03fec12a": [
+"C0MIDL01",
+"CAN0 message identifier register 01"
+],
+"03fec12c": [
+"C0MIDH01",
+""
+],
+"03fec12e": [
+"C0MCTRL01",
+"CAN0 message control register 01"
+],
+"03fec140": [
+"C0MDATA0102",
+"CAN0 message data byte 01 register 02"
+],
+"03fec141": [
+"C0MDATA102",
+"CAN0 message data byte 1 register 02"
+],
+"03fec142": [
+"C0MDATA2302",
+"CAN0 message data byte 23 register 02"
+],
+"03fec143": [
+"C0MDATA302",
+"CAN0 message data byte 3 register 02"
+],
+"03fec144": [
+"C0MDATA4502",
+"CAN0 message data byte 45 register 02"
+],
+"03fec145": [
+"C0MDATA502",
+"CAN0 message data byte 5 register 02"
+],
+"03fec146": [
+"C0MDATA6702",
+"CAN0 message data byte 67 register 02"
+],
+"03fec147": [
+"C0MDATA702",
+"CAN0 message data byte 7 register 02"
+],
+"03fec148": [
+"C0MDLC02",
+"CAN0 message data length register 02"
+],
+"03fec149": [
+"C0MCONF02",
+"CAN0 message configuration register 02"
+],
+"03fec14a": [
+"C0MIDL02",
+"CAN0 message identifier register 02"
+],
+"03fec14c": [
+"C0MIDH02",
+""
+],
+"03fec14e": [
+"C0MCTRL02",
+"CAN0 message control register 02"
+],
+"03fec160": [
+"C0MDATA0103",
+"CAN0 message data byte 01 register 03"
+],
+"03fec161": [
+"C0MDATA103",
+"CAN0 message data byte 1 register 03"
+],
+"03fec162": [
+"C0MDATA2303",
+"CAN0 message data byte 23 register 03"
+],
+"03fec163": [
+"C0MDATA303",
+"CAN0 message data byte 3 register 03"
+],
+"03fec164": [
+"C0MDATA4503",
+"CAN0 message data byte 45 register 03"
+],
+"03fec165": [
+"C0MDATA503",
+"CAN0 message data byte 5 register 03"
+],
+"03fec166": [
+"C0MDATA6703",
+"CAN0 message data byte 67 register 03"
+],
+"03fec167": [
+"C0MDATA703",
+"CAN0 message data byte 7 register 03"
+],
+"03fec168": [
+"C0MDLC03",
+"CAN0 message data length register 03"
+],
+"03fec169": [
+"C0MCONF03",
+"CAN0 message configuration register 03"
+],
+"03fec16a": [
+"C0MIDL03",
+"CAN0 message identifier register 03"
+],
+"03fec16c": [
+"C0MIDH03",
+""
+],
+"03fec16e": [
+"C0MCTRL03",
+"CAN0 message control register 03"
+],
+"03fec180": [
+"C0MDATA0104",
+"CAN0 message data byte 01 register 04"
+],
+"03fec181": [
+"C0MDATA104",
+"CAN0 message data byte 1 register 04"
+],
+"03fec182": [
+"C0MDATA2304",
+"CAN0 message data byte 23 register 04"
+],
+"03fec183": [
+"C0MDATA304",
+"CAN0 message data byte 3 register 04"
+],
+"03fec184": [
+"C0MDATA4504",
+"CAN0 message data byte 45 register 04"
+],
+"03fec185": [
+"C0MDATA504",
+"CAN0 message data byte 5 register 04"
+],
+"03fec186": [
+"C0MDATA6704",
+"CAN0 message data byte 67 register 04"
+],
+"03fec187": [
+"C0MDATA704",
+"CAN0 message data byte 7 register 04"
+],
+"03fec188": [
+"C0MDLC04",
+"CAN0 message data length register 04"
+],
+"03fec189": [
+"C0MCONF04",
+"CAN0 message configuration register 04"
+],
+"03fec18a": [
+"C0MIDL04",
+"CAN0 message identifier register 04"
+],
+"03fec18c": [
+"C0MIDH04",
+""
+],
+"03fec18e": [
+"C0MCTRL04",
+"CAN0 message control register 04"
+],
+"03fec1a0": [
+"C0MDATA0105",
+"CAN0 message data byte 01 register 05"
+],
+"03fec1a1": [
+"C0MDATA105",
+"CAN0 message data byte 1 register 05"
+],
+"03fec1a2": [
+"C0MDATA2305",
+"CAN0 message data byte 23 register 05"
+],
+"03fec1a3": [
+"C0MDATA305",
+"CAN0 message data byte 3 register 05"
+],
+"03fec1a4": [
+"C0MDATA4505",
+"CAN0 message data byte 45 register 05"
+],
+"03fec1a5": [
+"C0MDATA505",
+"CAN0 message data byte 5 register 05"
+],
+"03fec1a6": [
+"C0MDATA6705",
+"CAN0 message data byte 67 register 05"
+],
+"03fec1a7": [
+"C0MDATA705",
+"CAN0 message data byte 7 register 05"
+],
+"03fec1a8": [
+"C0MDLC05",
+"CAN0 message data length register 05"
+],
+"03fec1a9": [
+"C0MCONF05",
+"CAN0 message configuration register 05"
+],
+"03fec1aa": [
+"C0MIDL05",
+"CAN0 message identifier register 05"
+],
+"03fec1ac": [
+"C0MIDH05",
+""
+],
+"03fec1ae": [
+"C0MCTRL05",
+"CAN0 message control register 05"
+],
+"03fec1c0": [
+"C0MDATA0106",
+"CAN0 message data byte 01 register 06"
+],
+"03fec1c1": [
+"C0MDATA106",
+"CAN0 message data byte 1 register 06"
+],
+"03fec1c2": [
+"C0MDATA2306",
+"CAN0 message data byte 23 register 06"
+],
+"03fec1c3": [
+"C0MDATA306",
+"CAN0 message data byte 3 register 06"
+],
+"03fec1c4": [
+"C0MDATA4506",
+"CAN0 message data byte 45 register 06"
+],
+"03fec1c5": [
+"C0MDATA506",
+"CAN0 message data byte 5 register 06"
+],
+"03fec1c6": [
+"C0MDATA6706",
+"CAN0 message data byte 67 register 06"
+],
+"03fec1c7": [
+"C0MDATA706",
+"CAN0 message data byte 7 register 06"
+],
+"03fec1c8": [
+"C0MDLC06",
+"CAN0 message data length register 06"
+],
+"03fec1c9": [
+"C0MCONF06",
+"CAN0 message configuration register 06"
+],
+"03fec1ca": [
+"C0MIDL06",
+"CAN0 message identifier register 06"
+],
+"03fec1cc": [
+"C0MIDH06",
+""
+],
+"03fec1ce": [
+"C0MCTRL06",
+"CAN0 message control register 06"
+],
+"03fec1e0": [
+"C0MDATA0107",
+"CAN0 message data byte 01 register 07"
+],
+"03fec1e1": [
+"C0MDATA107",
+"CAN0 message data byte 1 register 07"
+],
+"03fec1e2": [
+"C0MDATA2307",
+"CAN0 message data byte 23 register 07"
+],
+"03fec1e3": [
+"C0MDATA307",
+"CAN0 message data byte 3 register 07"
+],
+"03fec1e4": [
+"C0MDATA4507",
+"CAN0 message data byte 45 register 07"
+],
+"03fec1e5": [
+"C0MDATA507",
+"CAN0 message data byte 5 register 07"
+],
+"03fec1e6": [
+"C0MDATA6707",
+"CAN0 message data byte 67 register 07"
+],
+"03fec1e7": [
+"C0MDATA707",
+"CAN0 message data byte 7 register 07"
+],
+"03fec1e8": [
+"C0MDLC07",
+"CAN0 message data length register 07"
+],
+"03fec1e9": [
+"C0MCONF07",
+"CAN0 message configuration register 07"
+],
+"03fec1ea": [
+"C0MIDL07",
+"CAN0 message identifier register 07"
+],
+"03fec1ec": [
+"C0MIDH07",
+""
+],
+"03fec1ee": [
+"C0MCTRL07",
+"CAN0 message control register 07"
+],
+"03fec200": [
+"C0MDATA0108",
+"CAN0 message data byte 01 register 08"
+],
+"03fec201": [
+"C0MDATA108",
+"CAN0 message data byte 1 register 08"
+],
+"03fec202": [
+"C0MDATA2308",
+"CAN0 message data byte 23 register 08"
+],
+"03fec203": [
+"C0MDATA308",
+"CAN0 message data byte 3 register 08"
+],
+"03fec204": [
+"C0MDATA4508",
+"CAN0 message data byte 45 register 08"
+],
+"03fec205": [
+"C0MDATA508",
+"CAN0 message data byte 5 register 08"
+],
+"03fec206": [
+"C0MDATA6708",
+"CAN0 message data byte 67 register 08"
+],
+"03fec207": [
+"C0MDATA708",
+"CAN0 message data byte 7 register 08"
+],
+"03fec208": [
+"C0MDLC08",
+"CAN0 message data length register 08"
+],
+"03fec209": [
+"C0MCONF08",
+"CAN0 message configuration register 08"
+],
+"03fec20a": [
+"C0MIDL08",
+"CAN0 message identifier register 08"
+],
+"03fec20c": [
+"C0MIDH08",
+""
+],
+"03fec20e": [
+"C0MCTRL08",
+"CAN0 message control register 08"
+],
+"03fec220": [
+"C0MDATA0109",
+"CAN0 message data byte 01 register 09"
+],
+"03fec221": [
+"C0MDATA109",
+"CAN0 message data byte 1 register 09"
+],
+"03fec222": [
+"C0MDATA2309",
+"CAN0 message data byte 23 register 09"
+],
+"03fec223": [
+"C0MDATA309",
+"CAN0 message data byte 3 register 09"
+],
+"03fec224": [
+"C0MDATA4509",
+"CAN0 message data byte 45 register 09"
+],
+"03fec225": [
+"C0MDATA509",
+"CAN0 message data byte 5 register 09"
+],
+"03fec226": [
+"C0MDATA6709",
+"CAN0 message data byte 67 register 09"
+],
+"03fec227": [
+"C0MDATA709",
+"CAN0 message data byte 7 register 09"
+],
+"03fec228": [
+"C0MDLC09",
+"CAN0 message data length register 09"
+],
+"03fec229": [
+"C0MCONF09",
+"CAN0 message configuration register 09"
+],
+"03fec22a": [
+"C0MIDL09",
+"CAN0 message identifier register 09"
+],
+"03fec22c": [
+"C0MIDH09",
+""
+],
+"03fec22e": [
+"C0MCTRL09",
+"CAN0 message control register 09"
+],
+"03fec240": [
+"C0MDATA0110",
+"CAN0 message data byte 01 register 10"
+],
+"03fec241": [
+"C0MDATA110",
+"CAN0 message data byte 1 register 10"
+],
+"03fec242": [
+"C0MDATA2310",
+"CAN0 message data byte 23 register 10"
+],
+"03fec243": [
+"C0MDATA310",
+"CAN0 message data byte 3 register 10"
+],
+"03fec244": [
+"C0MDATA4510",
+"CAN0 message data byte 45 register 10"
+],
+"03fec245": [
+"C0MDATA510",
+"CAN0 message data byte 5 register 10"
+],
+"03fec246": [
+"C0MDATA6710",
+"CAN0 message data byte 67 register 10"
+],
+"03fec247": [
+"C0MDATA710",
+"CAN0 message data byte 7 register 10"
+],
+"03fec248": [
+"C0MDLC10",
+"CAN0 message data length register 10"
+],
+"03fec249": [
+"C0MCONF10",
+"CAN0 message configuration register 10"
+],
+"03fec24a": [
+"C0MIDL10",
+"CAN0 message identifier register 10"
+],
+"03fec24c": [
+"C0MIDH10",
+""
+],
+"03fec24e": [
+"C0MCTRL10",
+"CAN0 message control register 10"
+],
+"03fec260": [
+"C0MDATA0111",
+"CAN0 message data byte 01 register 11"
+],
+"03fec261": [
+"C0MDATA111",
+"CAN0 message data byte 1 register 11"
+],
+"03fec262": [
+"C0MDATA2311",
+"CAN0 message data byte 23 register 11"
+],
+"03fec263": [
+"C0MDATA311",
+"CAN0 message data byte 3 register 11"
+],
+"03fec264": [
+"C0MDATA4511",
+"CAN0 message data byte 45 register 11"
+],
+"03fec265": [
+"C0MDATA511",
+"CAN0 message data byte 5 register 11"
+],
+"03fec266": [
+"C0MDATA6711",
+"CAN0 message data byte 67 register 11"
+],
+"03fec267": [
+"C0MDATA711",
+"CAN0 message data byte 7 register 11"
+],
+"03fec268": [
+"C0MDLC11",
+"CAN0 message data length register 11"
+],
+"03fec269": [
+"C0MCONF11",
+"CAN0 message configuration register 11"
+],
+"03fec26a": [
+"C0MIDL11",
+"CAN0 message identifier register 11"
+],
+"03fec26c": [
+"C0MIDH11",
+""
+],
+"03fec26e": [
+"C0MCTRL11",
+"CAN0 message control register 11"
+],
+"03fec280": [
+"C0MDATA0112",
+"CAN0 message data byte 01 register 12"
+],
+"03fec281": [
+"C0MDATA112",
+"CAN0 message data byte 1 register 12"
+],
+"03fec282": [
+"C0MDATA2312",
+"CAN0 message data byte 23 register 12"
+],
+"03fec283": [
+"C0MDATA312",
+"CAN0 message data byte 3 register 12"
+],
+"03fec284": [
+"C0MDATA4512",
+"CAN0 message data byte 45 register 12"
+],
+"03fec285": [
+"C0MDATA512",
+"CAN0 message data byte 5 register 12"
+],
+"03fec286": [
+"C0MDATA6712",
+"CAN0 message data byte 67 register 12"
+],
+"03fec287": [
+"C0MDATA712",
+"CAN0 message data byte 7 register 12"
+],
+"03fec288": [
+"C0MDLC12",
+"CAN0 message data length register 12"
+],
+"03fec289": [
+"C0MCONF12",
+"CAN0 message configuration register 12"
+],
+"03fec28a": [
+"C0MIDL12",
+"CAN0 message identifier register 12"
+],
+"03fec28c": [
+"C0MIDH12",
+""
+],
+"03fec28e": [
+"C0MCTRL12",
+"CAN0 message control register 12"
+],
+"03fec2a0": [
+"C0MDATA0113",
+"CAN0 message data byte 01 register 13"
+],
+"03fec2a1": [
+"C0MDATA113",
+"CAN0 message data byte 1 register 13"
+],
+"03fec2a2": [
+"C0MDATA2313",
+"CAN0 message data byte 23 register 13"
+],
+"03fec2a3": [
+"C0MDATA313",
+"CAN0 message data byte 3 register 13"
+],
+"03fec2a4": [
+"C0MDATA4513",
+"CAN0 message data byte 45 register 13"
+],
+"03fec2a5": [
+"C0MDATA513",
+"CAN0 message data byte 5 register 13"
+],
+"03fec2a6": [
+"C0MDATA6713",
+"CAN0 message data byte 67 register 13"
+],
+"03fec2a7": [
+"C0MDATA713",
+"CAN0 message data byte 7 register 13"
+],
+"03fec2a8": [
+"C0MDLC13",
+"CAN0 message data length register 13"
+],
+"03fec2a9": [
+"C0MCONF13",
+"CAN0 message configuration register 13"
+],
+"03fec2aa": [
+"C0MIDL13",
+"CAN0 message identifier register 13"
+],
+"03fec2ac": [
+"C0MIDH13",
+""
+],
+"03fec2ae": [
+"C0MCTRL13",
+"CAN0 message control register 13"
+],
+"03fec2c0": [
+"C0MDATA0114",
+"CAN0 message data byte 01 register 14"
+],
+"03fec2c1": [
+"C0MDATA114",
+"CAN0 message data byte 1 register 14"
+],
+"03fec2c2": [
+"C0MDATA2314",
+"CAN0 message data byte 23 register 14"
+],
+"03fec2c3": [
+"C0MDATA314",
+"CAN0 message data byte 3 register 14"
+],
+"03fec2c4": [
+"C0MDATA4514",
+"CAN0 message data byte 45 register 14"
+],
+"03fec2c5": [
+"C0MDATA514",
+"CAN0 message data byte 5 register 14"
+],
+"03fec2c6": [
+"C0MDATA6714",
+"CAN0 message data byte 67 register 14"
+],
+"03fec2c7": [
+"C0MDATA714",
+"CAN0 message data byte 7 register 14"
+],
+"03fec2c8": [
+"C0MDLC14",
+"CAN0 message data length register 14"
+],
+"03fec2c9": [
+"C0MCONF14",
+"CAN0 message configuration register 14"
+],
+"03fec2ca": [
+"C0MIDL14",
+"CAN0 message identifier register 14"
+],
+"03fec2cc": [
+"C0MIDH14",
+""
+],
+"03fec2ce": [
+"C0MCTRL14",
+"CAN0 message control register 14"
+],
+"03fec2e0": [
+"C0MDATA0115",
+"CAN0 message data byte 01 register 15"
+],
+"03fec2e1": [
+"C0MDATA115",
+"CAN0 message data byte 1 register 15"
+],
+"03fec2e2": [
+"C0MDATA2315",
+"CAN0 message data byte 23 register 15"
+],
+"03fec2e3": [
+"C0MDATA315",
+"CAN0 message data byte 3 register 15"
+],
+"03fec2e4": [
+"C0MDATA4515",
+"CAN0 message data byte 45 register 15"
+],
+"03fec2e5": [
+"C0MDATA515",
+"CAN0 message data byte 5 register 15"
+],
+"03fec2e6": [
+"C0MDATA6715",
+"CAN0 message data byte 67 register 15"
+],
+"03fec2e7": [
+"C0MDATA715",
+"CAN0 message data byte 7 register 15"
+],
+"03fec2e8": [
+"C0MDLC15",
+"CAN0 message data length register 15"
+],
+"03fec2e9": [
+"C0MCONF15",
+"CAN0 message configuration register 15"
+],
+"03fec2ea": [
+"C0MIDL15",
+"CAN0 message identifier register 15"
+],
+"03fec2ec": [
+"C0MIDH15",
+""
+],
+"03fec2ee": [
+"C0MCTRL15",
+"CAN0 message control register 15"
+],
+"03fec300": [
+"C0MDATA0116",
+"CAN0 message data byte 01 register 16"
+],
+"03fec301": [
+"C0MDATA116",
+"CAN0 message data byte 1 register 16"
+],
+"03fec302": [
+"C0MDATA2316",
+"CAN0 message data byte 23 register 16"
+],
+"03fec303": [
+"C0MDATA316",
+"CAN0 message data byte 3 register 16"
+],
+"03fec304": [
+"C0MDATA4516",
+"CAN0 message data byte 45 register 16"
+],
+"03fec305": [
+"C0MDATA516",
+"CAN0 message data byte 5 register 16"
+],
+"03fec306": [
+"C0MDATA6716",
+"CAN0 message data byte 67 register 16"
+],
+"03fec307": [
+"C0MDATA716",
+"CAN0 message data byte 7 register 16"
+],
+"03fec308": [
+"C0MDLC16",
+"CAN0 message data length register 16"
+],
+"03fec309": [
+"C0MCONF16",
+"CAN0 message configuration register 16"
+],
+"03fec30a": [
+"C0MIDL16",
+"CAN0 message identifier register 16"
+],
+"03fec30c": [
+"C0MIDH16",
+""
+],
+"03fec30e": [
+"C0MCTRL16",
+"CAN0 message control register 16"
+],
+"03fec320": [
+"C0MDATA0117",
+"CAN0 message data byte 01 register 17"
+],
+"03fec321": [
+"C0MDATA117",
+"CAN0 message data byte 1 register 17"
+],
+"03fec322": [
+"C0MDATA2317",
+"CAN0 message data byte 23 register 17"
+],
+"03fec323": [
+"C0MDATA317",
+"CAN0 message data byte 3 register 17"
+],
+"03fec324": [
+"C0MDATA4517",
+"CAN0 message data byte 45 register 17"
+],
+"03fec325": [
+"C0MDATA517",
+"CAN0 message data byte 5 register 17"
+],
+"03fec326": [
+"C0MDATA6717",
+"CAN0 message data byte 67 register 17"
+],
+"03fec327": [
+"C0MDATA717",
+"CAN0 message data byte 7 register 17"
+],
+"03fec328": [
+"C0MDLC17",
+"CAN0 message data length register 17"
+],
+"03fec329": [
+"C0MCONF17",
+"CAN0 message configuration register 17"
+],
+"03fec32a": [
+"C0MIDL17",
+"CAN0 message identifier register 17"
+],
+"03fec32c": [
+"C0MIDH17",
+""
+],
+"03fec32e": [
+"C0MCTRL17",
+"CAN0 message control register 17"
+],
+"03fec340": [
+"C0MDATA0118",
+"CAN0 message data byte 01 register 18"
+],
+"03fec341": [
+"C0MDATA118",
+"CAN0 message data byte 1 register 18"
+],
+"03fec342": [
+"C0MDATA2318",
+"CAN0 message data byte 23 register 18"
+],
+"03fec343": [
+"C0MDATA318",
+"CAN0 message data byte 3 register 18"
+],
+"03fec344": [
+"C0MDATA4518",
+"CAN0 message data byte 45 register 18"
+],
+"03fec345": [
+"C0MDATA518",
+"CAN0 message data byte 5 register 18"
+],
+"03fec346": [
+"C0MDATA6718",
+"CAN0 message data byte 67 register 18"
+],
+"03fec347": [
+"C0MDATA718",
+"CAN0 message data byte 7 register 18"
+],
+"03fec348": [
+"C0MDLC18",
+"CAN0 message data length register 18"
+],
+"03fec349": [
+"C0MCONF18",
+"CAN0 message configuration register 18"
+],
+"03fec34a": [
+"C0MIDL18",
+"CAN0 message identifier register 18"
+],
+"03fec34c": [
+"C0MIDH18",
+""
+],
+"03fec34e": [
+"C0MCTRL18",
+"CAN0 message control register 18"
+],
+"03fec360": [
+"C0MDATA0119",
+"CAN0 message data byte 01 register 19"
+],
+"03fec361": [
+"C0MDATA119",
+"CAN0 message data byte 1 register 19"
+],
+"03fec362": [
+"C0MDATA2319",
+"CAN0 message data byte 23 register 19"
+],
+"03fec363": [
+"C0MDATA319",
+"CAN0 message data byte 3 register 19"
+],
+"03fec364": [
+"C0MDATA4519",
+"CAN0 message data byte 45 register 19"
+],
+"03fec365": [
+"C0MDATA519",
+"CAN0 message data byte 5 register 19"
+],
+"03fec366": [
+"C0MDATA6719",
+"CAN0 message data byte 67 register 19"
+],
+"03fec367": [
+"C0MDATA719",
+"CAN0 message data byte 7 register 19"
+],
+"03fec368": [
+"C0MDLC19",
+"CAN0 message data length register 19"
+],
+"03fec369": [
+"C0MCONF19",
+"CAN0 message configuration register 19"
+],
+"03fec36a": [
+"C0MIDL19",
+"CAN0 message identifier register 19"
+],
+"03fec36c": [
+"C0MIDH19",
+""
+],
+"03fec36e": [
+"C0MCTRL19",
+"CAN0 message control register 19"
+],
+"03fec380": [
+"C0MDATA0120",
+"CAN0 message data byte 01 register 20"
+],
+"03fec381": [
+"C0MDATA120",
+"CAN0 message data byte 1 register 20"
+],
+"03fec382": [
+"C0MDATA2320",
+"CAN0 message data byte 23 register 20"
+],
+"03fec383": [
+"C0MDATA320",
+"CAN0 message data byte 3 register 20"
+],
+"03fec384": [
+"C0MDATA4520",
+"CAN0 message data byte 45 register 20"
+],
+"03fec385": [
+"C0MDATA520",
+"CAN0 message data byte 5 register 20"
+],
+"03fec386": [
+"C0MDATA6720",
+"CAN0 message data byte 67 register 20"
+],
+"03fec387": [
+"C0MDATA720",
+"CAN0 message data byte 7 register 20"
+],
+"03fec388": [
+"C0MDLC20",
+"CAN0 message data length register 20"
+],
+"03fec389": [
+"C0MCONF20",
+"CAN0 message configuration register 20"
+],
+"03fec38a": [
+"C0MIDL20",
+"CAN0 message identifier register 20"
+],
+"03fec38c": [
+"C0MIDH20",
+""
+],
+"03fec38e": [
+"C0MCTRL20",
+"CAN0 message control register 20"
+],
+"03fec3a0": [
+"C0MDATA0121",
+"CAN0 message data byte 01 register 21"
+],
+"03fec3a1": [
+"C0MDATA121",
+"CAN0 message data byte 1 register 21"
+],
+"03fec3a2": [
+"C0MDATA2321",
+"CAN0 message data byte 23 register 21"
+],
+"03fec3a3": [
+"C0MDATA321",
+"CAN0 message data byte 3 register 21"
+],
+"03fec3a4": [
+"C0MDATA4521",
+"CAN0 message data byte 45 register 21"
+],
+"03fec3a5": [
+"C0MDATA521",
+"CAN0 message data byte 5 register 21"
+],
+"03fec3a6": [
+"C0MDATA6721",
+"CAN0 message data byte 67 register 21"
+],
+"03fec3a7": [
+"C0MDATA721",
+"CAN0 message data byte 7 register 21"
+],
+"03fec3a8": [
+"C0MDLC21",
+"CAN0 message data length register 21"
+],
+"03fec3a9": [
+"C0MCONF21",
+"CAN0 message configuration register 21"
+],
+"03fec3aa": [
+"C0MIDL21",
+"CAN0 message identifier register 21"
+],
+"03fec3ac": [
+"C0MIDH21",
+""
+],
+"03fec3ae": [
+"C0MCTRL21",
+"CAN0 message control register 21"
+],
+"03fec3c0": [
+"C0MDATA0122",
+"CAN0 message data byte 01 register 22"
+],
+"03fec3c1": [
+"C0MDATA122",
+"CAN0 message data byte 1 register 22"
+],
+"03fec3c2": [
+"C0MDATA2322",
+"CAN0 message data byte 23 register 22"
+],
+"03fec3c3": [
+"C0MDATA322",
+"CAN0 message data byte 3 register 22"
+],
+"03fec3c4": [
+"C0MDATA4522",
+"CAN0 message data byte 45 register 22"
+],
+"03fec3c5": [
+"C0MDATA522",
+"CAN0 message data byte 5 register 22"
+],
+"03fec3c6": [
+"C0MDATA6722",
+"CAN0 message data byte 67 register 22"
+],
+"03fec3c7": [
+"C0MDATA722",
+"CAN0 message data byte 7 register 22"
+],
+"03fec3c8": [
+"C0MDLC22",
+"CAN0 message data length register 22"
+],
+"03fec3c9": [
+"C0MCONF22",
+"CAN0 message configuration register 22"
+],
+"03fec3ca": [
+"C0MIDL22",
+"CAN0 message identifier register 22"
+],
+"03fec3cc": [
+"C0MIDH22",
+""
+],
+"03fec3ce": [
+"C0MCTRL22",
+"CAN0 message control register 22"
+],
+"03fec3e0": [
+"C0MDATA0123",
+"CAN0 message data byte 01 register 23"
+],
+"03fec3e1": [
+"C0MDATA123",
+"CAN0 message data byte 1 register 23"
+],
+"03fec3e2": [
+"C0MDATA2323",
+"CAN0 message data byte 23 register 23"
+],
+"03fec3e3": [
+"C0MDATA323",
+"CAN0 message data byte 3 register 23"
+],
+"03fec3e4": [
+"C0MDATA4523",
+"CAN0 message data byte 45 register 23"
+],
+"03fec3e5": [
+"C0MDATA523",
+"CAN0 message data byte 5 register 23"
+],
+"03fec3e6": [
+"C0MDATA6723",
+"CAN0 message data byte 67 register 23"
+],
+"03fec3e7": [
+"C0MDATA723",
+"CAN0 message data byte 7 register 23"
+],
+"03fec3e8": [
+"C0MDLC23",
+"CAN0 message data length register 23"
+],
+"03fec3e9": [
+"C0MCONF23",
+"CAN0 message configuration register 23"
+],
+"03fec3ea": [
+"C0MIDL23",
+"CAN0 message identifier register 23"
+],
+"03fec3ec": [
+"C0MIDH23",
+""
+],
+"03fec3ee": [
+"C0MCTRL23",
+"CAN0 message control register 23"
+],
+"03fec400": [
+"C0MDATA0124",
+"CAN0 message data byte 01 register 24"
+],
+"03fec401": [
+"C0MDATA124",
+"CAN0 message data byte 1 register 24"
+],
+"03fec402": [
+"C0MDATA2324",
+"CAN0 message data byte 23 register 24"
+],
+"03fec403": [
+"C0MDATA324",
+"CAN0 message data byte 3 register 24"
+],
+"03fec404": [
+"C0MDATA4524",
+"CAN0 message data byte 45 register 24"
+],
+"03fec405": [
+"C0MDATA524",
+"CAN0 message data byte 5 register 24"
+],
+"03fec406": [
+"C0MDATA6724",
+"CAN0 message data byte 67 register 24"
+],
+"03fec407": [
+"C0MDATA724",
+"CAN0 message data byte 7 register 24"
+],
+"03fec408": [
+"C0MDLC24",
+"CAN0 message data length register 24"
+],
+"03fec409": [
+"C0MCONF24",
+"CAN0 message configuration register 24"
+],
+"03fec40a": [
+"C0MIDL24",
+"CAN0 message identifier register 24"
+],
+"03fec40c": [
+"C0MIDH24",
+""
+],
+"03fec40e": [
+"C0MCTRL24",
+"CAN0 message control register 24"
+],
+"03fec420": [
+"C0MDATA0125",
+"CAN0 message data byte 01 register 25"
+],
+"03fec421": [
+"C0MDATA125",
+"CAN0 message data byte 1 register 25"
+],
+"03fec422": [
+"C0MDATA2325",
+"CAN0 message data byte 23 register 25"
+],
+"03fec423": [
+"C0MDATA325",
+"CAN0 message data byte 3 register 25"
+],
+"03fec424": [
+"C0MDATA4525",
+"CAN0 message data byte 45 register 25"
+],
+"03fec425": [
+"C0MDATA525",
+"CAN0 message data byte 5 register 25"
+],
+"03fec426": [
+"C0MDATA6725",
+"CAN0 message data byte 67 register 25"
+],
+"03fec427": [
+"C0MDATA725",
+"CAN0 message data byte 7 register 25"
+],
+"03fec428": [
+"C0MDLC25",
+"CAN0 message data length register 25"
+],
+"03fec429": [
+"C0MCONF25",
+"CAN0 message configuration register 25"
+],
+"03fec42a": [
+"C0MIDL25",
+"CAN0 message identifier register 25"
+],
+"03fec42c": [
+"C0MIDH25",
+""
+],
+"03fec42e": [
+"C0MCTRL25",
+"CAN0 message control register 25"
+],
+"03fec440": [
+"C0MDATA0126",
+"CAN0 message data byte 01 register 26"
+],
+"03fec441": [
+"C0MDATA126",
+"CAN0 message data byte 1 register 26"
+],
+"03fec442": [
+"C0MDATA2326",
+"CAN0 message data byte 23 register 26"
+],
+"03fec443": [
+"C0MDATA326",
+"CAN0 message data byte 3 register 26"
+],
+"03fec444": [
+"C0MDATA4526",
+"CAN0 message data byte 45 register 26"
+],
+"03fec445": [
+"C0MDATA526",
+"CAN0 message data byte 5 register 26"
+],
+"03fec446": [
+"C0MDATA6726",
+"CAN0 message data byte 67 register 26"
+],
+"03fec447": [
+"C0MDATA726",
+"CAN0 message data byte 7 register 26"
+],
+"03fec448": [
+"C0MDLC26",
+"CAN0 message data length register 26"
+],
+"03fec449": [
+"C0MCONF26",
+"CAN0 message configuration register 26"
+],
+"03fec44a": [
+"C0MIDL26",
+"CAN0 message identifier register 26"
+],
+"03fec44c": [
+"C0MIDH26",
+""
+],
+"03fec44e": [
+"C0MCTRL26",
+"CAN0 message control register 26"
+],
+"03fec460": [
+"C0MDATA0127",
+"CAN0 message data byte 01 register 27"
+],
+"03fec461": [
+"C0MDATA127",
+"CAN0 message data byte 1 register 27"
+],
+"03fec462": [
+"C0MDATA2327",
+"CAN0 message data byte 23 register 27"
+],
+"03fec463": [
+"C0MDATA327",
+"CAN0 message data byte 3 register 27"
+],
+"03fec464": [
+"C0MDATA4527",
+"CAN0 message data byte 45 register 27"
+],
+"03fec465": [
+"C0MDATA527",
+"CAN0 message data byte 5 register 27"
+],
+"03fec466": [
+"C0MDATA6727",
+"CAN0 message data byte 67 register 27"
+],
+"03fec467": [
+"C0MDATA727",
+"CAN0 message data byte 7 register 27"
+],
+"03fec468": [
+"C0MDLC27",
+"CAN0 message data length register 27"
+],
+"03fec469": [
+"C0MCONF27",
+"CAN0 message configuration register 27"
+],
+"03fec46a": [
+"C0MIDL27",
+"CAN0 message identifier register 27"
+],
+"03fec46c": [
+"C0MIDH27",
+""
+],
+"03fec46e": [
+"C0MCTRL27",
+"CAN0 message control register 27"
+],
+"03fec480": [
+"C0MDATA0128",
+"CAN0 message data byte 01 register 28"
+],
+"03fec481": [
+"C0MDATA128",
+"CAN0 message data byte 1 register 28"
+],
+"03fec482": [
+"C0MDATA2328",
+"CAN0 message data byte 23 register 28"
+],
+"03fec483": [
+"C0MDATA328",
+"CAN0 message data byte 3 register 28"
+],
+"03fec484": [
+"C0MDATA4528",
+"CAN0 message data byte 45 register 28"
+],
+"03fec485": [
+"C0MDATA528",
+"CAN0 message data byte 5 register 28"
+],
+"03fec486": [
+"C0MDATA6728",
+"CAN0 message data byte 67 register 28"
+],
+"03fec487": [
+"C0MDATA728",
+"CAN0 message data byte 7 register 28"
+],
+"03fec488": [
+"C0MDLC28",
+"CAN0 message data length register 28"
+],
+"03fec489": [
+"C0MCONF28",
+"CAN0 message configuration register 28"
+],
+"03fec48a": [
+"C0MIDL28",
+"CAN0 message identifier register 28"
+],
+"03fec48c": [
+"C0MIDH28",
+""
+],
+"03fec48e": [
+"C0MCTRL28",
+"CAN0 message control register 28"
+],
+"03fec4a0": [
+"C0MDATA0129",
+"CAN0 message data byte 01 register 29"
+],
+"03fec4a1": [
+"C0MDATA129",
+"CAN0 message data byte 1 register 29"
+],
+"03fec4a2": [
+"C0MDATA2329",
+"CAN0 message data byte 23 register 29"
+],
+"03fec4a3": [
+"C0MDATA329",
+"CAN0 message data byte 3 register 29"
+],
+"03fec4a4": [
+"C0MDATA4529",
+"CAN0 message data byte 45 register 29"
+],
+"03fec4a5": [
+"C0MDATA529",
+"CAN0 message data byte 5 register 29"
+],
+"03fec4a6": [
+"C0MDATA6729",
+"CAN0 message data byte 67 register 29"
+],
+"03fec4a7": [
+"C0MDATA729",
+"CAN0 message data byte 7 register 29"
+],
+"03fec4a8": [
+"C0MDLC29",
+"CAN0 message data length register 29"
+],
+"03fec4a9": [
+"C0MCONF29",
+"CAN0 message configuration register 29"
+],
+"03fec4aa": [
+"C0MIDL29",
+"CAN0 message identifier register 29"
+],
+"03fec4ac": [
+"C0MIDH29",
+""
+],
+"03fec4ae": [
+"C0MCTRL29",
+"CAN0 message control register 29"
+],
+"03fec4c0": [
+"C0MDATA0130",
+"CAN0 message data byte 01 register 30"
+],
+"03fec4c1": [
+"C0MDATA130",
+"CAN0 message data byte 1 register 30"
+],
+"03fec4c2": [
+"C0MDATA2330",
+"CAN0 message data byte 23 register 30"
+],
+"03fec4c3": [
+"C0MDATA330",
+"CAN0 message data byte 3 register 30"
+],
+"03fec4c4": [
+"C0MDATA4530",
+"CAN0 message data byte 45 register 30"
+],
+"03fec4c5": [
+"C0MDATA530",
+"CAN0 message data byte 5 register 30"
+],
+"03fec4c6": [
+"C0MDATA6730",
+"CAN0 message data byte 67 register 30"
+],
+"03fec4c7": [
+"C0MDATA730",
+"CAN0 message data byte 7 register 30"
+],
+"03fec4c8": [
+"C0MDLC30",
+"CAN0 message data length register 30"
+],
+"03fec4c9": [
+"C0MCONF30",
+"CAN0 message configuration register 30"
+],
+"03fec4ca": [
+"C0MIDL30",
+"CAN0 message identifier register 30"
+],
+"03fec4cc": [
+"C0MIDH30",
+""
+],
+"03fec4ce": [
+"C0MCTRL30",
+"CAN0 message control register 30"
+],
+"03fec4e0": [
+"C0MDATA0131",
+"CAN0 message data byte 01 register 31"
+],
+"03fec4e1": [
+"C0MDATA131",
+"CAN0 message data byte 1 register 31"
+],
+"03fec4e2": [
+"C0MDATA2331",
+"CAN0 message data byte 23 register 31"
+],
+"03fec4e3": [
+"C0MDATA331",
+"CAN0 message data byte 3 register 31"
+],
+"03fec4e4": [
+"C0MDATA4531",
+"CAN0 message data byte 45 register 31"
+],
+"03fec4e5": [
+"C0MDATA531",
+"CAN0 message data byte 5 register 31"
+],
+"03fec4e6": [
+"C0MDATA6731",
+"CAN0 message data byte 67 register 31"
+],
+"03fec4e7": [
+"C0MDATA731",
+"CAN0 message data byte 7 register 31"
+],
+"03fec4e8": [
+"C0MDLC31",
+"CAN0 message data length register 31"
+],
+"03fec4e9": [
+"C0MCONF31",
+"CAN0 message configuration register 31"
+],
+"03fec4ea": [
+"C0MIDL31",
+"CAN0 message identifier register 31"
+],
+"03fec4ec": [
+"C0MIDH31",
+""
+],
+"03fec4ee": [
+"C0MCTRL31",
+"CAN0 message control register 31"
+],
+"03fec600": [
+"C1GMCTRL",
+"CAN1 global control register"
+],
+"03fec602": [
+"C1GMCS",
+"CAN1 global clock selection register"
+],
+"03fec606": [
+"C1GMABT",
+"CAN1 global block transmission register"
+],
+"03fec608": [
+"C1GMABTD",
+"CAN1 global block transmission delay register"
+],
+"03fec640": [
+"C1MASK1L",
+"CAN1 module mask 1 register"
+],
+"03fec642": [
+"C1MASK1H",
+""
+],
+"03fec644": [
+"C1MASK2L",
+"CAN1 module mask 2 register"
+],
+"03fec646": [
+"C1MASK2H",
+""
+],
+"03fec648": [
+"C1MASK3L",
+"CAN1 module mask 3 register"
+],
+"03fec64a": [
+"C1MASK3H",
+""
+],
+"03fec64c": [
+"C1MASK4L",
+"CAN1 module mask 4 register"
+],
+"03fec64e": [
+"C1MASK4H",
+""
+],
+"03fec650": [
+"C1CTRL",
+"CAN1 module control register"
+],
+"03fec652": [
+"C1LEC",
+"CAN1 module last error code register"
+],
+"03fec653": [
+"C1INFO",
+"CAN1 module information register"
+],
+"03fec654": [
+"C1ERC",
+"CAN1 module error counter register"
+],
+"03fec656": [
+"C1IE",
+"CAN1 module interrupt enable register"
+],
+"03fec658": [
+"C1INTS",
+"CAN1 module interrupt status register"
+],
+"03fec65a": [
+"C1BRP",
+"CAN1 module bit-rate prescaler register"
+],
+"03fec65c": [
+"C1BTR",
+"CAN1 module bit-rate register"
+],
+"03fec65e": [
+"C1LIPT",
+"CAN1 module last in-pointer register"
+],
+"03fec660": [
+"C1RGPT",
+"CAN1 module receive history list register"
+],
+"03fec662": [
+"C1LOPT",
+"CAN1 module last out-pointer register"
+],
+"03fec664": [
+"C1TGPT",
+"CAN1 module transmit history list register"
+],
+"03fec666": [
+"C1TS",
+"CAN1 module time stamp register"
+],
+"03fec700": [
+"C1MDATA0100",
+"CAN1 message data byte 01 register 00"
+],
+"03fec701": [
+"C1MDATA100",
+"CAN1 message data byte 1 register 00"
+],
+"03fec702": [
+"C1MDATA2300",
+"CAN1 message data byte 23 register 00"
+],
+"03fec703": [
+"C1MDATA300",
+"CAN1 message data byte 3 register 00"
+],
+"03fec704": [
+"C1MDATA4500",
+"CAN1 message data byte 45 register 00"
+],
+"03fec705": [
+"C1MDATA500",
+"CAN1 message data byte 5 register 00"
+],
+"03fec706": [
+"C1MDATA6700",
+"CAN1 message data byte 67 register 00"
+],
+"03fec707": [
+"C1MDATA700",
+"CAN1 message data byte 7 register 00"
+],
+"03fec708": [
+"C1MDLC00",
+"CAN1 message data length register 00"
+],
+"03fec709": [
+"C1MCONF00",
+"CAN1 message configuration register 00"
+],
+"03fec70a": [
+"C1MIDL00",
+"CAN1 message identifier register 00"
+],
+"03fec70c": [
+"C1MIDH00",
+""
+],
+"03fec70e": [
+"C1MCTRL00",
+"CAN1 message control register 00"
+],
+"03fec720": [
+"C1MDATA0101",
+"CAN1 message data byte 01 register 01"
+],
+"03fec721": [
+"C1MDATA101",
+"CAN1 message data byte 1 register 01"
+],
+"03fec722": [
+"C1MDATA2301",
+"CAN1 message data byte 23 register 01"
+],
+"03fec723": [
+"C1MDATA301",
+"CAN1 message data byte 3 register 01"
+],
+"03fec724": [
+"C1MDATA4501",
+"CAN1 message data byte 45 register 01"
+],
+"03fec725": [
+"C1MDATA501",
+"CAN1 message data byte 5 register 01"
+],
+"03fec726": [
+"C1MDATA6701",
+"CAN1 message data byte 67 register 01"
+],
+"03fec727": [
+"C1MDATA701",
+"CAN1 message data byte 7 register 01"
+],
+"03fec728": [
+"C1MDLC01",
+"CAN1 message data length register 01"
+],
+"03fec729": [
+"C1MCONF01",
+"CAN1 message configuration register 01"
+],
+"03fec72a": [
+"C1MIDL01",
+"CAN1 message identifier register 01"
+],
+"03fec72c": [
+"C1MIDH01",
+""
+],
+"03fec72e": [
+"C1MCTRL01",
+"CAN1 message control register 01"
+],
+"03fec740": [
+"C1MDATA0102",
+"CAN1 message data byte 01 register 02"
+],
+"03fec741": [
+"C1MDATA102",
+"CAN1 message data byte 1 register 02"
+],
+"03fec742": [
+"C1MDATA2302",
+"CAN1 message data byte 23 register 02"
+],
+"03fec743": [
+"C1MDATA302",
+"CAN1 message data byte 3 register 02"
+],
+"03fec744": [
+"C1MDATA4502",
+"CAN1 message data byte 45 register 02"
+],
+"03fec745": [
+"C1MDATA502",
+"CAN1 message data byte 5 register 02"
+],
+"03fec746": [
+"C1MDATA6702",
+"CAN1 message data byte 67 register 02"
+],
+"03fec747": [
+"C1MDATA702",
+"CAN1 message data byte 7 register 02"
+],
+"03fec748": [
+"C1MDLC02",
+"CAN1 message data length register 02"
+],
+"03fec749": [
+"C1MCONF02",
+"CAN1 message configuration register 02"
+],
+"03fec74a": [
+"C1MIDL02",
+"CAN1 message identifier register 02"
+],
+"03fec74c": [
+"C1MIDH02",
+""
+],
+"03fec74e": [
+"C1MCTRL02",
+"CAN1 message control register 02"
+],
+"03fec760": [
+"C1MDATA0103",
+"CAN1 message data byte 01 register 03"
+],
+"03fec761": [
+"C1MDATA103",
+"CAN1 message data byte 1 register 03"
+],
+"03fec762": [
+"C1MDATA2303",
+"CAN1 message data byte 23 register 03"
+],
+"03fec763": [
+"C1MDATA303",
+"CAN1 message data byte 3 register 03"
+],
+"03fec764": [
+"C1MDATA4503",
+"CAN1 message data byte 45 register 03"
+],
+"03fec765": [
+"C1MDATA503",
+"CAN1 message data byte 5 register 03"
+],
+"03fec766": [
+"C1MDATA6703",
+"CAN1 message data byte 67 register 03"
+],
+"03fec767": [
+"C1MDATA703",
+"CAN1 message data byte 7 register 03"
+],
+"03fec768": [
+"C1MDLC03",
+"CAN1 message data length register 03"
+],
+"03fec769": [
+"C1MCONF03",
+"CAN1 message configuration register 03"
+],
+"03fec76a": [
+"C1MIDL03",
+"CAN1 message identifier register 03"
+],
+"03fec76c": [
+"C1MIDH03",
+""
+],
+"03fec76e": [
+"C1MCTRL03",
+"CAN1 message control register 03"
+],
+"03fec780": [
+"C1MDATA0104",
+"CAN1 message data byte 01 register 04"
+],
+"03fec781": [
+"C1MDATA104",
+"CAN1 message data byte 1 register 04"
+],
+"03fec782": [
+"C1MDATA2304",
+"CAN1 message data byte 23 register 04"
+],
+"03fec783": [
+"C1MDATA304",
+"CAN1 message data byte 3 register 04"
+],
+"03fec784": [
+"C1MDATA4504",
+"CAN1 message data byte 45 register 04"
+],
+"03fec785": [
+"C1MDATA504",
+"CAN1 message data byte 5 register 04"
+],
+"03fec786": [
+"C1MDATA6704",
+"CAN1 message data byte 67 register 04"
+],
+"03fec787": [
+"C1MDATA704",
+"CAN1 message data byte 7 register 04"
+],
+"03fec788": [
+"C1MDLC04",
+"CAN1 message data length register 04"
+],
+"03fec789": [
+"C1MCONF04",
+"CAN1 message configuration register 04"
+],
+"03fec78a": [
+"C1MIDL04",
+"CAN1 message identifier register 04"
+],
+"03fec78c": [
+"C1MIDH04",
+""
+],
+"03fec78e": [
+"C1MCTRL04",
+"CAN1 message control register 04"
+],
+"03fec7a0": [
+"C1MDATA0105",
+"CAN1 message data byte 01 register 05"
+],
+"03fec7a1": [
+"C1MDATA105",
+"CAN1 message data byte 1 register 05"
+],
+"03fec7a2": [
+"C1MDATA2305",
+"CAN1 message data byte 23 register 05"
+],
+"03fec7a3": [
+"C1MDATA305",
+"CAN1 message data byte 3 register 05"
+],
+"03fec7a4": [
+"C1MDATA4505",
+"CAN1 message data byte 45 register 05"
+],
+"03fec7a5": [
+"C1MDATA505",
+"CAN1 message data byte 5 register 05"
+],
+"03fec7a6": [
+"C1MDATA6705",
+"CAN1 message data byte 67 register 05"
+],
+"03fec7a7": [
+"C1MDATA705",
+"CAN1 message data byte 7 register 05"
+],
+"03fec7a8": [
+"C1MDLC05",
+"CAN1 message data length register 05"
+],
+"03fec7a9": [
+"C1MCONF05",
+"CAN1 message configuration register 05"
+],
+"03fec7aa": [
+"C1MIDL05",
+"CAN1 message identifier register 05"
+],
+"03fec7ac": [
+"C1MIDH05",
+""
+],
+"03fec7ae": [
+"C1MCTRL05",
+"CAN1 message control register 05"
+],
+"03fec7c0": [
+"C1MDATA0106",
+"CAN1 message data byte 01 register 06"
+],
+"03fec7c1": [
+"C1MDATA106",
+"CAN1 message data byte 1 register 06"
+],
+"03fec7c2": [
+"C1MDATA2306",
+"CAN1 message data byte 23 register 06"
+],
+"03fec7c3": [
+"C1MDATA306",
+"CAN1 message data byte 3 register 06"
+],
+"03fec7c4": [
+"C1MDATA4506",
+"CAN1 message data byte 45 register 06"
+],
+"03fec7c5": [
+"C1MDATA506",
+"CAN1 message data byte 5 register 06"
+],
+"03fec7c6": [
+"C1MDATA6706",
+"CAN1 message data byte 67 register 06"
+],
+"03fec7c7": [
+"C1MDATA706",
+"CAN1 message data byte 7 register 06"
+],
+"03fec7c8": [
+"C1MDLC06",
+"CAN1 message data length register 06"
+],
+"03fec7c9": [
+"C1MCONF06",
+"CAN1 message configuration register 06"
+],
+"03fec7ca": [
+"C1MIDL06",
+"CAN1 message identifier register 06"
+],
+"03fec7cc": [
+"C1MIDH06",
+""
+],
+"03fec7ce": [
+"C1MCTRL06",
+"CAN1 message control register 06"
+],
+"03fec7e0": [
+"C1MDATA0107",
+"CAN1 message data byte 01 register 07"
+],
+"03fec7e1": [
+"C1MDATA107",
+"CAN1 message data byte 1 register 07"
+],
+"03fec7e2": [
+"C1MDATA2307",
+"CAN1 message data byte 23 register 07"
+],
+"03fec7e3": [
+"C1MDATA307",
+"CAN1 message data byte 3 register 07"
+],
+"03fec7e4": [
+"C1MDATA4507",
+"CAN1 message data byte 45 register 07"
+],
+"03fec7e5": [
+"C1MDATA507",
+"CAN1 message data byte 5 register 07"
+],
+"03fec7e6": [
+"C1MDATA6707",
+"CAN1 message data byte 67 register 07"
+],
+"03fec7e7": [
+"C1MDATA707",
+"CAN1 message data byte 7 register 07"
+],
+"03fec7e8": [
+"C1MDLC07",
+"CAN1 message data length register 07"
+],
+"03fec7e9": [
+"C1MCONF07",
+"CAN1 message configuration register 07"
+],
+"03fec7ea": [
+"C1MIDL07",
+"CAN1 message identifier register 07"
+],
+"03fec7ec": [
+"C1MIDH07",
+""
+],
+"03fec7ee": [
+"C1MCTRL07",
+"CAN1 message control register 07"
+],
+"03fec800": [
+"C1MDATA0108",
+"CAN1 message data byte 01 register 08"
+],
+"03fec801": [
+"C1MDATA108",
+"CAN1 message data byte 1 register 08"
+],
+"03fec802": [
+"C1MDATA2308",
+"CAN1 message data byte 23 register 08"
+],
+"03fec803": [
+"C1MDATA308",
+"CAN1 message data byte 3 register 08"
+],
+"03fec804": [
+"C1MDATA4508",
+"CAN1 message data byte 45 register 08"
+],
+"03fec805": [
+"C1MDATA508",
+"CAN1 message data byte 5 register 08"
+],
+"03fec806": [
+"C1MDATA6708",
+"CAN1 message data byte 67 register 08"
+],
+"03fec807": [
+"C1MDATA708",
+"CAN1 message data byte 7 register 08"
+],
+"03fec808": [
+"C1MDLC08",
+"CAN1 message data length register 08"
+],
+"03fec809": [
+"C1MCONF08",
+"CAN1 message configuration register 08"
+],
+"03fec80a": [
+"C1MIDL08",
+"CAN1 message identifier register 08"
+],
+"03fec80c": [
+"C1MIDH08",
+""
+],
+"03fec80e": [
+"C1MCTRL08",
+"CAN1 message control register 08"
+],
+"03fec820": [
+"C1MDATA0109",
+"CAN1 message data byte 01 register 09"
+],
+"03fec821": [
+"C1MDATA109",
+"CAN1 message data byte 1 register 09"
+],
+"03fec822": [
+"C1MDATA2309",
+"CAN1 message data byte 23 register 09"
+],
+"03fec823": [
+"C1MDATA309",
+"CAN1 message data byte 3 register 09"
+],
+"03fec824": [
+"C1MDATA4509",
+"CAN1 message data byte 45 register 09"
+],
+"03fec825": [
+"C1MDATA509",
+"CAN1 message data byte 5 register 09"
+],
+"03fec826": [
+"C1MDATA6709",
+"CAN1 message data byte 67 register 09"
+],
+"03fec827": [
+"C1MDATA709",
+"CAN1 message data byte 7 register 09"
+],
+"03fec828": [
+"C1MDLC09",
+"CAN1 message data length register 09"
+],
+"03fec829": [
+"C1MCONF09",
+"CAN1 message configuration register 09"
+],
+"03fec82a": [
+"C1MIDL09",
+"CAN1 message identifier register 09"
+],
+"03fec82c": [
+"C1MIDH09",
+""
+],
+"03fec82e": [
+"C1MCTRL09",
+"CAN1 message control register 09"
+],
+"03fec840": [
+"C1MDATA0110",
+"CAN1 message data byte 01 register 10"
+],
+"03fec841": [
+"C1MDATA110",
+"CAN1 message data byte 1 register 10"
+],
+"03fec842": [
+"C1MDATA2310",
+"CAN1 message data byte 23 register 10"
+],
+"03fec843": [
+"C1MDATA310",
+"CAN1 message data byte 3 register 10"
+],
+"03fec844": [
+"C1MDATA4510",
+"CAN1 message data byte 45 register 10"
+],
+"03fec845": [
+"C1MDATA510",
+"CAN1 message data byte 5 register 10"
+],
+"03fec846": [
+"C1MDATA6710",
+"CAN1 message data byte 67 register 10"
+],
+"03fec847": [
+"C1MDATA710",
+"CAN1 message data byte 7 register 10"
+],
+"03fec848": [
+"C1MDLC10",
+"CAN1 message data length register 10"
+],
+"03fec849": [
+"C1MCONF10",
+"CAN1 message configuration register 10"
+],
+"03fec84a": [
+"C1MIDL10",
+"CAN1 message identifier register 10"
+],
+"03fec84c": [
+"C1MIDH10",
+""
+],
+"03fec84e": [
+"C1MCTRL10",
+"CAN1 message control register 10"
+],
+"03fec860": [
+"C1MDATA0111",
+"CAN1 message data byte 01 register 11"
+],
+"03fec861": [
+"C1MDATA111",
+"CAN1 message data byte 1 register 11"
+],
+"03fec862": [
+"C1MDATA2311",
+"CAN1 message data byte 23 register 11"
+],
+"03fec863": [
+"C1MDATA311",
+"CAN1 message data byte 3 register 11"
+],
+"03fec864": [
+"C1MDATA4511",
+"CAN1 message data byte 45 register 11"
+],
+"03fec865": [
+"C1MDATA511",
+"CAN1 message data byte 5 register 11"
+],
+"03fec866": [
+"C1MDATA6711",
+"CAN1 message data byte 67 register 11"
+],
+"03fec867": [
+"C1MDATA711",
+"CAN1 message data byte 7 register 11"
+],
+"03fec868": [
+"C1MDLC11",
+"CAN1 message data length register 11"
+],
+"03fec869": [
+"C1MCONF11",
+"CAN1 message configuration register 11"
+],
+"03fec86a": [
+"C1MIDL11",
+"CAN1 message identifier register 11"
+],
+"03fec86c": [
+"C1MIDH11",
+""
+],
+"03fec86e": [
+"C1MCTRL11",
+"CAN1 message control register 11"
+],
+"03fec880": [
+"C1MDATA0112",
+"CAN1 message data byte 01 register 12"
+],
+"03fec881": [
+"C1MDATA112",
+"CAN1 message data byte 1 register 12"
+],
+"03fec882": [
+"C1MDATA2312",
+"CAN1 message data byte 23 register 12"
+],
+"03fec883": [
+"C1MDATA312",
+"CAN1 message data byte 3 register 12"
+],
+"03fec884": [
+"C1MDATA4512",
+"CAN1 message data byte 45 register 12"
+],
+"03fec885": [
+"C1MDATA512",
+"CAN1 message data byte 5 register 12"
+],
+"03fec886": [
+"C1MDATA6712",
+"CAN1 message data byte 67 register 12"
+],
+"03fec887": [
+"C1MDATA712",
+"CAN1 message data byte 7 register 12"
+],
+"03fec888": [
+"C1MDLC12",
+"CAN1 message data length register 12"
+],
+"03fec889": [
+"C1MCONF12",
+"CAN1 message configuration register 12"
+],
+"03fec88a": [
+"C1MIDL12",
+"CAN1 message identifier register 12"
+],
+"03fec88c": [
+"C1MIDH12",
+""
+],
+"03fec88e": [
+"C1MCTRL12",
+"CAN1 message control register 12"
+],
+"03fec8a0": [
+"C1MDATA0113",
+"CAN1 message data byte 01 register 13"
+],
+"03fec8a1": [
+"C1MDATA113",
+"CAN1 message data byte 1 register 13"
+],
+"03fec8a2": [
+"C1MDATA2313",
+"CAN1 message data byte 23 register 13"
+],
+"03fec8a3": [
+"C1MDATA313",
+"CAN1 message data byte 3 register 13"
+],
+"03fec8a4": [
+"C1MDATA4513",
+"CAN1 message data byte 45 register 13"
+],
+"03fec8a5": [
+"C1MDATA513",
+"CAN1 message data byte 5 register 13"
+],
+"03fec8a6": [
+"C1MDATA6713",
+"CAN1 message data byte 67 register 13"
+],
+"03fec8a7": [
+"C1MDATA713",
+"CAN1 message data byte 7 register 13"
+],
+"03fec8a8": [
+"C1MDLC13",
+"CAN1 message data length register 13"
+],
+"03fec8a9": [
+"C1MCONF13",
+"CAN1 message configuration register 13"
+],
+"03fec8aa": [
+"C1MIDL13",
+"CAN1 message identifier register 13"
+],
+"03fec8ac": [
+"C1MIDH13",
+""
+],
+"03fec8ae": [
+"C1MCTRL13",
+"CAN1 message control register 13"
+],
+"03fec8c0": [
+"C1MDATA0114",
+"CAN1 message data byte 01 register 14"
+],
+"03fec8c1": [
+"C1MDATA114",
+"CAN1 message data byte 1 register 14"
+],
+"03fec8c2": [
+"C1MDATA2314",
+"CAN1 message data byte 23 register 14"
+],
+"03fec8c3": [
+"C1MDATA314",
+"CAN1 message data byte 3 register 14"
+],
+"03fec8c4": [
+"C1MDATA4514",
+"CAN1 message data byte 45 register 14"
+],
+"03fec8c5": [
+"C1MDATA514",
+"CAN1 message data byte 5 register 14"
+],
+"03fec8c6": [
+"C1MDATA6714",
+"CAN1 message data byte 67 register 14"
+],
+"03fec8c7": [
+"C1MDATA714",
+"CAN1 message data byte 7 register 14"
+],
+"03fec8c8": [
+"C1MDLC14",
+"CAN1 message data length register 14"
+],
+"03fec8c9": [
+"C1MCONF14",
+"CAN1 message configuration register 14"
+],
+"03fec8ca": [
+"C1MIDL14",
+"CAN1 message identifier register 14"
+],
+"03fec8cc": [
+"C1MIDH14",
+""
+],
+"03fec8ce": [
+"C1MCTRL14",
+"CAN1 message control register 14"
+],
+"03fec8e0": [
+"C1MDATA0115",
+"CAN1 message data byte 01 register 15"
+],
+"03fec8e1": [
+"C1MDATA115",
+"CAN1 message data byte 1 register 15"
+],
+"03fec8e2": [
+"C1MDATA2315",
+"CAN1 message data byte 23 register 15"
+],
+"03fec8e3": [
+"C1MDATA315",
+"CAN1 message data byte 3 register 15"
+],
+"03fec8e4": [
+"C1MDATA4515",
+"CAN1 message data byte 45 register 15"
+],
+"03fec8e5": [
+"C1MDATA515",
+"CAN1 message data byte 5 register 15"
+],
+"03fec8e6": [
+"C1MDATA6715",
+"CAN1 message data byte 67 register 15"
+],
+"03fec8e7": [
+"C1MDATA715",
+"CAN1 message data byte 7 register 15"
+],
+"03fec8e8": [
+"C1MDLC15",
+"CAN1 message data length register 15"
+],
+"03fec8e9": [
+"C1MCONF15",
+"CAN1 message configuration register 15"
+],
+"03fec8ea": [
+"C1MIDL15",
+"CAN1 message identifier register 15"
+],
+"03fec8ec": [
+"C1MIDH15",
+""
+],
+"03fec8ee": [
+"C1MCTRL15",
+"CAN1 message control register 15"
+],
+"03fec900": [
+"C1MDATA0116",
+"CAN1 message data byte 01 register 16"
+],
+"03fec901": [
+"C1MDATA116",
+"CAN1 message data byte 1 register 16"
+],
+"03fec902": [
+"C1MDATA2316",
+"CAN1 message data byte 23 register 16"
+],
+"03fec903": [
+"C1MDATA316",
+"CAN1 message data byte 3 register 16"
+],
+"03fec904": [
+"C1MDATA4516",
+"CAN1 message data byte 45 register 16"
+],
+"03fec905": [
+"C1MDATA516",
+"CAN1 message data byte 5 register 16"
+],
+"03fec906": [
+"C1MDATA6716",
+"CAN1 message data byte 67 register 16"
+],
+"03fec907": [
+"C1MDATA716",
+"CAN1 message data byte 7 register 16"
+],
+"03fec908": [
+"C1MDLC16",
+"CAN1 message data length register 16"
+],
+"03fec909": [
+"C1MCONF16",
+"CAN1 message configuration register 16"
+],
+"03fec90a": [
+"C1MIDL16",
+"CAN1 message identifier register 16"
+],
+"03fec90c": [
+"C1MIDH16",
+""
+],
+"03fec90e": [
+"C1MCTRL16",
+"CAN1 message control register 16"
+],
+"03fec920": [
+"C1MDATA0117",
+"CAN1 message data byte 01 register 17"
+],
+"03fec921": [
+"C1MDATA117",
+"CAN1 message data byte 1 register 17"
+],
+"03fec922": [
+"C1MDATA2317",
+"CAN1 message data byte 23 register 17"
+],
+"03fec923": [
+"C1MDATA317",
+"CAN1 message data byte 3 register 17"
+],
+"03fec924": [
+"C1MDATA4517",
+"CAN1 message data byte 45 register 17"
+],
+"03fec925": [
+"C1MDATA517",
+"CAN1 message data byte 5 register 17"
+],
+"03fec926": [
+"C1MDATA6717",
+"CAN1 message data byte 67 register 17"
+],
+"03fec927": [
+"C1MDATA717",
+"CAN1 message data byte 7 register 17"
+],
+"03fec928": [
+"C1MDLC17",
+"CAN1 message data length register 17"
+],
+"03fec929": [
+"C1MCONF17",
+"CAN1 message configuration register 17"
+],
+"03fec92a": [
+"C1MIDL17",
+"CAN1 message identifier register 17"
+],
+"03fec92c": [
+"C1MIDH17",
+""
+],
+"03fec92e": [
+"C1MCTRL17",
+"CAN1 message control register 17"
+],
+"03fec940": [
+"C1MDATA0118",
+"CAN1 message data byte 01 register 18"
+],
+"03fec941": [
+"C1MDATA118",
+"CAN1 message data byte 1 register 18"
+],
+"03fec942": [
+"C1MDATA2318",
+"CAN1 message data byte 23 register 18"
+],
+"03fec943": [
+"C1MDATA318",
+"CAN1 message data byte 3 register 18"
+],
+"03fec944": [
+"C1MDATA4518",
+"CAN1 message data byte 45 register 18"
+],
+"03fec945": [
+"C1MDATA518",
+"CAN1 message data byte 5 register 18"
+],
+"03fec946": [
+"C1MDATA6718",
+"CAN1 message data byte 67 register 18"
+],
+"03fec947": [
+"C1MDATA718",
+"CAN1 message data byte 7 register 18"
+],
+"03fec948": [
+"C1MDLC18",
+"CAN1 message data length register 18"
+],
+"03fec949": [
+"C1MCONF18",
+"CAN1 message configuration register 18"
+],
+"03fec94a": [
+"C1MIDL18",
+"CAN1 message identifier register 18"
+],
+"03fec94c": [
+"C1MIDH18",
+""
+],
+"03fec94e": [
+"C1MCTRL18",
+"CAN1 message control register 18"
+],
+"03fec960": [
+"C1MDATA0119",
+"CAN1 message data byte 01 register 19"
+],
+"03fec961": [
+"C1MDATA119",
+"CAN1 message data byte 1 register 19"
+],
+"03fec962": [
+"C1MDATA2319",
+"CAN1 message data byte 23 register 19"
+],
+"03fec963": [
+"C1MDATA319",
+"CAN1 message data byte 3 register 19"
+],
+"03fec964": [
+"C1MDATA4519",
+"CAN1 message data byte 45 register 19"
+],
+"03fec965": [
+"C1MDATA519",
+"CAN1 message data byte 5 register 19"
+],
+"03fec966": [
+"C1MDATA6719",
+"CAN1 message data byte 67 register 19"
+],
+"03fec967": [
+"C1MDATA719",
+"CAN1 message data byte 7 register 19"
+],
+"03fec968": [
+"C1MDLC19",
+"CAN1 message data length register 19"
+],
+"03fec969": [
+"C1MCONF19",
+"CAN1 message configuration register 19"
+],
+"03fec96a": [
+"C1MIDL19",
+"CAN1 message identifier register 19"
+],
+"03fec96c": [
+"C1MIDH19",
+""
+],
+"03fec96e": [
+"C1MCTRL19",
+"CAN1 message control register 19"
+],
+"03fec980": [
+"C1MDATA0120",
+"CAN1 message data byte 01 register 20"
+],
+"03fec981": [
+"C1MDATA120",
+"CAN1 message data byte 1 register 20"
+],
+"03fec982": [
+"C1MDATA2320",
+"CAN1 message data byte 23 register 20"
+],
+"03fec983": [
+"C1MDATA320",
+"CAN1 message data byte 3 register 20"
+],
+"03fec984": [
+"C1MDATA4520",
+"CAN1 message data byte 45 register 20"
+],
+"03fec985": [
+"C1MDATA520",
+"CAN1 message data byte 5 register 20"
+],
+"03fec986": [
+"C1MDATA6720",
+"CAN1 message data byte 67 register 20"
+],
+"03fec987": [
+"C1MDATA720",
+"CAN1 message data byte 7 register 20"
+],
+"03fec988": [
+"C1MDLC20",
+"CAN1 message data length register 20"
+],
+"03fec989": [
+"C1MCONF20",
+"CAN1 message configuration register 20"
+],
+"03fec98a": [
+"C1MIDL20",
+"CAN1 message identifier register 20"
+],
+"03fec98c": [
+"C1MIDH20",
+""
+],
+"03fec98e": [
+"C1MCTRL20",
+"CAN1 message control register 20"
+],
+"03fec9a0": [
+"C1MDATA0121",
+"CAN1 message data byte 01 register 21"
+],
+"03fec9a1": [
+"C1MDATA121",
+"CAN1 message data byte 1 register 21"
+],
+"03fec9a2": [
+"C1MDATA2321",
+"CAN1 message data byte 23 register 21"
+],
+"03fec9a3": [
+"C1MDATA321",
+"CAN1 message data byte 3 register 21"
+],
+"03fec9a4": [
+"C1MDATA4521",
+"CAN1 message data byte 45 register 21"
+],
+"03fec9a5": [
+"C1MDATA521",
+"CAN1 message data byte 5 register 21"
+],
+"03fec9a6": [
+"C1MDATA6721",
+"CAN1 message data byte 67 register 21"
+],
+"03fec9a7": [
+"C1MDATA721",
+"CAN1 message data byte 7 register 21"
+],
+"03fec9a8": [
+"C1MDLC21",
+"CAN1 message data length register 21"
+],
+"03fec9a9": [
+"C1MCONF21",
+"CAN1 message configuration register 21"
+],
+"03fec9aa": [
+"C1MIDL21",
+"CAN1 message identifier register 21"
+],
+"03fec9ac": [
+"C1MIDH21",
+""
+],
+"03fec9ae": [
+"C1MCTRL21",
+"CAN1 message control register 21"
+],
+"03fec9c0": [
+"C1MDATA0122",
+"CAN1 message data byte 01 register 22"
+],
+"03fec9c1": [
+"C1MDATA122",
+"CAN1 message data byte 1 register 22"
+],
+"03fec9c2": [
+"C1MDATA2322",
+"CAN1 message data byte 23 register 22"
+],
+"03fec9c3": [
+"C1MDATA322",
+"CAN1 message data byte 3 register 22"
+],
+"03fec9c4": [
+"C1MDATA4522",
+"CAN1 message data byte 45 register 22"
+],
+"03fec9c5": [
+"C1MDATA522",
+"CAN1 message data byte 5 register 22"
+],
+"03fec9c6": [
+"C1MDATA6722",
+"CAN1 message data byte 67 register 22"
+],
+"03fec9c7": [
+"C1MDATA722",
+"CAN1 message data byte 7 register 22"
+],
+"03fec9c8": [
+"C1MDLC22",
+"CAN1 message data length register 22"
+],
+"03fec9c9": [
+"C1MCONF22",
+"CAN1 message configuration register 22"
+],
+"03fec9ca": [
+"C1MIDL22",
+"CAN1 message identifier register 22"
+],
+"03fec9cc": [
+"C1MIDH22",
+""
+],
+"03fec9ce": [
+"C1MCTRL22",
+"CAN1 message control register 22"
+],
+"03fec9e0": [
+"C1MDATA0123",
+"CAN1 message data byte 01 register 23"
+],
+"03fec9e1": [
+"C1MDATA123",
+"CAN1 message data byte 1 register 23"
+],
+"03fec9e2": [
+"C1MDATA2323",
+"CAN1 message data byte 23 register 23"
+],
+"03fec9e3": [
+"C1MDATA323",
+"CAN1 message data byte 3 register 23"
+],
+"03fec9e4": [
+"C1MDATA4523",
+"CAN1 message data byte 45 register 23"
+],
+"03fec9e5": [
+"C1MDATA523",
+"CAN1 message data byte 5 register 23"
+],
+"03fec9e6": [
+"C1MDATA6723",
+"CAN1 message data byte 67 register 23"
+],
+"03fec9e7": [
+"C1MDATA723",
+"CAN1 message data byte 7 register 23"
+],
+"03fec9e8": [
+"C1MDLC23",
+"CAN1 message data length register 23"
+],
+"03fec9e9": [
+"C1MCONF23",
+"CAN1 message configuration register 23"
+],
+"03fec9ea": [
+"C1MIDL23",
+"CAN1 message identifier register 23"
+],
+"03fec9ec": [
+"C1MIDH23",
+""
+],
+"03fec9ee": [
+"C1MCTRL23",
+"CAN1 message control register 23"
+],
+"03feca00": [
+"C1MDATA0124",
+"CAN1 message data byte 01 register 24"
+],
+"03feca01": [
+"C1MDATA124",
+"CAN1 message data byte 1 register 24"
+],
+"03feca02": [
+"C1MDATA2324",
+"CAN1 message data byte 23 register 24"
+],
+"03feca03": [
+"C1MDATA324",
+"CAN1 message data byte 3 register 24"
+],
+"03feca04": [
+"C1MDATA4524",
+"CAN1 message data byte 45 register 24"
+],
+"03feca05": [
+"C1MDATA524",
+"CAN1 message data byte 5 register 24"
+],
+"03feca06": [
+"C1MDATA6724",
+"CAN1 message data byte 67 register 24"
+],
+"03feca07": [
+"C1MDATA724",
+"CAN1 message data byte 7 register 24"
+],
+"03feca08": [
+"C1MDLC24",
+"CAN1 message data length register 24"
+],
+"03feca09": [
+"C1MCONF24",
+"CAN1 message configuration register 24"
+],
+"03feca0a": [
+"C1MIDL24",
+"CAN1 message identifier register 24"
+],
+"03feca0c": [
+"C1MIDH24",
+""
+],
+"03feca0e": [
+"C1MCTRL24",
+"CAN1 message control register 24"
+],
+"03feca20": [
+"C1MDATA0125",
+"CAN1 message data byte 01 register 25"
+],
+"03feca21": [
+"C1MDATA125",
+"CAN1 message data byte 1 register 25"
+],
+"03feca22": [
+"C1MDATA2325",
+"CAN1 message data byte 23 register 25"
+],
+"03feca23": [
+"C1MDATA325",
+"CAN1 message data byte 3 register 25"
+],
+"03feca24": [
+"C1MDATA4525",
+"CAN1 message data byte 45 register 25"
+],
+"03feca25": [
+"C1MDATA525",
+"CAN1 message data byte 5 register 25"
+],
+"03feca26": [
+"C1MDATA6725",
+"CAN1 message data byte 67 register 25"
+],
+"03feca27": [
+"C1MDATA725",
+"CAN1 message data byte 7 register 25"
+],
+"03feca28": [
+"C1MDLC25",
+"CAN1 message data length register 25"
+],
+"03feca29": [
+"C1MCONF25",
+"CAN1 message configuration register 25"
+],
+"03feca2a": [
+"C1MIDL25",
+"CAN1 message identifier register 25"
+],
+"03feca2c": [
+"C1MIDH25",
+""
+],
+"03feca2e": [
+"C1MCTRL25",
+"CAN1 message control register 25"
+],
+"03feca40": [
+"C1MDATA0126",
+"CAN1 message data byte 01 register 26"
+],
+"03feca41": [
+"C1MDATA126",
+"CAN1 message data byte 1 register 26"
+],
+"03feca42": [
+"C1MDATA2326",
+"CAN1 message data byte 23 register 26"
+],
+"03feca43": [
+"C1MDATA326",
+"CAN1 message data byte 3 register 26"
+],
+"03feca44": [
+"C1MDATA4526",
+"CAN1 message data byte 45 register 26"
+],
+"03feca45": [
+"C1MDATA526",
+"CAN1 message data byte 5 register 26"
+],
+"03feca46": [
+"C1MDATA6726",
+"CAN1 message data byte 67 register 26"
+],
+"03feca47": [
+"C1MDATA726",
+"CAN1 message data byte 7 register 26"
+],
+"03feca48": [
+"C1MDLC26",
+"CAN1 message data length register 26"
+],
+"03feca49": [
+"C1MCONF26",
+"CAN1 message configuration register 26"
+],
+"03feca4a": [
+"C1MIDL26",
+"CAN1 message identifier register 26"
+],
+"03feca4c": [
+"C1MIDH26",
+""
+],
+"03feca4e": [
+"C1MCTRL26",
+"CAN1 message control register 26"
+],
+"03feca60": [
+"C1MDATA0127",
+"CAN1 message data byte 01 register 27"
+],
+"03feca61": [
+"C1MDATA127",
+"CAN1 message data byte 1 register 27"
+],
+"03feca62": [
+"C1MDATA2327",
+"CAN1 message data byte 23 register 27"
+],
+"03feca63": [
+"C1MDATA327",
+"CAN1 message data byte 3 register 27"
+],
+"03feca64": [
+"C1MDATA4527",
+"CAN1 message data byte 45 register 27"
+],
+"03feca65": [
+"C1MDATA527",
+"CAN1 message data byte 5 register 27"
+],
+"03feca66": [
+"C1MDATA6727",
+"CAN1 message data byte 67 register 27"
+],
+"03feca67": [
+"C1MDATA727",
+"CAN1 message data byte 7 register 27"
+],
+"03feca68": [
+"C1MDLC27",
+"CAN1 message data length register 27"
+],
+"03feca69": [
+"C1MCONF27",
+"CAN1 message configuration register 27"
+],
+"03feca6a": [
+"C1MIDL27",
+"CAN1 message identifier register 27"
+],
+"03feca6c": [
+"C1MIDH27",
+""
+],
+"03feca6e": [
+"C1MCTRL27",
+"CAN1 message control register 27"
+],
+"03feca80": [
+"C1MDATA0128",
+"CAN1 message data byte 01 register 28"
+],
+"03feca81": [
+"C1MDATA128",
+"CAN1 message data byte 1 register 28"
+],
+"03feca82": [
+"C1MDATA2328",
+"CAN1 message data byte 23 register 28"
+],
+"03feca83": [
+"C1MDATA328",
+"CAN1 message data byte 3 register 28"
+],
+"03feca84": [
+"C1MDATA4528",
+"CAN1 message data byte 45 register 28"
+],
+"03feca85": [
+"C1MDATA528",
+"CAN1 message data byte 5 register 28"
+],
+"03feca86": [
+"C1MDATA6728",
+"CAN1 message data byte 67 register 28"
+],
+"03feca87": [
+"C1MDATA728",
+"CAN1 message data byte 7 register 28"
+],
+"03feca88": [
+"C1MDLC28",
+"CAN1 message data length register 28"
+],
+"03feca89": [
+"C1MCONF28",
+"CAN1 message configuration register 28"
+],
+"03feca8a": [
+"C1MIDL28",
+"CAN1 message identifier register 28"
+],
+"03feca8c": [
+"C1MIDH28",
+""
+],
+"03feca8e": [
+"C1MCTRL28",
+"CAN1 message control register 28"
+],
+"03fecaa0": [
+"C1MDATA0129",
+"CAN1 message data byte 01 register 29"
+],
+"03fecaa1": [
+"C1MDATA129",
+"CAN1 message data byte 1 register 29"
+],
+"03fecaa2": [
+"C1MDATA2329",
+"CAN1 message data byte 23 register 29"
+],
+"03fecaa3": [
+"C1MDATA329",
+"CAN1 message data byte 3 register 29"
+],
+"03fecaa4": [
+"C1MDATA4529",
+"CAN1 message data byte 45 register 29"
+],
+"03fecaa5": [
+"C1MDATA529",
+"CAN1 message data byte 5 register 29"
+],
+"03fecaa6": [
+"C1MDATA6729",
+"CAN1 message data byte 67 register 29"
+],
+"03fecaa7": [
+"C1MDATA729",
+"CAN1 message data byte 7 register 29"
+],
+"03fecaa8": [
+"C1MDLC29",
+"CAN1 message data length register 29"
+],
+"03fecaa9": [
+"C1MCONF29",
+"CAN1 message configuration register 29"
+],
+"03fecaaa": [
+"C1MIDL29",
+"CAN1 message identifier register 29"
+],
+"03fecaac": [
+"C1MIDH29",
+""
+],
+"03fecaae": [
+"C1MCTRL29",
+"CAN1 message control register 29"
+],
+"03fecac0": [
+"C1MDATA0130",
+"CAN1 message data byte 01 register 30"
+],
+"03fecac1": [
+"C1MDATA130",
+"CAN1 message data byte 1 register 30"
+],
+"03fecac2": [
+"C1MDATA2330",
+"CAN1 message data byte 23 register 30"
+],
+"03fecac3": [
+"C1MDATA330",
+"CAN1 message data byte 3 register 30"
+],
+"03fecac4": [
+"C1MDATA4530",
+"CAN1 message data byte 45 register 30"
+],
+"03fecac5": [
+"C1MDATA530",
+"CAN1 message data byte 5 register 30"
+],
+"03fecac6": [
+"C1MDATA6730",
+"CAN1 message data byte 67 register 30"
+],
+"03fecac7": [
+"C1MDATA730",
+"CAN1 message data byte 7 register 30"
+],
+"03fecac8": [
+"C1MDLC30",
+"CAN1 message data length register 30"
+],
+"03fecac9": [
+"C1MCONF30",
+"CAN1 message configuration register 30"
+],
+"03fecaca": [
+"C1MIDL30",
+"CAN1 message identifier register 30"
+],
+"03fecacc": [
+"C1MIDH30",
+""
+],
+"03fecace": [
+"C1MCTRL30",
+"CAN1 message control register 30"
+],
+"03fecae0": [
+"C1MDATA0131",
+"CAN1 message data byte 01 register 31"
+],
+"03fecae1": [
+"C1MDATA131",
+"CAN1 message data byte 1 register 31"
+],
+"03fecae2": [
+"C1MDATA2331",
+"CAN1 message data byte 23 register 31"
+],
+"03fecae3": [
+"C1MDATA331",
+"CAN1 message data byte 3 register 31"
+],
+"03fecae4": [
+"C1MDATA4531",
+"CAN1 message data byte 45 register 31"
+],
+"03fecae5": [
+"C1MDATA531",
+"CAN1 message data byte 5 register 31"
+],
+"03fecae6": [
+"C1MDATA6731",
+"CAN1 message data byte 67 register 31"
+],
+"03fecae7": [
+"C1MDATA731",
+"CAN1 message data byte 7 register 31"
+],
+"03fecae8": [
+"C1MDLC31",
+"CAN1 message data length register 31"
+],
+"03fecae9": [
+"C1MCONF31",
+"CAN1 message configuration register 31"
+],
+"03fecaea": [
+"C1MIDL31",
+"CAN1 message identifier register 31"
+],
+"03fecaec": [
+"C1MIDH31",
+""
+],
+"03fecaee": [
+"C1MCTRL31",
+"CAN1 message control register 31"
+],
+"fffff004": [
+"PDL",
+"Port DL register"
+],
+"fffff005": [
+"PDLH",
+"Port DLH register"
+],
+"fffff006": [
+"PDH",
+"Port DH register"
+],
+"fffff008": [
+"PCS",
+"Port CS register"
+],
+"fffff00a": [
+"PCT",
+"Port CT register"
+],
+"fffff00c": [
+"PCM",
+"Port CM register"
+],
+"fffff00e": [
+"PCD",
+"Port CD register"
+],
+"fffff024": [
+"PMDL",
+"Port DL mode register"
+],
+"fffff025": [
+"PMDLH",
+"Port DL mode register H"
+],
+"fffff026": [
+"PMDH",
+"Port DH mode register"
+],
+"fffff028": [
+"PMCS",
+"Port CS mode register"
+],
+"fffff02a": [
+"PMCT",
+"Port CT mode register"
+],
+"fffff02c": [
+"PMCM",
+"Port CM mode register"
+],
+"fffff02e": [
+"PMCD",
+"Port CD mode register"
+],
+"fffff044": [
+"PMCDL",
+"Port DL mode control register"
+],
+"fffff045": [
+"PMCDLH",
+"Port DL mode control register H"
+],
+"fffff046": [
+"PMCDH",
+"Port DH mode control register"
+],
+"fffff048": [
+"PMCCS",
+"Port CS mode control register"
+],
+"fffff04a": [
+"PMCCT",
+"Port CT mode control register"
+],
+"fffff04c": [
+"PMCCM",
+"Port CM mode control register"
+],
+"fffff064": [
+"Peripheral",
+""
+],
+"fffff066": [
+"BSC",
+"Bus size configuration register"
+],
+"fffff06e": [
+"VSWC",
+"System wait control register"
+],
+"fffff080": [
+"DSA0L",
+"DMA source address register 0L"
+],
+"fffff082": [
+"DSA0H",
+"DMA source address register 0H"
+],
+"fffff084": [
+"DDA0L",
+"DMA destination address register 0L"
+],
+"fffff086": [
+"DDA0H",
+"DMA destination address register 0H"
+],
+"fffff088": [
+"DSA1L",
+"DMA source address register 1L"
+],
+"fffff08a": [
+"DSA1H",
+"DMA source address register 1H"
+],
+"fffff08c": [
+"DDA1L",
+"DMA destination address register 1L"
+],
+"fffff08e": [
+"DDA1H",
+"DMA destination address register 1H"
+],
+"fffff090": [
+"DSA2L",
+"DMA source address register 2L"
+],
+"fffff092": [
+"DSA2H",
+"DMA source address register 2H"
+],
+"fffff094": [
+"DDA2L",
+"DMA destination address register 2L"
+],
+"fffff096": [
+"DDA2H",
+"DMA destination address register 2H"
+],
+"fffff098": [
+"DSA3L",
+"DMA source address register 3L"
+],
+"fffff09a": [
+"DSA3H",
+"DMA source address register 3H"
+],
+"fffff09c": [
+"DDA3L",
+"DMA destination address register 3L"
+],
+"fffff09e": [
+"DDA3H",
+"DMA destination address register 3H"
+],
+"fffff0c0": [
+"DBC0",
+"DMA transfer count register 0"
+],
+"fffff0c2": [
+"DBC1",
+"DMA transfer count register 1"
+],
+"fffff0c4": [
+"DBC2",
+"DMA transfer count register 2"
+],
+"fffff0c6": [
+"DBC3",
+"DMA transfer count register 3"
+],
+"fffff0d0": [
+"DADC0",
+"DMA addressing control register 0"
+],
+"fffff0d2": [
+"DADC1",
+"DMA addressing control register 1"
+],
+"fffff0d4": [
+"DADC2",
+"DMA addressing control register 2"
+],
+"fffff0d6": [
+"DADC3",
+"DMA addressing control register 3"
+],
+"fffff0e0": [
+"DCHC0",
+"DMA channel control register 0"
+],
+"fffff0e2": [
+"DCHC1",
+"DMA channel control register 1"
+],
+"fffff0e4": [
+"DCHC2",
+"DMA channel control register 2"
+],
+"fffff0e6": [
+"DCHC3",
+"DMA channel control register 3"
+],
+"fffff100": [
+"IMR0",
+"Interrupt mask register 0"
+],
+"fffff101": [
+"IMR0H",
+"Interrupt mask register 0H"
+],
+"fffff102": [
+"IMR1",
+"Interrupt mask register 1"
+],
+"fffff103": [
+"IMR1H",
+"Interrupt mask register 1H"
+],
+"fffff104": [
+"IMR2",
+"Interrupt mask register 2"
+],
+"fffff105": [
+"IMR2H",
+"Interrupt mask register 2H"
+],
+"fffff106": [
+"IMR3",
+"Interrupt mask register 3"
+],
+"fffff107": [
+"IMR3H",
+"Interrupt mask register 3H"
+],
+"fffff108": [
+"IMR4",
+"Interrupt mask register 4"
+],
+"fffff109": [
+"IMR4H",
+"Interrupt mask register 4H"
+],
+"fffff110": [
+"LVIIC",
+"Interrupt control register"
+],
+"fffff112": [
+"PIC0",
+"Interrupt control register"
+],
+"fffff114": [
+"PIC1",
+"Interrupt control register"
+],
+"fffff116": [
+"PIC2",
+"Interrupt control register"
+],
+"fffff118": [
+"PIC3",
+"Interrupt control register"
+],
+"fffff11a": [
+"PIC4",
+"Interrupt control register"
+],
+"fffff11c": [
+"PIC5",
+"Interrupt control register"
+],
+"fffff11e": [
+"PIC6",
+"Interrupt control register"
+],
+"fffff120": [
+"PIC7",
+"Interrupt control register"
+],
+"fffff122": [
+"TQ0OVIC",
+"Interrupt control register"
+],
+"fffff124": [
+"TQ0CCIC0",
+"Interrupt control register"
+],
+"fffff126": [
+"TQ0CCIC1",
+"Interrupt control register"
+],
+"fffff128": [
+"TQ0CCIC2",
+"Interrupt control register"
+],
+"fffff12a": [
+"TQ0CCIC3",
+"Interrupt control register"
+],
+"fffff12c": [
+"TP0OVIC",
+"Interrupt control register"
+],
+"fffff12e": [
+"TP0CCIC0",
+"Interrupt control register"
+],
+"fffff130": [
+"TP0CCIC1",
+"Interrupt control register"
+],
+"fffff132": [
+"TP1OVIC",
+"Interrupt control register"
+],
+"fffff134": [
+"TP1CCIC0",
+"Interrupt control register"
+],
+"fffff136": [
+"TP1CCIC1",
+"Interrupt control register"
+],
+"fffff138": [
+"TP2OVIC",
+"Interrupt control register"
+],
+"fffff13a": [
+"TP2CCIC0",
+"Interrupt control register"
+],
+"fffff13c": [
+"TP2CCIC1",
+"Interrupt control register"
+],
+"fffff13e": [
+"TP3OVIC",
+"Interrupt control register"
+],
+"fffff140": [
+"TP3CCIC0",
+"Interrupt control register"
+],
+"fffff142": [
+"TP3CCIC1",
+"Interrupt control register"
+],
+"fffff144": [
+"TP4OVIC",
+"Interrupt control register"
+],
+"fffff146": [
+"TP4CCIC0",
+"Interrupt control register"
+],
+"fffff148": [
+"TP4CCIC1",
+"Interrupt control register"
+],
+"fffff14a": [
+"TP5OVIC",
+"Interrupt control register"
+],
+"fffff14c": [
+"TP5CCIC0",
+"Interrupt control register"
+],
+"fffff14e": [
+"TP5CCIC1",
+"Interrupt control register"
+],
+"fffff150": [
+"TM0EQIC0",
+"Interrupt control register"
+],
+"fffff152": [
+"Interrupt",
+""
+],
+"fffff154": [
+"CB0TIC",
+"Interrupt control register"
+],
+"fffff156": [
+"CB1RIC",
+"Interrupt control register"
+],
+"fffff158": [
+"CB1TIC",
+"Interrupt control register"
+],
+"fffff15a": [
+"CB2RIC",
+"Interrupt control register"
+],
+"fffff15c": [
+"CB2TIC",
+"Interrupt control register"
+],
+"fffff15e": [
+"CB3RIC",
+"Interrupt control register"
+],
+"fffff160": [
+"CB3TIC",
+"Interrupt control register"
+],
+"fffff162": [
+"Interrupt",
+""
+],
+"fffff164": [
+"Interrupt",
+""
+],
+"fffff166": [
+"Interrupt",
+""
+],
+"fffff168": [
+"UA1TIC",
+"Interrupt control register"
+],
+"fffff16a": [
+"Interrupt",
+""
+],
+"fffff16c": [
+"UA2TIC",
+"Interrupt control register"
+],
+"fffff16e": [
+"ADIC",
+"Interrupt control register"
+],
+"fffff170": [
+"DMAIC0",
+"Interrupt control register"
+],
+"fffff172": [
+"DMAIC1",
+"Interrupt control register"
+],
+"fffff174": [
+"DMAIC2",
+"Interrupt control register"
+],
+"fffff176": [
+"DMAIC3",
+"Interrupt control register"
+],
+"fffff178": [
+"KRIC",
+"Interrupt control register"
+],
+"fffff17a": [
+"WTIIC",
+"Interrupt control register"
+],
+"fffff17c": [
+"WTIC",
+"Interrupt control register"
+],
+"fffff17e": [
+"Interrupt",
+""
+],
+"fffff180": [
+"Interrupt",
+""
+],
+"fffff182": [
+"Interrupt",
+""
+],
+"fffff184": [
+"Interrupt",
+""
+],
+"fffff186": [
+"Interrupt",
+""
+],
+"fffff188": [
+"Interrupt",
+""
+],
+"fffff18a": [
+"Interrupt",
+""
+],
+"fffff18c": [
+"Interrupt",
+""
+],
+"fffff18e": [
+"PIC8",
+"Interrupt control register"
+],
+"fffff190": [
+"TP6OVIC",
+"Interrupt control register"
+],
+"fffff192": [
+"TP6CCIC0",
+"Interrupt control register"
+],
+"fffff194": [
+"TP6CCIC1",
+"Interrupt control register"
+],
+"fffff196": [
+"TP7OVIC",
+"Interrupt control register"
+],
+"fffff198": [
+"TP7CCIC0",
+"Interrupt control register"
+],
+"fffff19a": [
+"TP7CCIC1",
+"Interrupt control register"
+],
+"fffff19c": [
+"TP8OVIC",
+"Interrupt control register"
+],
+"fffff19e": [
+"TP8CCIC0",
+"Interrupt control register"
+],
+"fffff1a0": [
+"TP8CCIC1",
+"Interrupt control register"
+],
+"fffff1a2": [
+"CB5RIC",
+"Interrupt control register"
+],
+"fffff1a4": [
+"CB5TIC",
+"Interrupt control register"
+],
+"fffff1a6": [
+"UA3RIC",
+"Interrupt control register"
+],
+"fffff1a8": [
+"UA3TIC",
+"Interrupt control register"
+],
+"fffff1fa": [
+"ISPR",
+"In-service priority register"
+],
+"fffff1fc": [
+"PRCMD",
+"Command register"
+],
+"fffff1fe": [
+"PSC",
+"Power save control register"
+],
+"fffff200": [
+"ADA0M0",
+"A/D converter mode register 0"
+],
+"fffff201": [
+"ADA0M1",
+"A/D converter mode register 1"
+],
+"fffff202": [
+"ADA0S",
+"A/D converter channel specification register"
+],
+"fffff203": [
+"ADA0M2",
+"A/D converter mode register 2"
+],
+"fffff204": [
+"ADA0PFM",
+"Power-fail compare mode register"
+],
+"fffff205": [
+"ADA0PFT",
+"Power-fail compare threshold value register"
+],
+"fffff210": [
+"ADA0CR0",
+"A/D conversion result register 0"
+],
+"fffff211": [
+"ADA0CR0H",
+"A/D conversion result register 0H"
+],
+"fffff212": [
+"ADA0CR1",
+"A/D conversion result register 1"
+],
+"fffff213": [
+"ADA0CR1H",
+"A/D conversion result register 1H"
+],
+"fffff214": [
+"ADA0CR2",
+"A/D conversion result register 2"
+],
+"fffff215": [
+"ADA0CR2H",
+"A/D conversion result register 2H"
+],
+"fffff216": [
+"ADA0CR3",
+"A/D conversion result register 3"
+],
+"fffff217": [
+"ADA0CR3H",
+"A/D conversion result register 3H"
+],
+"fffff218": [
+"ADA0CR4",
+"A/D conversion result register 4"
+],
+"fffff219": [
+"ADA0CR4H",
+"A/D conversion result register 4H"
+],
+"fffff21a": [
+"ADA0CR5",
+"A/D conversion result register 5"
+],
+"fffff21b": [
+"ADA0CR5H",
+"A/D conversion result register 5H"
+],
+"fffff21c": [
+"ADA0CR6",
+"A/D conversion result register 6"
+],
+"fffff21d": [
+"ADA0CR6H",
+"A/D conversion result register 6H"
+],
+"fffff21e": [
+"ADA0CR7",
+"A/D conversion result register 7"
+],
+"fffff21f": [
+"ADA0CR7H",
+"A/D conversion result register 7H"
+],
+"fffff220": [
+"ADA0CR8",
+"A/D conversion result register 8"
+],
+"fffff221": [
+"ADA0CR8H",
+"A/D conversion result register 8H"
+],
+"fffff222": [
+"ADA0CR9",
+"A/D conversion result register 9"
+],
+"fffff223": [
+"ADA0CR9H",
+"A/D conversion result register 9H"
+],
+"fffff224": [
+"ADA0CR10",
+"A/D conversion result register 10"
+],
+"fffff225": [
+"ADA0CR10H",
+"A/D conversion result register 10H"
+],
+"fffff226": [
+"ADA0CR11",
+"A/D conversion result register 11"
+],
+"fffff227": [
+"ADA0CR11H",
+"A/D conversion result register 11H"
+],
+"fffff228": [
+"ADA0CR12",
+"A/D conversion result register 12"
+],
+"fffff229": [
+"ADA0CR12H",
+"A/D conversion result register 12H"
+],
+"fffff22a": [
+"ADA0CR13",
+"A/D conversion result register 13"
+],
+"fffff22b": [
+"ADA0CR13H",
+"A/D conversion result register 13H"
+],
+"fffff22c": [
+"ADA0CR14",
+"A/D conversion result register 14"
+],
+"fffff22d": [
+"ADA0CR14H",
+"A/D conversion result register 14H"
+],
+"fffff22e": [
+"ADA0CR15",
+"A/D conversion result register 15"
+],
+"fffff22f": [
+"ADA0CR15H",
+"A/D conversion result register 15H"
+],
+"fffff280": [
+"DA0CS0",
+"D/A converter conversion value setting register 0"
+],
+"fffff281": [
+"DA0CS1",
+"D/A converter conversion value setting register 1"
+],
+"fffff282": [
+"DA0M",
+"D/A converter mode register"
+],
+"fffff300": [
+"KRM",
+"Key return mode register"
+],
+"fffff308": [
+"SELCNT0",
+"Selector operation control register 0"
+],
+"fffff310": [
+"CRCIN",
+"CRC input register"
+],
+"fffff312": [
+"CRCD",
+"CRC data register"
+],
+"fffff318": [
+"NFC",
+"Noise elimination control register"
+],
+"fffff320": [
+"PRSM1",
+"BRG1 prescaler mode register"
+],
+"fffff321": [
+"PRSCM1",
+"BRG1 prescaler compare register"
+],
+"fffff324": [
+"PRSM2",
+"BRG2 prescaler mode register"
+],
+"fffff325": [
+"PRSCM2",
+"BRG2 prescaler compare register"
+],
+"fffff328": [
+"PRSM3",
+"BRG3 prescaler mode register"
+],
+"fffff329": [
+"PRSCM3",
+"BRG3 prescaler compare register"
+],
+"fffff340": [
+"OCKS0",
+"IIC division clock select register 0"
+],
+"fffff344": [
+"OCKS1",
+"IIC division clock select register 1"
+],
+"fffff348": [
+"OCKS2",
+"IEBus clock select register"
+],
+"fffff360": [
+"BCR",
+"IEBus control register"
+],
+"fffff361": [
+"PSR",
+"IEBus power save register"
+],
+"fffff362": [
+"SSR",
+"IEBus slave status register"
+],
+"fffff363": [
+"USR",
+"IEBus unit status register"
+],
+"fffff364": [
+"ISR",
+"IEBus interrupt status register"
+],
+"fffff365": [
+"ESR",
+"IEBus error status register"
+],
+"fffff366": [
+"UAR",
+"IEBus unit address register"
+],
+"fffff368": [
+"SAR",
+"IEBus slave address register"
+],
+"fffff36a": [
+"PAR",
+"IEBus partner address register"
+],
+"fffff36c": [
+"RSA",
+"IEBus receive slave address register"
+],
+"fffff36e": [
+"CDR",
+"IEBus control data register"
+],
+"fffff36f": [
+"DLR",
+"IEBus telegraph length register"
+],
+"fffff370": [
+"DR",
+"IEBus data register"
+],
+"fffff371": [
+"FSR",
+"IEBus field status register"
+],
+"fffff372": [
+"SCR",
+"IEBus success count register"
+],
+"fffff373": [
+"CCR",
+"IEBus communication count register"
+],
+"fffff400": [
+"P0",
+"Port 0 register"
+],
+"fffff402": [
+"P1",
+"Port 1 register"
+],
+"fffff406": [
+"P3",
+"Port 3 register"
+],
+"fffff407": [
+"P3H",
+"Port 3H register"
+],
+"fffff408": [
+"P4",
+"Port 4 register"
+],
+"fffff40a": [
+"P5",
+"Port 5 register"
+],
+"fffff40c": [
+"P6",
+"Port 6 register"
+],
+"fffff40d": [
+"P6H",
+"Port 6H register"
+],
+"fffff40e": [
+"P7L",
+"Port 7L register"
+],
+"fffff40f": [
+"P7H",
+"Port 7H register"
+],
+"fffff410": [
+"P8",
+"Port 8 register"
+],
+"fffff412": [
+"P9",
+"Port 9 register"
+],
+"fffff413": [
+"P9H",
+"Port 9H register"
+],
+"fffff420": [
+"PM0",
+"Port 0 mode register"
+],
+"fffff422": [
+"PM1",
+"Port 1 mode register"
+],
+"fffff426": [
+"PM3",
+"Port 3 mode register"
+],
+"fffff427": [
+"PM3H",
+"Port 3 mode register H"
+],
+"fffff428": [
+"PM4",
+"Port 4 mode register"
+],
+"fffff42a": [
+"PM5",
+"Port 5 mode register"
+],
+"fffff42c": [
+"PM6",
+"Port 6 mode register"
+],
+"fffff42d": [
+"PM6H",
+"Port 6 mode register H"
+],
+"fffff42e": [
+"PM7L",
+"Port 7 mode register L"
+],
+"fffff42f": [
+"PM7H",
+"Port 7 mode register H"
+],
+"fffff430": [
+"PM8",
+"Port 8 mode register"
+],
+"fffff432": [
+"PM9",
+"Port 9 mode register"
+],
+"fffff433": [
+"PM9H",
+"Port 9 mode register H"
+],
+"fffff440": [
+"PMC0",
+"Port 0 mode control register"
+],
+"fffff446": [
+"PMC3",
+"Port 3 mode control register"
+],
+"fffff447": [
+"PMC3H",
+"Port 3 mode control register H"
+],
+"fffff448": [
+"PMC4",
+"Port 4 mode control register"
+],
+"fffff44a": [
+"PMC5",
+"Port 5 mode control register"
+],
+"fffff44c": [
+"PMC6",
+"Port 6 mode control register"
+],
+"fffff44d": [
+"PMC6H",
+"Port 6 mode control register H"
+],
+"fffff450": [
+"PMC8",
+"Port 8 mode control register"
+],
+"fffff452": [
+"PMC9",
+"Port 9 mode control register"
+],
+"fffff453": [
+"PMC9H",
+"Port 9 mode control register H"
+],
+"fffff460": [
+"PFC0",
+"Port 0 function control register"
+],
+"fffff466": [
+"PFC3",
+"Port 3 function control register"
+],
+"fffff467": [
+"PFC3H",
+"Port 3 function control register H"
+],
+"fffff468": [
+"PFC4",
+"Port 4 function control register"
+],
+"fffff46a": [
+"PFC5",
+"Port 5 function control register"
+],
+"fffff46d": [
+"PFC6H",
+"Port 6 function control register H"
+],
+"fffff472": [
+"PFC9",
+"Port 9 function control register"
+],
+"fffff473": [
+"PFC9H",
+"Port 9 function control register H"
+],
+"fffff484": [
+"DWC0",
+"Data wait control register 0"
+],
+"fffff488": [
+"AWC",
+"Address wait control register"
+],
+"fffff48a": [
+"BCC",
+"Bus cycle control register"
+],
+"fffff540": [
+"TQ0CTL0",
+"TMQ0 control register 0"
+],
+"fffff541": [
+"TQ0CTL1",
+"TMQ0 control register 1"
+],
+"fffff542": [
+"TQ0IOC0",
+"TMQ0 I/O control register 0"
+],
+"fffff543": [
+"TQ0IOC1",
+"TMQ0 I/O control register 1"
+],
+"fffff544": [
+"TQ0IOC2",
+"TMQ0 I/O control register 2"
+],
+"fffff545": [
+"TQ0OPT0",
+"TMQ0 option register 0"
+],
+"fffff546": [
+"TQ0CCR0",
+"TMQ0 capture/compare register 0"
+],
+"fffff548": [
+"TQ0CCR1",
+"TMQ0 capture/compare register 1"
+],
+"fffff54a": [
+"TQ0CCR2",
+"TMQ0 capture/compare register 2"
+],
+"fffff54c": [
+"TQ0CCR3",
+"TMQ0 capture/compare register 3"
+],
+"fffff54e": [
+"TQ0CNT",
+"TMQ0 counter read buffer register"
+],
+"fffff590": [
+"TP0CTL0",
+"TMP0 control register 0"
+],
+"fffff591": [
+"TP0CTL1",
+"TMP0 control register 1"
+],
+"fffff592": [
+"TP0IOC0",
+"TMP0 I/O control register 0"
+],
+"fffff593": [
+"TP0IOC1",
+"TMP0 I/O control register 1"
+],
+"fffff594": [
+"TP0IOC2",
+"TMP0 I/O control register 2"
+],
+"fffff595": [
+"TP0OPT0",
+"TMP0 option register 0"
+],
+"fffff596": [
+"TP0CCR0",
+"TMP0 capture/compare register 0"
+],
+"fffff598": [
+"TP0CCR1",
+"TMP0 capture/compare register 1"
+],
+"fffff59a": [
+"TP0CNT",
+"TMP0 counter read buffer register"
+],
+"fffff5a0": [
+"TP1CTL0",
+"TMP1 control register 0"
+],
+"fffff5a1": [
+"TP1CTL1",
+"TMP1 control register 1"
+],
+"fffff5a2": [
+"TP1IOC0",
+"TMP1 I/O control register 0"
+],
+"fffff5a3": [
+"TP1IOC1",
+"TMP1 I/O control register 1"
+],
+"fffff5a4": [
+"TP1IOC2",
+"TMP1 I/O control register 2"
+],
+"fffff5a5": [
+"TP1OPT0",
+"TMP1 option register 0"
+],
+"fffff5a6": [
+"TP1CCR0",
+"TMP1 capture/compare register 0"
+],
+"fffff5a8": [
+"TP1CCR1",
+"TMP1 capture/compare register 1"
+],
+"fffff5aa": [
+"TP1CNT",
+"TMP1 counter read buffer register"
+],
+"fffff5b0": [
+"TP2CTL0",
+"TMP2 control register 0"
+],
+"fffff5b1": [
+"TP2CTL1",
+"TMP2 control register 1"
+],
+"fffff5b2": [
+"TP2IOC0",
+"TMP2 I/O control register 0"
+],
+"fffff5b3": [
+"TP2IOC1",
+"TMP2 I/O control register 1"
+],
+"fffff5b4": [
+"TP2IOC2",
+"TMP2 I/O control register 2"
+],
+"fffff5b5": [
+"TP2OPT0",
+"TMP2 option register 0"
+],
+"fffff5b6": [
+"TP2CCR0",
+"TMP2 capture/compare register 0"
+],
+"fffff5b8": [
+"TP2CCR1",
+"TMP2 capture/compare register 1"
+],
+"fffff5ba": [
+"TP2CNT",
+"TMP2 counter read buffer register"
+],
+"fffff5c0": [
+"TP3CTL0",
+"TMP3 control register 0"
+],
+"fffff5c1": [
+"TP3CTL1",
+"TMP3 control register 1"
+],
+"fffff5c2": [
+"TP3IOC0",
+"TMP3 I/O control register 0"
+],
+"fffff5c3": [
+"TP3IOC1",
+"TMP3 I/O control register 1"
+],
+"fffff5c4": [
+"TP3IOC2",
+"TMP3 I/O control register 2"
+],
+"fffff5c5": [
+"TP3OPT0",
+"TMP3 option register 0"
+],
+"fffff5c6": [
+"TP3CCR0",
+"TMP3 capture/compare register 0"
+],
+"fffff5c8": [
+"TP3CCR1",
+"TMP3 capture/compare register 1"
+],
+"fffff5ca": [
+"TP3CNT",
+"TMP3 counter read buffer register"
+],
+"fffff5d0": [
+"TP4CTL0",
+"TMP4 control register 0"
+],
+"fffff5d1": [
+"TP4CTL1",
+"TMP4 control register 1"
+],
+"fffff5d2": [
+"TP4IOC0",
+"TMP4 I/O control register 0"
+],
+"fffff5d3": [
+"TP4IOC1",
+"TMP4 I/O control register 1"
+],
+"fffff5d4": [
+"TP4IOC2",
+"TMP4 I/O control register 2"
+],
+"fffff5d5": [
+"TP4OPT0",
+"TMP4 option register 0"
+],
+"fffff5d6": [
+"TP4CCR0",
+"TMP4 capture/compare register 0"
+],
+"fffff5d8": [
+"TP4CCR1",
+"TMP4 capture/compare register 1"
+],
+"fffff5da": [
+"TP4CNT",
+"TMP4 counter read buffer register"
+],
+"fffff5e0": [
+"TP5CTL0",
+"TMP5 control register 0"
+],
+"fffff5e1": [
+"TP5CTL1",
+"TMP5 control register 1"
+],
+"fffff5e2": [
+"TP5IOC0",
+"TMP5 I/O control register 0"
+],
+"fffff5e3": [
+"TP5IOC1",
+"TMP5 I/O control register 1"
+],
+"fffff5e4": [
+"TP5IOC2",
+"TMP5 I/O control register 2"
+],
+"fffff5e5": [
+"TP5OPT0",
+"TMP5 option register 0"
+],
+"fffff5e6": [
+"TP5CCR0",
+"TMP5 capture/compare register 0"
+],
+"fffff5e8": [
+"TP5CCR1",
+"TMP5 capture/compare register 1"
+],
+"fffff5ea": [
+"TP5CNT",
+"TMP5 counter read buffer register"
+],
+"fffff5f0": [
+"TP6CTL0",
+"TMP6 control register 0"
+],
+"fffff5f1": [
+"TP6CTL1",
+"TMP6 control register 1"
+],
+"fffff5f2": [
+"TP6IOC0",
+"TMP6 I/O control register 0"
+],
+"fffff5f3": [
+"TP6IOC1",
+"TMP6 I/O control register 1"
+],
+"fffff5f4": [
+"TP6IOC2",
+"TMP6 I/O control register 2"
+],
+"fffff5f5": [
+"TP6OPT0",
+"TMP6 option register 0"
+],
+"fffff5f6": [
+"TP6CCR0",
+"TMP6 capture/compare register 0"
+],
+"fffff5f8": [
+"TP6CCR1",
+"TMP6 capture/compare register 1"
+],
+"fffff5fa": [
+"TP6CNT",
+"TMP6 counter read buffer register"
+],
+"fffff600": [
+"TP7CTL0",
+"TMP7 control register 0"
+],
+"fffff601": [
+"TP7CTL1",
+"TMP7 control register 1"
+],
+"fffff602": [
+"TP7IOC0",
+"TMP7 I/O control register 0"
+],
+"fffff603": [
+"TP7IOC1",
+"TMP7 I/O control register 1"
+],
+"fffff604": [
+"TP7IOC2",
+"TMP7 I/O control register 2"
+],
+"fffff605": [
+"TP7OPT0",
+"TMP7 option register 0"
+],
+"fffff606": [
+"TP7CCR0",
+"TMP7 capture/compare register 0"
+],
+"fffff608": [
+"TP7CCR1",
+"TMP7 capture/compare register 1"
+],
+"fffff60a": [
+"TP7CNT",
+"TMP7 counter read buffer register"
+],
+"fffff610": [
+"TP8CTL0",
+"TMP8 control register 0"
+],
+"fffff611": [
+"TP8CTL1",
+"TMP8 control register 1"
+],
+"fffff612": [
+"TP8IOC0",
+"TMP8 I/O control register 0"
+],
+"fffff613": [
+"TP8IOC1",
+"TMP8 I/O control register 1"
+],
+"fffff614": [
+"TP8IOC2",
+"TMP8 I/O control register 2"
+],
+"fffff615": [
+"TP8OPT0",
+"TMP8 option register 0"
+],
+"fffff616": [
+"TP8CCR0",
+"TMP8 capture/compare register 0"
+],
+"fffff618": [
+"TP8CCR1",
+"TMP8 capture/compare register 1"
+],
+"fffff61a": [
+"TP8CNT",
+"TMP8 counter read buffer register"
+],
+"fffff680": [
+"WTM",
+"Watch timer operation mode register"
+],
+"fffff690": [
+"TM0CTL0",
+"TMM0 control register 0"
+],
+"fffff694": [
+"TM0CMP0",
+"TMM0 compare register 0"
+],
+"fffff6c0": [
+"OSTS",
+"Oscillation stabilization time select register"
+],
+"fffff6c1": [
+"PLLS",
+"PLL lockup time specification register"
+],
+"fffff6d0": [
+"WDTM2",
+"Watchdog timer mode register 2"
+],
+"fffff6d1": [
+"WDTE",
+"Watchdog timer enable register"
+],
+"fffff6e0": [
+"RTBL0",
+"Real-time output buffer register 0L"
+],
+"fffff6e2": [
+"RTBH0",
+"Real-time output buffer register 0H"
+],
+"fffff6e4": [
+"RTPM0",
+"Real-time output port mode register 0"
+],
+"fffff6e5": [
+"RTPC0",
+"Real-time output port control register 0"
+],
+"fffff6f0": [
+"RTBL1",
+"Real-time output buffer register 1L"
+],
+"fffff6f2": [
+"RTBH1",
+"Real-time output buffer register 1H"
+],
+"fffff6f4": [
+"RTPM1",
+"Real-time output port mode register 1"
+],
+"fffff6f5": [
+"RTPC1",
+"Real-time output port control register 1"
+],
+"fffff706": [
+"PFCE3L",
+"Port 3 function control expansion register L"
+],
+"fffff70a": [
+"PFCE5",
+"Port 5 function control expansion register"
+],
+"fffff712": [
+"PFCE9",
+"Port 9 function control expansion register"
+],
+"fffff713": [
+"PFCE9H",
+"Port 9 function control expansion register H"
+],
+"fffff802": [
+"SYS",
+"System status register"
+],
+"fffff80c": [
+"RCM",
+"Internal oscillation mode register"
+],
+"fffff810": [
+"DTFR0",
+"DMA trigger factor register 0"
+],
+"fffff812": [
+"DTFR1",
+"DMA trigger factor register 1"
+],
+"fffff814": [
+"DTFR2",
+"DMA trigger factor register 2"
+],
+"fffff816": [
+"DTFR3",
+"DMA trigger factor register 3"
+],
+"fffff820": [
+"PSMR",
+"Power save mode register"
+],
+"fffff822": [
+"CKC",
+"Clock control register"
+],
+"fffff824": [
+"LOCKR",
+"Lock register"
+],
+"fffff828": [
+"PCC",
+"Processor clock control register"
+],
+"fffff82c": [
+"PLLCTL",
+"PLL control register"
+],
+"fffff82e": [
+"CCLS",
+"CPU operation clock status register"
+],
+"fffff840": [
+"CORAD0",
+"Correction address register 0"
+],
+"fffff842": [
+"CORAD0H",
+"Correction address register 0H"
+],
+"fffff844": [
+"CORAD1",
+"Correction address register 1"
+],
+"fffff846": [
+"CORAD1H",
+"Correction address register 1H"
+],
+"fffff848": [
+"CORAD2",
+"Correction address register 2"
+],
+"fffff84a": [
+"CORAD2H",
+"Correction address register 2H"
+],
+"fffff84c": [
+"CORAD3",
+"Correction address register 3"
+],
+"fffff84e": [
+"CORAD3H",
+"Correction address register 3H"
+],
+"fffff870": [
+"CLM",
+"Clock monitor mode register"
+],
+"fffff880": [
+"CORCN",
+"Correction control register"
+],
+"fffff888": [
+"RESF",
+"Reset source flag register"
+],
+"fffff890": [
+"LVIM",
+"Low-voltage detection register"
+],
+"fffff891": [
+"LVIS",
+"Low-voltage detection level select register"
+],
+"fffff892": [
+"RAMS",
+"Internal RAM data status register"
+],
+"fffff8b0": [
+"PRSM0",
+"Prescaler mode register 0"
+],
+"fffff8b1": [
+"PRSCM0",
+"Prescaler compare register 0"
+],
+"fffff9fc": [
+"OCDM",
+"On-chip debug mode register"
+],
+"fffff9fe": [
+"Peripheral",
+""
+],
+"fffffa00": [
+"UA0CTL0",
+"UARTA0 control register 0"
+],
+"fffffa01": [
+"UA0CTL1",
+"UARTA0 control register 1"
+],
+"fffffa02": [
+"UA0CTL2",
+"UARTA0 control register 2"
+],
+"fffffa03": [
+"UA0OPT0",
+"UARTA0 option control register 0"
+],
+"fffffa04": [
+"UA0STR",
+"UARTA0 status register"
+],
+"fffffa06": [
+"UA0RX",
+"UARTA0 receive data register"
+],
+"fffffa07": [
+"UA0TX",
+"UARTA0 transmit data register"
+],
+"fffffa10": [
+"UA1CTL0",
+"UARTA1 control register 0"
+],
+"fffffa11": [
+"UA1CTL1",
+"UARTA1 control register 1"
+],
+"fffffa12": [
+"UA1CTL2",
+"UARTA1 control register 2"
+],
+"fffffa13": [
+"UA1OPT0",
+"UARTA1 option control register 0"
+],
+"fffffa14": [
+"UA1STR",
+"UARTA1 status register"
+],
+"fffffa16": [
+"UA1RX",
+"UARTA1 receive data register"
+],
+"fffffa17": [
+"UA1TX",
+"UARTA1 transmit data register"
+],
+"fffffa20": [
+"UA2CTL0",
+"UARTA2 control register 0"
+],
+"fffffa21": [
+"UA2CTL1",
+"UARTA2 control register 1"
+],
+"fffffa22": [
+"UA2CTL2",
+"UARTA2 control register 2"
+],
+"fffffa23": [
+"UA2OPT0",
+"UARTA2 option control register 0"
+],
+"fffffa24": [
+"UA2STR",
+"UARTA2 status register"
+],
+"fffffa26": [
+"UA2RX",
+"UARTA2 receive data register"
+],
+"fffffa27": [
+"UA2TX",
+"UARTA2 transmit data register"
+],
+"fffffa30": [
+"UA3CTL0",
+"UARTA3 control register 0"
+],
+"fffffa31": [
+"UA3CTL1",
+"UARTA3 control register 1"
+],
+"fffffa32": [
+"UA3CTL2",
+"UARTA3 control register 2"
+],
+"fffffa33": [
+"UA3OPT0",
+"UARTA3 option control register 0"
+],
+"fffffa34": [
+"UA3STR",
+"UARTA3 status register"
+],
+"fffffa36": [
+"UA3RX",
+"UARTA3 receive data register"
+],
+"fffffa37": [
+"UA3TX",
+"UARTA3 transmit data register"
+],
+"fffffc00": [
+"INTF0",
+"External interrupt falling edge specification register 0"
+],
+"fffffc06": [
+"INTF3",
+"External interrupt falling edge specification register 3"
+],
+"fffffc10": [
+"INTF8",
+"External interrupt falling edge specification register 8"
+],
+"fffffc13": [
+"INTF9H",
+"External interrupt falling edge specification register"
+],
+"fffffc20": [
+"INTR0",
+"External interrupt rising edge specification register 0"
+],
+"fffffc26": [
+"INTR3",
+"External interrupt rising edge specification register 3"
+],
+"fffffc30": [
+"INTR8",
+"External interrupt rising edge specification register 8"
+],
+"fffffc33": [
+"External",
+""
+],
+"fffffc60": [
+"PF0",
+"Port 0 function register"
+],
+"fffffc66": [
+"PF3",
+"Port 3 function register"
+],
+"fffffc67": [
+"PF3H",
+"Port 3 function register H"
+],
+"fffffc68": [
+"PF4",
+"Port 4 function register"
+],
+"fffffc6a": [
+"PF5",
+"Port 5 function register"
+],
+"fffffc6c": [
+"PF6",
+"Port 6 function register"
+],
+"fffffc6d": [
+"PF6H",
+"Port 6 function register H"
+],
+"fffffc70": [
+"PF8",
+"Port 8 function register"
+],
+"fffffc72": [
+"PF9",
+"Port 9 function register"
+],
+"fffffc73": [
+"PF9H",
+"Port 9 function register H"
+],
+"fffffcc8": [
+"PRDSELL",
+"Product selection register L"
+],
+"fffffcca": [
+"PRDSELH",
+"Product selection register H"
+],
+"fffffd00": [
+"CB0CTL0",
+"CSIB0 control register 0"
+],
+"fffffd01": [
+"CB0CTL1",
+"CSIB0 control register 1"
+],
+"fffffd02": [
+"CB0CTL2",
+"CSIB0 control register 2"
+],
+"fffffd03": [
+"CB0STR",
+"CSIB0 status register"
+],
+"fffffd04": [
+"CB0RX",
+"CSIB0 receive data register"
+],
+"fffffd06": [
+"CB0TX",
+"CSIB0 transmit data register"
+],
+"fffffd10": [
+"CB1CTL0",
+"CSIB1 control register 0"
+],
+"fffffd11": [
+"CB1CTL1",
+"CSIB1 control register 1"
+],
+"fffffd12": [
+"CB1CTL2",
+"CSIB1 control register 2"
+],
+"fffffd13": [
+"CB1STR",
+"CSIB1 status register"
+],
+"fffffd14": [
+"CB1RX",
+"CSIB1 receive data register"
+],
+"fffffd16": [
+"CB1TX",
+"CSIB1 transmit data register"
+],
+"fffffd20": [
+"CB2CTL0",
+"CSIB2 control register 0"
+],
+"fffffd21": [
+"CB2CTL1",
+"CSIB2 control register 1"
+],
+"fffffd22": [
+"CB2CTL2",
+"CSIB2 control register 2"
+],
+"fffffd23": [
+"CB2STR",
+"CSIB2 status register"
+],
+"fffffd24": [
+"CB2RX",
+"CSIB2 receive data register"
+],
+"fffffd26": [
+"CB2TX",
+"CSIB2 transmit data register"
+],
+"fffffd30": [
+"CB3CTL0",
+"CSIB3 control register 0"
+],
+"fffffd31": [
+"CB3CTL1",
+"CSIB3 control register 1"
+],
+"fffffd32": [
+"CB3CTL2",
+"CSIB3 control register 2"
+],
+"fffffd33": [
+"CB3STR",
+"CSIB3 status register"
+],
+"fffffd34": [
+"CB3RX",
+"CSIB3 receive data register"
+],
+"fffffd36": [
+"CB3TX",
+"CSIB3 transmit data register"
+],
+"fffffd40": [
+"CB4CTL0",
+"CSIB4 control register 0"
+],
+"fffffd41": [
+"CB4CTL1",
+"CSIB4 control register 1"
+],
+"fffffd42": [
+"CB4CTL2",
+"CSIB4 control register 2"
+],
+"fffffd43": [
+"CB4STR",
+"CSIB4 status register"
+],
+"fffffd44": [
+"CB4RX",
+"CSIB4 receive data register"
+],
+"fffffd46": [
+"CB4TX",
+"CSIB4 transmit data register"
+],
+"fffffd50": [
+"CB5CTL0",
+"CSIB5 control register 0"
+],
+"fffffd51": [
+"CB5CTL1",
+"CSIB5 control register 1"
+],
+"fffffd52": [
+"CB5CTL2",
+"CSIB5 control register 2"
+],
+"fffffd53": [
+"CB5STR",
+"CSIB5 status register"
+],
+"fffffd54": [
+"CB5RX",
+"CSIB5 receive data register"
+],
+"fffffd56": [
+"CB5TX",
+"CSIB5 transmit data register"
+],
+"fffffd80": [
+"IIC0",
+"IIC shift register 0"
+],
+"fffffd82": [
+"IICC0",
+"IIC control register 0"
+],
+"fffffd83": [
+"SVA0",
+"Slave address register 0"
+],
+"fffffd84": [
+"IICCL0",
+"IIC clock select register 0"
+],
+"fffffd85": [
+"IICX0",
+"IIC function expansion register 0"
+],
+"fffffd86": [
+"IICS0",
+"IIC status register 0"
+],
+"fffffd8a": [
+"IICF0",
+"IIC flag register 0"
+],
+"fffffd90": [
+"IIC1",
+"IIC shift register 1"
+],
+"fffffd92": [
+"IICC1",
+"IIC control register 1"
+],
+"fffffd93": [
+"SVA1",
+"Slave address register 1"
+],
+"fffffd94": [
+"IICCL1",
+"IIC clock select register 1"
+],
+"fffffd95": [
+"IICX1",
+"IIC function expansion register 1"
+],
+"fffffd96": [
+"IICS1",
+"IIC status register 1"
+],
+"fffffd9a": [
+"IICF1",
+"IIC flag register 1"
+],
+"fffffda0": [
+"IIC2",
+"IIC shift register 2"
+],
+"fffffda2": [
+"IICC2",
+"IIC control register 2"
+],
+"fffffda3": [
+"SVA2",
+"Slave address register 2"
+],
+"fffffda4": [
+"IICCL2",
+"IIC clock select register 2"
+],
+"fffffda5": [
+"IICX2",
+"IIC function expansion register 2"
+],
+"fffffda6": [
+"IICS2",
+"IIC status register 2"
+],
+"fffffdaa": [
+"IICF2",
+"IIC flag register 2"
+],
+"ffffffbe": [
+"EXIMC",
+"External bus interface mode control register"
+]
+}

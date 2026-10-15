@@ -1,0 +1,1745 @@
+{
+ "vectors": [
+  {
+   "slot": "004500",
+   "vector": "reset",
+   "handler": "0183e0"
+  },
+  {
+   "slot": "004544",
+   "vector": "120",
+   "handler": "019318"
+  },
+  {
+   "slot": "004558",
+   "vector": "170",
+   "handler": "0194aa"
+  },
+  {
+   "slot": "0045a8",
+   "vector": "2b0",
+   "handler": "019c4a"
+  },
+  {
+   "slot": "0045ac",
+   "vector": "2c0",
+   "handler": "01ae88"
+  },
+  {
+   "slot": "0045b0",
+   "vector": "2d0",
+   "handler": "01ada4"
+  },
+  {
+   "slot": "0045b4",
+   "vector": "2e0",
+   "handler": "01af54"
+  },
+  {
+   "slot": "0045b8",
+   "vector": "2f0",
+   "handler": "01b110"
+  },
+  {
+   "slot": "0045bc",
+   "vector": "300",
+   "handler": "033b00"
+  },
+  {
+   "slot": "0045c4",
+   "vector": "320",
+   "handler": "019d94"
+  },
+  {
+   "slot": "0045d8",
+   "vector": "370",
+   "handler": "019236"
+  }
+ ],
+ "can_rx_buffers": [
+  {
+   "mailbox": 1,
+   "slot": 24,
+   "ram": "00000000",
+   "gp_offset": null
+  },
+  {
+   "mailbox": 2,
+   "slot": 7,
+   "ram": "03ffe09c",
+   "gp_offset": "-0x5f70"
+  },
+  {
+   "mailbox": 3,
+   "slot": 8,
+   "ram": "03ffe08c",
+   "gp_offset": "-0x5f80"
+  },
+  {
+   "mailbox": 4,
+   "slot": 9,
+   "ram": "03ffe230",
+   "gp_offset": "-0x5ddc"
+  },
+  {
+   "mailbox": 5,
+   "slot": 10,
+   "ram": "03ffe238",
+   "gp_offset": "-0x5dd4"
+  },
+  {
+   "mailbox": 6,
+   "slot": 11,
+   "ram": "03ffe240",
+   "gp_offset": "-0x5dcc"
+  },
+  {
+   "mailbox": 7,
+   "slot": 12,
+   "ram": "03ffe084",
+   "gp_offset": "-0x5f88"
+  },
+  {
+   "mailbox": 8,
+   "slot": 13,
+   "ram": "03ffe248",
+   "gp_offset": "-0x5dc4"
+  },
+  {
+   "mailbox": 9,
+   "slot": 25,
+   "ram": "03ffe280",
+   "gp_offset": "-0x5d8c"
+  },
+  {
+   "mailbox": 10,
+   "slot": 26,
+   "ram": "03ffe288",
+   "gp_offset": "-0x5d84"
+  },
+  {
+   "mailbox": 11,
+   "slot": 27,
+   "ram": "03ffe290",
+   "gp_offset": "-0x5d7c"
+  },
+  {
+   "mailbox": 12,
+   "slot": 14,
+   "ram": "03ffe250",
+   "gp_offset": "-0x5dbc"
+  },
+  {
+   "mailbox": 13,
+   "slot": 28,
+   "ram": "03ffe298",
+   "gp_offset": "-0x5d74"
+  },
+  {
+   "mailbox": 14,
+   "slot": 15,
+   "ram": "03ffe07c",
+   "gp_offset": "-0x5f90"
+  },
+  {
+   "mailbox": 15,
+   "slot": 16,
+   "ram": "03ffe258",
+   "gp_offset": "-0x5db4"
+  },
+  {
+   "mailbox": 16,
+   "slot": 17,
+   "ram": "03ffe260",
+   "gp_offset": "-0x5dac"
+  },
+  {
+   "mailbox": 17,
+   "slot": 18,
+   "ram": "03ffe268",
+   "gp_offset": "-0x5da4"
+  },
+  {
+   "mailbox": 18,
+   "slot": 29,
+   "ram": "03ffe2a0",
+   "gp_offset": "-0x5d6c"
+  },
+  {
+   "mailbox": 19,
+   "slot": 19,
+   "ram": "03ffe270",
+   "gp_offset": "-0x5d9c"
+  },
+  {
+   "mailbox": 20,
+   "slot": 30,
+   "ram": "03ffe2a8",
+   "gp_offset": "-0x5d64"
+  },
+  {
+   "mailbox": 21,
+   "slot": 20,
+   "ram": "03ffe0ac",
+   "gp_offset": "-0x5f60"
+  },
+  {
+   "mailbox": 22,
+   "slot": 31,
+   "ram": "03ffe2b0",
+   "gp_offset": "-0x5d5c"
+  },
+  {
+   "mailbox": 23,
+   "slot": 32,
+   "ram": "03ffe2b8",
+   "gp_offset": "-0x5d54"
+  },
+  {
+   "mailbox": 24,
+   "slot": 33,
+   "ram": "03ffe2c0",
+   "gp_offset": "-0x5d4c"
+  },
+  {
+   "mailbox": 25,
+   "slot": 21,
+   "ram": "03ffe0a0",
+   "gp_offset": "-0x5f6c"
+  },
+  {
+   "mailbox": 26,
+   "slot": 34,
+   "ram": "03ffe2c8",
+   "gp_offset": "-0x5d44"
+  },
+  {
+   "mailbox": 27,
+   "slot": 35,
+   "ram": "03ffe2d0",
+   "gp_offset": "-0x5d3c"
+  },
+  {
+   "mailbox": 28,
+   "slot": 22,
+   "ram": "03ffe274",
+   "gp_offset": "-0x5d98"
+  },
+  {
+   "mailbox": 29,
+   "slot": 36,
+   "ram": "03ffe2d8",
+   "gp_offset": "-0x5d34"
+  }
+ ],
+ "strings": [
+  {
+   "addr": "000058",
+   "s": "        "
+  },
+  {
+   "addr": "000061",
+   "s": "                                  "
+  },
+  {
+   "addr": "000084",
+   "s": "        "
+  },
+  {
+   "addr": "000094",
+   "s": "      Empty     "
+  },
+  {
+   "addr": "0000a8",
+   "s": "                                "
+  },
+  {
+   "addr": "0000c9",
+   "s": "                               "
+  },
+  {
+   "addr": "0000f0",
+   "s": "    Empty     "
+  },
+  {
+   "addr": "000102",
+   "s": "      "
+  },
+  {
+   "addr": "000109",
+   "s": "AM    "
+  },
+  {
+   "addr": "000110",
+   "s": "        "
+  },
+  {
+   "addr": "000119",
+   "s": "AM AS"
+  },
+  {
+   "addr": "00011f",
+   "s": "        "
+  },
+  {
+   "addr": "000128",
+   "s": "FM 1  "
+  },
+  {
+   "addr": "00012f",
+   "s": "FM 2  "
+  },
+  {
+   "addr": "000136",
+   "s": "FM AS"
+  },
+  {
+   "addr": "000140",
+   "s": "        "
+  },
+  {
+   "addr": "00014b",
+   "s": "Emergency B'cast "
+  },
+  {
+   "addr": "00015d",
+   "s": "Press 'EXIT' button to stop"
+  },
+  {
+   "addr": "00017b",
+   "s": "Traffic Announce..."
+  },
+  {
+   "addr": "00018f",
+   "s": "Press 'EXIT' button to stop"
+  },
+  {
+   "addr": "0001ad",
+   "s": "Program Types "
+  },
+  {
+   "addr": "0001bc",
+   "s": "Not Found"
+  },
+  {
+   "addr": "0001c6",
+   "s": "                                              "
+  },
+  {
+   "addr": "0001f5",
+   "s": "                                              "
+  },
+  {
+   "addr": "000229",
+   "s": "Current Affairs"
+  },
+  {
+   "addr": "000239",
+   "s": "Information"
+  },
+  {
+   "addr": "000245",
+   "s": "Sport"
+  },
+  {
+   "addr": "00024b",
+   "s": "Education"
+  },
+  {
+   "addr": "000255",
+   "s": "Drama"
+  },
+  {
+   "addr": "00025b",
+   "s": "Culture"
+  },
+  {
+   "addr": "000263",
+   "s": "Science"
+  },
+  {
+   "addr": "00026b",
+   "s": "Varied"
+  },
+  {
+   "addr": "000272",
+   "s": "Pop Music"
+  },
+  {
+   "addr": "00027c",
+   "s": "Rock Music"
+  },
+  {
+   "addr": "000287",
+   "s": "Easy Listening Music"
+  },
+  {
+   "addr": "00029c",
+   "s": "Light Classical"
+  },
+  {
+   "addr": "0002ac",
+   "s": "Serious Classical"
+  },
+  {
+   "addr": "0002be",
+   "s": "Other Music"
+  },
+  {
+   "addr": "0002ca",
+   "s": "Weather"
+  },
+  {
+   "addr": "0002d2",
+   "s": "Finance"
+  },
+  {
+   "addr": "0002da",
+   "s": "Children's Programs"
+  },
+  {
+   "addr": "0002ee",
+   "s": "Social Affairs"
+  },
+  {
+   "addr": "0002fd",
+   "s": "Religion"
+  },
+  {
+   "addr": "000306",
+   "s": "Phone In"
+  },
+  {
+   "addr": "00030f",
+   "s": "Travel"
+  },
+  {
+   "addr": "000316",
+   "s": "Leisure"
+  },
+  {
+   "addr": "00031e",
+   "s": "Jazz Music"
+  },
+  {
+   "addr": "000329",
+   "s": "Country Music"
+  },
+  {
+   "addr": "000337",
+   "s": "National Music"
+  },
+  {
+   "addr": "000346",
+   "s": "Oldies Music"
+  },
+  {
+   "addr": "000353",
+   "s": "Folk Music"
+  },
+  {
+   "addr": "00035e",
+   "s": "Documentary"
+  },
+  {
+   "addr": "00036a",
+   "s": "Alarm Test"
+  },
+  {
+   "addr": "000375",
+   "s": "Alarm"
+  },
+  {
+   "addr": "00037e",
+   "s": "          "
+  },
+  {
+   "addr": "000389",
+   "s": "PHONE"
+  },
+  {
+   "addr": "00038f",
+   "s": "Reading Disc"
+  },
+  {
+   "addr": "00039c",
+   "s": "Please Wait..."
+  },
+  {
+   "addr": "0003ab",
+   "s": "                               "
+  },
+  {
+   "addr": "0003d1",
+   "s": "Track  "
+  },
+  {
+   "addr": "0003dd",
+   "s": "                     "
+  },
+  {
+   "addr": "0003f3",
+   "s": "                  "
+  },
+  {
+   "addr": "000406",
+   "s": "        "
+  },
+  {
+   "addr": "00040f",
+   "s": "     "
+  },
+  {
+   "addr": "000419",
+   "s": "Auxiliary"
+  },
+  {
+   "addr": "000423",
+   "s": "Auxiliary"
+  },
+  {
+   "addr": "00042d",
+   "s": "Audio Off"
+  },
+  {
+   "addr": "000439",
+   "s": "Audio Off"
+  },
+  {
+   "addr": "0018b4",
+   "s": "~'?'9"
+  },
+  {
+   "addr": "003168",
+   "s": "                     "
+  },
+  {
+   "addr": "003fb0",
+   "s": ">F~>N~>N~"
+  },
+  {
+   "addr": "004054",
+   "s": "(\"(\"(1(1 "
+  },
+  {
+   "addr": "004063",
+   "s": "Audio"
+  },
+  {
+   "addr": "004069",
+   "s": "Settings"
+  },
+  {
+   "addr": "004072",
+   "s": "Phone"
+  },
+  {
+   "addr": "00408c",
+   "s": "                                                              "
+  },
+  {
+   "addr": "0040cb",
+   "s": "                                                              "
+  },
+  {
+   "addr": "00410a",
+   "s": "                                                              "
+  },
+  {
+   "addr": "004149",
+   "s": "                                                                      "
+  },
+  {
+   "addr": "004190",
+   "s": "                                                              "
+  },
+  {
+   "addr": "0041cf",
+   "s": "                                                              "
+  },
+  {
+   "addr": "00420e",
+   "s": "                                                              "
+  },
+  {
+   "addr": "0052ae",
+   "s": " ``````````````````` "
+  },
+  {
+   "addr": "0053ea",
+   "s": " `````````` "
+  },
+  {
+   "addr": "006784",
+   "s": "w<w<w<w<w<w<w<w<w"
+  },
+  {
+   "addr": "006796",
+   "s": "w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w<w"
+  },
+  {
+   "addr": "006926",
+   "s": "ww<ww<ww<ww<ww<ww<ww<ww<ww"
+  },
+  {
+   "addr": "006941",
+   "s": "ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww<ww"
+  },
+  {
+   "addr": "0072a6",
+   "s": "`               `"
+  },
+  {
+   "addr": "008c77",
+   "s": " >y>H8"
+  },
+  {
+   "addr": "008c92",
+   "s": " ~y>L?"
+  },
+  {
+   "addr": "00980a",
+   "s": "Audio"
+  },
+  {
+   "addr": "009810",
+   "s": "Bass/Mid/Treble"
+  },
+  {
+   "addr": "009820",
+   "s": "Balance and Fade"
+  },
+  {
+   "addr": "009836",
+   "s": "Sound Equaliser"
+  },
+  {
+   "addr": "00984a",
+   "s": "Full ID3 Information"
+  },
+  {
+   "addr": "00985f",
+   "s": "Options"
+  },
+  {
+   "addr": "009867",
+   "s": "Radio Scan/AS"
+  },
+  {
+   "addr": "009875",
+   "s": "Default Audio Settings"
+  },
+  {
+   "addr": "009895",
+   "s": "Treble"
+  },
+  {
+   "addr": "00989c",
+   "s": "Balance"
+  },
+  {
+   "addr": "0098ae",
+   "s": "250Hz"
+  },
+  {
+   "addr": "0098be",
+   "s": "16kHz"
+  },
+  {
+   "addr": "0098c4",
+   "s": "Traffic Announcements"
+  },
+  {
+   "addr": "0098da",
+   "s": "Emergency Broadcasts"
+  },
+  {
+   "addr": "0098ef",
+   "s": "Alternative Frequency"
+  },
+  {
+   "addr": "009905",
+   "s": "Regional Links"
+  },
+  {
+   "addr": "009914",
+   "s": "Radio Text"
+  },
+  {
+   "addr": "00991f",
+   "s": "Program Types Filter"
+  },
+  {
+   "addr": "009934",
+   "s": "Program Types"
+  },
+  {
+   "addr": "009942",
+   "s": "Default RDS Settings"
+  },
+  {
+   "addr": "009957",
+   "s": "Power Limiting"
+  },
+  {
+   "addr": "009966",
+   "s": "CD Compression"
+  },
+  {
+   "addr": "009975",
+   "s": "Audio Off-Driver Door Open"
+  },
+  {
+   "addr": "009990",
+   "s": "Speed Dependent Volume"
+  },
+  {
+   "addr": "0099a7",
+   "s": "Media Volume"
+  },
+  {
+   "addr": "0099b4",
+   "s": "Scan Active"
+  },
+  {
+   "addr": "0099c0",
+   "s": "Auto Store Active"
+  },
+  {
+   "addr": "0099d2",
+   "s": "All Genres On"
+  },
+  {
+   "addr": "0099e0",
+   "s": "Children's Programs"
+  },
+  {
+   "addr": "0099f4",
+   "s": "Country Music"
+  },
+  {
+   "addr": "009a02",
+   "s": "Culture"
+  },
+  {
+   "addr": "009a0a",
+   "s": "Current Affairs"
+  },
+  {
+   "addr": "009a1a",
+   "s": "Documentary"
+  },
+  {
+   "addr": "009a26",
+   "s": "Drama"
+  },
+  {
+   "addr": "009a2c",
+   "s": "Easy Listening Music"
+  },
+  {
+   "addr": "009a41",
+   "s": "Education"
+  },
+  {
+   "addr": "009a4b",
+   "s": "Finance"
+  },
+  {
+   "addr": "009a53",
+   "s": "Folk Music"
+  },
+  {
+   "addr": "009a5e",
+   "s": "Information"
+  },
+  {
+   "addr": "009a6a",
+   "s": "Jazz Music"
+  },
+  {
+   "addr": "009a75",
+   "s": "Leisure"
+  },
+  {
+   "addr": "009a7d",
+   "s": "Light Classical"
+  },
+  {
+   "addr": "009a8d",
+   "s": "National Music"
+  },
+  {
+   "addr": "009aa1",
+   "s": "Oldies Music"
+  },
+  {
+   "addr": "009aae",
+   "s": "Other Music"
+  },
+  {
+   "addr": "009aba",
+   "s": "Phone In"
+  },
+  {
+   "addr": "009ac3",
+   "s": "Pop Music"
+  },
+  {
+   "addr": "009acd",
+   "s": "Religion"
+  },
+  {
+   "addr": "009ad6",
+   "s": "Rock Music"
+  },
+  {
+   "addr": "009ae1",
+   "s": "Science"
+  },
+  {
+   "addr": "009ae9",
+   "s": "Serious Classical"
+  },
+  {
+   "addr": "009afb",
+   "s": "Social Affairs"
+  },
+  {
+   "addr": "009b0a",
+   "s": "Sport"
+  },
+  {
+   "addr": "009b10",
+   "s": "Travel"
+  },
+  {
+   "addr": "009b17",
+   "s": "Varied"
+  },
+  {
+   "addr": "009b1e",
+   "s": "Weather"
+  },
+  {
+   "addr": "009b26",
+   "s": "Sonar Volume"
+  },
+  {
+   "addr": "009b33",
+   "s": "Auxiliary-1 Volume"
+  },
+  {
+   "addr": "009b46",
+   "s": "Auxiliary-2 Volume"
+  },
+  {
+   "addr": "009c70",
+   "s": "Audio Code Error"
+  },
+  {
+   "addr": "00a44a",
+   "s": "Settings"
+  },
+  {
+   "addr": "00a458",
+   "s": "Locking"
+  },
+  {
+   "addr": "00a460",
+   "s": "Unlocking"
+  },
+  {
+   "addr": "00a46a",
+   "s": "Lighting"
+  },
+  {
+   "addr": "00a473",
+   "s": "Alarm"
+  },
+  {
+   "addr": "00a479",
+   "s": "Display"
+  },
+  {
+   "addr": "00a481",
+   "s": "Default Vehicle Settings"
+  },
+  {
+   "addr": "00a49a",
+   "s": "Minutes"
+  },
+  {
+   "addr": "00a4a2",
+   "s": "Hours"
+  },
+  {
+   "addr": "00a4a8",
+   "s": "Drive Away Locking"
+  },
+  {
+   "addr": "00a4bb",
+   "s": "Confirm with Indicators"
+  },
+  {
+   "addr": "00a4d3",
+   "s": "Confirm with Horn"
+  },
+  {
+   "addr": "00a4e5",
+   "s": "Boot Security Lock"
+  },
+  {
+   "addr": "00a4f8",
+   "s": "Default Locking Settings"
+  },
+  {
+   "addr": "00a511",
+   "s": "2 Stage Unlock"
+  },
+  {
+   "addr": "00a520",
+   "s": "Confirm with Indicators"
+  },
+  {
+   "addr": "00a538",
+   "s": "Puddle Lamp On"
+  },
+  {
+   "addr": "00a547",
+   "s": "Default Unlocking Settings"
+  },
+  {
+   "addr": "00a562",
+   "s": "Follow Me Home Lighting"
+  },
+  {
+   "addr": "00a57a",
+   "s": "Auto Headlight Adjustment"
+  },
+  {
+   "addr": "00a594",
+   "s": "Interior Lighting Settings"
+  },
+  {
+   "addr": "00a5af",
+   "s": "Default Lighting Settings"
+  },
+  {
+   "addr": "00a5c9",
+   "s": "Alarm"
+  },
+  {
+   "addr": "00a5cf",
+   "s": "Confirm - Audible"
+  },
+  {
+   "addr": "00a5e1",
+   "s": "Enable with Remote"
+  },
+  {
+   "addr": "00a5f4",
+   "s": "Enable with Key Out"
+  },
+  {
+   "addr": "00a608",
+   "s": "Default Alarm Settings"
+  },
+  {
+   "addr": "00a61f",
+   "s": "Brightness"
+  },
+  {
+   "addr": "00a62a",
+   "s": "Contrast"
+  },
+  {
+   "addr": "00a633",
+   "s": "Screen Off"
+  },
+  {
+   "addr": "00a63e",
+   "s": "Ford Logo"
+  },
+  {
+   "addr": "00a648",
+   "s": "Default Display Settings"
+  },
+  {
+   "addr": "00a661",
+   "s": "Auto Headlight On Dly"
+  },
+  {
+   "addr": "00a677",
+   "s": "Auto Headlight Off Dly"
+  },
+  {
+   "addr": "00a68e",
+   "s": "Always Off"
+  },
+  {
+   "addr": "00a699",
+   "s": "On with Ignition Off"
+  },
+  {
+   "addr": "00a6ae",
+   "s": "On with Key Out"
+  },
+  {
+   "addr": "00a6be",
+   "s": "On with Door Open"
+  },
+  {
+   "addr": "00a6d0",
+   "s": "On with Unlock"
+  },
+  {
+   "addr": "00ab89",
+   "s": "O 8|?"
+  },
+  {
+   "addr": "00c081",
+   "s": "?hBLE+H"
+  },
+  {
+   "addr": "00c0a0",
+   "s": "FOLDERS                                   "
+  },
+  {
+   "addr": "00c0cb",
+   "s": "CD MP3                                         "
+  },
+  {
+   "addr": "00ce70",
+   "s": "8x88x"
+  },
+  {
+   "addr": "00ce8e",
+   "s": "8p88pq"
+  },
+  {
+   "addr": "00cead",
+   "s": "p88pq"
+  },
+  {
+   "addr": "00cecb",
+   "s": "p88pq"
+  },
+  {
+   "addr": "00cee8",
+   "s": "8p88pq"
+  },
+  {
+   "addr": "00cf06",
+   "s": "8p88pq"
+  },
+  {
+   "addr": "00cf24",
+   "s": "8p88pq"
+  },
+  {
+   "addr": "00cf42",
+   "s": "xp88pp"
+  },
+  {
+   "addr": "00cf61",
+   "s": "p>8pp"
+  },
+  {
+   "addr": "00ed82",
+   "s": "PHONE"
+  },
+  {
+   "addr": "00ed88",
+   "s": "Pair a New Phone"
+  },
+  {
+   "addr": "00ed99",
+   "s": "Change Connected Phone"
+  },
+  {
+   "addr": "00edb0",
+   "s": "Delete Phone List"
+  },
+  {
+   "addr": "00ee04",
+   "s": "PAIR A NEW PHONE"
+  },
+  {
+   "addr": "00ee15",
+   "s": "PAIR A NEW PHONE"
+  },
+  {
+   "addr": "00ee26",
+   "s": "CHANGE CONNECTED PHONE"
+  },
+  {
+   "addr": "00ee3d",
+   "s": "CONNECT NEW PHONE"
+  },
+  {
+   "addr": "00ee4f",
+   "s": "DELETE PHONE LIST"
+  },
+  {
+   "addr": "00ee61",
+   "s": "PHONE"
+  },
+  {
+   "addr": "00ee67",
+   "s": "PHONE"
+  },
+  {
+   "addr": "00ee6f",
+   "s": "                                                          "
+  },
+  {
+   "addr": "00eeaa",
+   "s": "PHONE"
+  },
+  {
+   "addr": "00eeb2",
+   "s": "PHONE"
+  },
+  {
+   "addr": "00efa2",
+   "s": "MODE-1 "
+  },
+  {
+   "addr": "00efaa",
+   "s": "RDS Detect: "
+  },
+  {
+   "addr": "00efb7",
+   "s": "Multipath: "
+  },
+  {
+   "addr": "00efc3",
+   "s": "        "
+  },
+  {
+   "addr": "00efcc",
+   "s": "Signal Strength: "
+  },
+  {
+   "addr": "00efde",
+   "s": "8R29-14D348-"
+  },
+  {
+   "addr": "00efeb",
+   "s": "8R29-18C939-"
+  },
+  {
+   "addr": "00effa",
+   "s": "MODE-2 "
+  },
+  {
+   "addr": "00f002",
+   "s": "RDS Detect: "
+  },
+  {
+   "addr": "00f00f",
+   "s": "S/W Ver: "
+  },
+  {
+   "addr": "00f021",
+   "s": "Serial: "
+  },
+  {
+   "addr": "00f02a",
+   "s": "     "
+  },
+  {
+   "addr": "00f032",
+   "s": "MODE-3 "
+  },
+  {
+   "addr": "00f03a",
+   "s": "RDS Detect: "
+  },
+  {
+   "addr": "00f047",
+   "s": "Diag Data: "
+  },
+  {
+   "addr": "00f072",
+   "s": "```````"
+  },
+  {
+   "addr": "00f07a",
+   "s": "``lll"
+  },
+  {
+   "addr": "00f09b",
+   "s": ">kh~?"
+  },
+  {
+   "addr": "00f0a4",
+   "s": "<`f`f"
+  },
+  {
+   "addr": "00f0d7",
+   "s": "0 ```` 0"
+  },
+  {
+   "addr": "00f12c",
+   "s": "00``>"
+  },
+  {
+   "addr": "00f132",
+   "s": "cccccc"
+  },
+  {
+   "addr": "00f16d",
+   "s": ">a|~ccc>"
+  },
+  {
+   "addr": "00f18b",
+   "s": ">ccc?"
+  },
+  {
+   "addr": "00f254",
+   "s": "``~~``"
+  },
+  {
+   "addr": "00f25e",
+   "s": "``~~````"
+  },
+  {
+   "addr": "00f28e",
+   "s": "``````````"
+  },
+  {
+   "addr": "00f2b6",
+   "s": "````````"
+  },
+  {
+   "addr": "00f316",
+   "s": "``````c`q"
+  },
+  {
+   "addr": "00f3d8",
+   "s": "`@@@@@@@@```00"
+  },
+  {
+   "addr": "00f3ec",
+   "s": "`        `"
+  },
+  {
+   "addr": "00f41f",
+   "s": "000``000"
+  },
+  {
+   "addr": "00f428",
+   "s": "```````````000"
+  },
+  {
+   "addr": "00f6bc",
+   "s": "```````"
+  },
+  {
+   "addr": "00f6ed",
+   "s": ">kh~?"
+  },
+  {
+   "addr": "00f6f8",
+   "s": "<`f`f"
+  },
+  {
+   "addr": "00f735",
+   "s": "0 ```` 0"
+  },
+  {
+   "addr": "00f7a2",
+   "s": "cccccc"
+  },
+  {
+   "addr": "00f7e9",
+   "s": ">a|~ccc>"
+  },
+  {
+   "addr": "00f80d",
+   "s": ">ccc?"
+  },
+  {
+   "addr": "00f8fe",
+   "s": "``~~``"
+  },
+  {
+   "addr": "00f90a",
+   "s": "``~~````"
+  },
+  {
+   "addr": "00f944",
+   "s": "``````````"
+  },
+  {
+   "addr": "00f974",
+   "s": "````````"
+  },
+  {
+   "addr": "00f9e6",
+   "s": "``````c`q"
+  },
+  {
+   "addr": "00fad0",
+   "s": "`@@@@@@@@`"
+  },
+  {
+   "addr": "00fae8",
+   "s": "`        `"
+  },
+  {
+   "addr": "00fb3c",
+   "s": "```lvcccvl"
+  },
+  {
+   "addr": "00fb4c",
+   "s": "3```3"
+  },
+  {
+   "addr": "00fb58",
+   "s": "7ccc7"
+  },
+  {
+   "addr": "00fb6d",
+   "s": "00|000000"
+  },
+  {
+   "addr": "00fb7c",
+   "s": "7ccc7"
+  },
+  {
+   "addr": "00fb82",
+   "s": "C>```nsccccc"
+  },
+  {
+   "addr": "00fb93",
+   "s": "```````"
+  },
+  {
+   "addr": "00fb9f",
+   "s": "00000000````flxpxlf"
+  },
+  {
+   "addr": "00fbb4",
+   "s": "`````````0"
+  },
+  {
+   "addr": "00fbdb",
+   "s": "nsccccc"
+  },
+  {
+   "addr": "00fbe8",
+   "s": "6ccc6"
+  },
+  {
+   "addr": "00fbf3",
+   "s": "lvcccvl``"
+  },
+  {
+   "addr": "00fc00",
+   "s": "7ccc7"
+  },
+  {
+   "addr": "00fc0b",
+   "s": "lp`````"
+  },
+  {
+   "addr": "00fc22",
+   "s": "0|00000"
+  },
+  {
+   "addr": "00fc2f",
+   "s": "cccccg;"
+  },
+  {
+   "addr": "00fc3b",
+   "s": "cc666"
+  },
+  {
+   "addr": "00fc6b",
+   "s": "cc666"
+  },
+  {
+   "addr": "00fc81",
+   "s": "000``000"
+  },
+  {
+   "addr": "00fc8c",
+   "s": "``````````"
+  },
+  {
+   "addr": "00fcbc",
+   "s": "          "
+  },
+  {
+   "addr": "010008",
+   "s": "000000000000"
+  },
+  {
+   "addr": "01001c",
+   "s": "ff\"\"D"
+  },
+  {
+   "addr": "01006c",
+   "s": "b0b0:`?"
+  },
+  {
+   "addr": "0101f0",
+   "s": "000``"
+  },
+  {
+   "addr": "010204",
+   "s": "0``0`0`0`0`0`0`00`8"
+  },
+  {
+   "addr": "010289",
+   "s": "0`0`00`?"
+  },
+  {
+   "addr": "0102a9",
+   "s": "`8`p```"
+  },
+  {
+   "addr": "0102fe",
+   "s": "`0`0`0`08"
+  },
+  {
+   "addr": "010344",
+   "s": "0`0`8"
+  },
+  {
+   "addr": "01034e",
+   "s": "pp`0`0`0pp?"
+  },
+  {
+   "addr": "01036c",
+   "s": "`0`0`0`08"
+  },
+  {
+   "addr": "01060c",
+   "s": "0000000000000000"
+  },
+  {
+   "addr": "010635",
+   "s": "`````p"
+  },
+  {
+   "addr": "01064c",
+   "s": "080p0"
+  },
+  {
+   "addr": "010660",
+   "s": "0p080"
+  },
+  {
+   "addr": "0106be",
+   "s": "`0p`0p`0 `"
+  },
+  {
+   "addr": "0108f5",
+   "s": "`00p8`"
+  },
+  {
+   "addr": "010954",
+   "s": "xx````````````xx"
+  },
+  {
+   "addr": "01096b",
+   "s": "``000"
+  },
+  {
+   "addr": "010a28",
+   "s": "<p880"
+  },
+  {
+   "addr": "010a34",
+   "s": "88<p?"
+  },
+  {
+   "addr": "010a7a",
+   "s": "pp`0`0`0`0pp8"
+  },
+  {
+   "addr": "010ade",
+   "s": "pp`0`0`0`0pp8"
+  },
+  {
+   "addr": "010af0",
+   "s": "`0pp?"
+  },
+  {
+   "addr": "010b04",
+   "s": "<p800000000000000000"
+  },
+  {
+   "addr": "010b24",
+   "s": "000000000000"
+  },
+  {
+   "addr": "010b38",
+   "s": "00000000000000"
+  },
+  {
+   "addr": "010b70",
+   "s": "000000000000008"
+  },
+  {
+   "addr": "010bcc",
+   "s": "<p800000000000000000"
+  },
+  {
+   "addr": "010bf6",
+   "s": "pp`0`0`0`0pp8"
+  },
+  {
+   "addr": "010c1c",
+   "s": "<p880"
+  },
+  {
+   "addr": "010c28",
+   "s": "88<p?"
+  },
+  {
+   "addr": "010ccc",
+   "s": "00000000000000000p8"
+  },
+  {
+   "addr": "010cf4",
+   "s": "`0`00`0`8"
+  },
+  {
+   "addr": "010d58",
+   "s": "`0pp8"
+  },
+  {
+   "addr": "010d80",
+   "s": "`0`00`0`8"
+  },
+  {
+   "addr": "010df0",
+   "s": "````````````````"
+  },
+  {
+   "addr": "010e57",
+   "s": "?            "
+  },
+  {
+   "addr": "011960",
+   "s": " @ @ @"
+  },
+  {
+   "addr": "0119d9",
+   "s": " @@@@@@ "
+  },
+  {
+   "addr": "011a45",
+   "s": "*A\"A\"A\"U*"
+  },
+  {
+   "addr": "011a8e",
+   "s": " T*A\"A*"
+  },
+  {
+   "addr": "011aa9",
+   "s": "*A\"U*"
+  },
+  {
+   "addr": "011ab1",
+   "s": "*A\"A*"
+  },
+  {
+   "addr": "011b30",
+   "s": "DHHHH"
+  },
+  {
+   "addr": "011ba0",
+   "s": "*U @*T @*U"
+  },
+  {
+   "addr": "011bac",
+   "s": "*U @*T @ @"
+  },
+  {
+   "addr": "011be8",
+   "s": " @ @ @ @ @"
+  },
+  {
+   "addr": "011c18",
+   "s": " @ @ @ @*U"
+  },
+  {
+   "addr": "011c89",
+   "s": "@  @@\" A@ "
+  },
+  {
+   "addr": "011d74",
+   "s": "`@@@@@@@@`"
+  },
+  {
+   "addr": "011d8c",
+   "s": "`        `"
+  },
+  {
+   "addr": "011de0",
+   "s": " @ T\"A\"A\"T"
+  },
+  {
+   "addr": "011df0",
+   "s": "*@ @*"
+  },
+  {
+   "addr": "011dfc",
+   "s": "\"A\"A\""
+  },
+  {
+   "addr": "011e07",
+   "s": "*A\"U A*"
+  },
+  {
+   "addr": "011e20",
+   "s": "\"A\"A\""
+  },
+  {
+   "addr": "011e26",
+   "s": "B* @ T\"A\"A\"A"
+  },
+  {
+   "addr": "011e37",
+   "s": " @ @ @ "
+  },
+  {
+   "addr": "011e4a",
+   "s": " @@ @\"D(P(D\""
+  },
+  {
+   "addr": "011e58",
+   "s": " @ @ @ @ "
+  },
+  {
+   "addr": "011e7f",
+   "s": "D*Q\"A\"A"
+  },
+  {
+   "addr": "011e8c",
+   "s": "\"A\"A\""
+  },
+  {
+   "addr": "011e97",
+   "s": "T\"A\"A\"T @"
+  },
+  {
+   "addr": "011ea4",
+   "s": "\"A\"A\""
+  },
+  {
+   "addr": "011eaf",
+   "s": "(D @ @ "
+  },
+  {
+   "addr": "011ed3",
+   "s": "A\"A\"E*"
+  },
+  {
+   "addr": "011edf",
+   "s": "\"A\"A\""
+  },
+  {
+   "addr": "011f0f",
+   "s": "\"A\"A*"
+  },
+  {
+   "addr": "011f25",
+   "s": "   @@   "
+  },
+  {
+   "addr": "011f30",
+   "s": " @ @ @ @ @"
+  },
+  {
+   "addr": "012284",
+   "s": "JHGHJKLMMLJB8"
+  },
+  {
+   "addr": "0122d4",
+   "s": "Disconnected"
+  },
+  {
+   "addr": "0122e1",
+   "s": "Not Supported"
+  },
+  {
+   "addr": "0122ef",
+   "s": "Auxiliary"
+  },
+  {
+   "addr": "012380",
+   "s": "     "
+  },
+  {
+   "addr": "0123b9",
+   "s": " @@@ "
+  },
+  {
+   "addr": "012400",
+   "s": " `    p"
+  },
+  {
+   "addr": "0124c0",
+   "s": "p     p"
+  },
+  {
+   "addr": "012519",
+   "s": "      "
+  },
+  {
+   "addr": "012550",
+   "s": "p@@@@@p"
+  },
+  {
+   "addr": "0125c2",
+   "s": "`   p"
+  },
+  {
+   "addr": "0125d8",
+   "s": "`     p"
+  },
+  {
+   "addr": "012651",
+   "s": "  @  "
+  },
+  {
+   "addr": "012658",
+   "s": "       "
+  },
+  {
+   "addr": "0126c9",
+   "s": "@pHHp@"
+  },
+  {
+   "addr": "0126e0",
+   "s": "` 0(0 p"
+  },
+  {
+   "addr": "01270a",
+   "s": "p   p"
+  },
+  {
+   "addr": "01272a",
+   "s": "     "
+  },
+  {
+   "addr": "012776",
+   "s": "p 0@@"
+  },
+  {
+   "addr": "012798",
+   "s": "0H P "
+  },
+  {
+   "addr": "012ae3",
+   "s": ";0123456789ABCDEF"
+  }
+ ]
+}
